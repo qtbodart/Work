@@ -14,7 +14,7 @@ def elNumerator(line):
 
 sum = 0
 bettersum = 0
-with open('/home/qbodart/Documents/text1_1.txt') as f:
+with open('/home/qbodart/Git/Work/Advent of Code 2023/Day 1/text1_1.txt') as f:
     lines = f.readlines()
     for phrase in lines:
         numbers = numberGiver(phrase)
