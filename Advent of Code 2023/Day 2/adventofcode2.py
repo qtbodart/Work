@@ -10,7 +10,7 @@ def lineChonker(line):
     return treated
 
 def elNumerator(line):
-    """converts input line into the max occuring number of each color : blue, green and red"""
+    """converts input line into the max occuring number of each color : red, green and blue"""
     line = lineChonker(line)
     output = [0, 0, 0]
 
@@ -36,10 +36,13 @@ with open('/home/qbodart/Git/Work/Advent of Code 2023/Day 2/input2.txt') as f:
     for line in lines:
         feasable = True
         max = elNumerator(line)
+        print(max)
         for i in range(3):
             if max[i] > 13+i:
                 feasable = False
+                print('Bad')
         if feasable == True:
             sum += gameNumberReader(line)
+            print('Good')
     
     print(sum)
