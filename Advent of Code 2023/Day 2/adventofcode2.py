@@ -1,6 +1,7 @@
-colors = ['blue', 'green', 'red']
+colors = ['red', 'green', 'blue']
 
 def lineChonker(line):
+    """strips line from the end '\\n' character and the 'Game #' at the beginning of each line"""
     if(line[-1] == '\n'):
         treated = line[0:-1]
     else:
@@ -9,6 +10,7 @@ def lineChonker(line):
     return treated
 
 def elNumerator(line):
+    """converts input line into the max occuring number of each color : blue, green and red"""
     line = lineChonker(line)
     output = [0, 0, 0]
 
@@ -23,4 +25,21 @@ def elNumerator(line):
             if min < num:
                 output[colors.index(col)] = num
     return output
-print(elNumerator('Game 2: 6 blue, 3 green; 4 red, 1 green, 7 blue; 2 green'))
+
+def gameNumberReader(line):
+    return int(line.split(':')[0].split(' ')[1])
+
+
+sum = 0
+with open('/home/qbodart/Git/Work/Advent of Code 2023/Day 2/input2.txt') as f:
+    lines = f.readlines()
+    for line in lines:
+        feasable = True
+        max = elNumerator(line)
+        for i in range(3):
+            if max[i] > 13+i:
+                feasable = False
+        if feasable == True:
+            sum += gameNumberReader(line)
+    
+    print(sum)
