@@ -31,11 +31,13 @@ def gameNumberReader(line):
 
 
 sum = 0
+power_sum = 0
 with open('/home/qbodart/Git/Work/Advent of Code 2023/Day 2/input2.txt') as f:
     lines = f.readlines()
     for line in lines:
         feasable = True
         max = elNumerator(line)
+        power_sum += max[0]*max[1]*max[2]
         print(max)
         for i in range(3):
             if max[i] >= 13+i:
@@ -45,3 +47,4 @@ with open('/home/qbodart/Git/Work/Advent of Code 2023/Day 2/input2.txt') as f:
             sum += gameNumberReader(line)
             print('Good')
     print(sum)
+    print(power_sum)
