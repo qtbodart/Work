@@ -38,11 +38,10 @@ with open('/home/qbodart/Git/Work/Advent of Code 2023/Day 2/input2.txt') as f:
         max = elNumerator(line)
         print(max)
         for i in range(3):
-            if max[i] > 13+i:
+            if max[i] >= 13+i:
                 feasable = False
                 print('Bad')
         if feasable == True:
             sum += gameNumberReader(line)
             print('Good')
-    
     print(sum)
