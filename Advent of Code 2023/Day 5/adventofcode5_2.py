@@ -27,29 +27,37 @@ def maxOfSeeds(lines):
     return max
 
 interval = [([0,maxOfSeeds(lines)*10],0)]
-print(interval)
 
 def intervalModifier(fr, to, modifier):
+    current_interval = interval
     for i in range(len(interval)):
         rng, cur_modifier = interval[i]
         fr_int, to_int = rng
         if fr_int < fr and to < to_int:
-            interval.remove(([fr_int,to_int], cur_modifier))
-            interval.append(([fr_int,fr], cur_modifier))
-            interval.append(([to, to_int], cur_modifier))
-            interval.append(([fr,to], cur_modifier+modifier))
+            current_interval.remove(([fr_int,to_int], cur_modifier))
+            current_interval.append(([fr_int,fr-1], cur_modifier))
+            current_interval.append(([to, to_int-1], cur_modifier))
+            current_interval.append(([fr,to-1], cur_modifier+modifier))
             continue
         if fr_int >= fr and to > fr_int and to < to_int:
-            interval.remove(([fr_int,to_int], cur_modifier))
-            interval.append(([fr_int, to], cur_modifier+modifier))
-            interval.append(([to, to_int], cur_modifier))
+            current_interval.remove(([fr_int,to_int], cur_modifier))
+            current_interval.append(([fr_int, to-1], cur_modifier+modifier))
+            current_interval.append(([to, to_int-1], cur_modifier))
             continue
         if fr_int < fr and fr < to_int and to_int <= to:
-            print(to_int)
-            print(to)
-            interval.remove(([fr_int,to_int], cur_modifier))
-            interval.append(([fr_int,fr], cur_modifier))
-            interval.append(([fr, to_int], cur_modifier+modifier))
+            current_interval.remove(([fr_int,to_int], cur_modifier))
+            current_interval.append(([fr_int,fr-1], cur_modifier))
+            current_interval.append(([fr, to_int], cur_modifier+modifier))
             continue
         elif (fr<fr_int & to<fr_int) or (to_int<fr & to_int<to):
             continue
+        interval = current_interval
+
+if __name__ == '__main__':
+    table = tableConvertor(lines)
+    for function in table:
+        for line in function:
+            print(f'line : {line}\ninterval : {interval}\nmodifying interval from {line[1]} to {line[1]+line[2]} by {line[0]-line[1]}')
+            intervalModifier(line[1], line[1]+line[2], line[0]-line[1])
+            print(f'interval after modification : {interval}\n')
+    print(interval)
