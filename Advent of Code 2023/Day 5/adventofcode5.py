@@ -4,14 +4,15 @@ def seedisator(lines):
     treated = lines[0].split(':')[1].split(' ')
     return [int(seed) for seed in treated if seed != '']
 
-def bettahSeedisator(lines):
-    output = []
-    treated = lines[0].split(':')[1].split(' ')
-    treated = [int(seed) for seed in treated if seed != '']
-    for i in range(int(len(treated)/2)):
-        for j in range(treated[2*i],treated[2*i]+treated[2*i+1]):
-            output.append(j)
-    return output
+def maxOfSeeds(lines):
+    max = 0
+    seeds = seedisator(lines)
+    for i in range(int(len(seeds)/2)):
+        pot_max = seeds[2*i]+seeds[2*i+1]
+        if max < pot_max:
+            max = pot_max
+    return max
+
 
 def tableConvertor(lines):
     matrix = []
@@ -46,21 +47,6 @@ def elGrandeExecutor(lines):
     
     return findNearest(destinations)
 
-def elGrandeExecutorButBettah(lines):
-    matrix = tableConvertor(lines)
-
-    output = float('inf')
-    treated = lines[0].split(':')[1].split(' ')
-    treated = [int(seed) for seed in treated if seed != '']
-    for i in range(int(len(treated)/2)):
-        for seed in range(treated[2*i],treated[2*i]+treated[2*i+1]):
-            destination = destinationConvertor(matrix,seed)
-            if destination < output:
-                output = destination
-    
-    return output
-    
-
 def findNearest(destinations):
     nearest = destinations[0]
     for dest in destinations:
@@ -70,4 +56,4 @@ def findNearest(destinations):
 
 if __name__ == '__main__':
     lines = open('Day 5/input5.txt').readlines()
-    print(elGrandeExecutorButBettah(lines))
+    print(elGrandeExecutor(lines))
