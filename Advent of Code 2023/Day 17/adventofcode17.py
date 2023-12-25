@@ -2,7 +2,18 @@ import sys
 
 def parseFile(directory):
     return [line[:-1] if line[-1] == '\n' else line for line in open(directory).readlines()]
-input = parseFile('Advent of Code 2023\Day 17\\test17.txt')
+input = parseFile('Advent of Code 2023/Day 17/test17.txt')
+
+def get_path(node):
+    output = []
+    current = node
+    while(True):
+        try:
+            output.append(str(current))
+            current = self.previous_nodes[current]
+        except:
+            break
+    print('->'.join(reversed(output)))
 
 def getInt(y,x):
     return int(input[y][x])
@@ -69,6 +80,7 @@ def dijkstra_algorithm(start_node, end_node):
                 current_min_node = node
         
         print(f'current : {current_min_node}')
+        get_path(current_min_node)
         neighbors = get_outgoing_edges(current_min_node, previous_nodes, start_node)
         print(neighbors)
         for neighbor in neighbors:

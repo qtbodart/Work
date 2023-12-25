@@ -52,30 +52,31 @@ class Graph:
                 previous = self.previous_nodes[current_min_node]
                 pprevious = self.previous_nodes[previous]
                 ppprevious = self.previous_nodes[pprevious]
-            except KeyError:
-                #print('keyerror detected')
+            except:
+                print('keyerror detected')
                 return [n for n in self.getNeighbours(current_min_node) if n != previous]
             else:
-                #print(f'ppprevious : {ppprevious}\npprevious : {pprevious}\nprevious : {previous}\ncurrent : {node}')
+                print(f'ppprevious : {ppprevious}\npprevious : {pprevious}\nprevious : {previous}\ncurrent : {node}')
                 if previous == (current_min_node[0], current_min_node[1]-1) and pprevious == (previous[0], previous[1]-1) and ppprevious == (pprevious[0], pprevious[1]-1):
-                    #print('three times right in a row')
+                    print('three times right in a row')
                     return [n for n in self.getNeighbours(current_min_node) if (n != previous and n != (current_min_node[0],current_min_node[1]+1))]
                 elif previous == (current_min_node[0], current_min_node[1]+1) and pprevious == (previous[0], previous[1]+1) and ppprevious == (pprevious[0], pprevious[1]+1):
-                    #print('three times left in a row')
+                    print('three times left in a row')
                     return [n for n in self.getNeighbours(current_min_node) if (n != previous and n != (current_min_node[0],current_min_node[1]-1))]
                 elif previous == (current_min_node[0]-1, current_min_node[1]) and pprevious == (previous[0]-1, previous[1]) and ppprevious == (pprevious[0]-1, pprevious[1]):
-                    #print('three times down in a row')
+                    print('three times down in a row')
                     return [n for n in self.getNeighbours(current_min_node) if (n != previous and n != (current_min_node[0]+1,current_min_node[1]))]
                 elif previous == (current_min_node[0]+1, current_min_node[1]) and pprevious == (previous[0]+1, previous[1]) and ppprevious == (pprevious[0]+1, pprevious[1]):
-                    #print('three times up in a row')
+                    print('three times up in a row')
                     return [n for n in self.getNeighbours(current_min_node) if (n != previous and n != (current_min_node[0]-1,current_min_node[1]))]
             finally:
-                #print('no 3-long straight line detected')
+                print('no 3-long straight line detected')
                 return [n for n in self.getNeighbours(current_min_node) if n != previous]
         #print('start node')
         return self.getNeighbours(current_min_node)
 
     def weird_dijkstra(self):
+        direction_record = ['',0]
         while(self.unvisited_nodes):
             current_min_node = None
             for node in self.unvisited_nodes: # Iterate over the nodes
@@ -109,7 +110,7 @@ class Graph:
         print('->'.join(reversed(output)))
 
 if __name__ == '__main__':
-    lines = open('Advent of Code 2023\Day 17\\test17.txt').readlines()
+    lines = open('Advent of Code 2023/Day 17/test17.txt').readlines()
     graph1 = Graph(lines)
     graph1.weird_dijkstra()
     print(graph1)
