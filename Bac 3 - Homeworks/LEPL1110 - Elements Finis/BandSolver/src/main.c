@@ -21,8 +21,8 @@ int main(void)
     printf("    X-Y-N : Renumbering along x - along y - No renumbering \n");
     
     femSolverType solverType = FEM_BAND;
-    femRenumType  renumType  = FEM_YNUM;
-    char meshFileName[] = "./data/triangles101.txt";  
+    femRenumType  renumType  = FEM_NO;
+    char meshFileName[] = "./data/square1682.txt";  
     
     // Pour Windows, remplacer l'argument :
     // ("../data/triangles101.txt") 
