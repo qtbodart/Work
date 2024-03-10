@@ -22,7 +22,7 @@ int main(void)
     
     femSolverType solverType = FEM_BAND;
     femRenumType  renumType  = FEM_YNUM;
-    char meshFileName[] = "../data/triangles101.txt";  
+    char meshFileName[] = "./data/triangles101.txt";  
     
     // Pour Windows, remplacer l'argument :
     // ("../data/triangles101.txt") 
@@ -34,7 +34,7 @@ int main(void)
     // Be patient !
 
     
-    
+
     femDiffusionProblem* theProblem = femDiffusionCreate(meshFileName,solverType,renumType);
     clock_t tic = clock();
     femDiffusionCompute(theProblem);  
