@@ -28,10 +28,7 @@ void femMeshRenumber(femMesh *theMesh, femRenumType renumType)
             for (int i = 0; i < theMesh->nodes->nNodes; i++) 
                 theMesh->nodes->number[i] = i;
             break;
-// 
-// A modifier :-)
-// debut
-//
+
         case FEM_XNUM :
             for (int i = 0; i < theMesh->nodes->nNodes; i++){
                 positions[i] = i;
@@ -113,8 +110,8 @@ void femBandSystemAssemble(femBandSystem* myBandSystem, double *Aloc, double *Bl
             if (col >= row) {
                 myBandSystem->A[row][col] += Aloc[i * nLoc + j];
             }
-            myBandSystem->B[row] += Bloc[i];
         }
+        myBandSystem->B[row] += Bloc[i];
     }
 }
 
@@ -123,30 +120,37 @@ void femBandSystemAssemble(femBandSystem* myBandSystem, double *Aloc, double *Bl
 #ifndef NOBANDELIMINATE
 
 
-double  *femBandSystemEliminate(femBandSystem *myBand)
-{
-    double  **A, *B, factor;
-    int     i, j, k, jend, size, band;
-    A    = myBand->A;
-    B    = myBand->B;
-    size = myBand->size;
-    band = myBand->band;
-    
-    // A completer :-)
-    // élémination de Gauss pour une matrice bande
-    for (k = 0; k < size-1; k++) {
-        jend = MIN(size-1,k+band);
-        for (j = k+1; j <= jend; j++) {
-            factor = A[j][k]/A[k][k];
-            for (i = k; i <= jend; i++) {
-                A[j][i] -= factor*A[k][i];
-            }
-            B[j] -= factor*B[k];
+double * femBandSystemEliminate ( femBandSystem * myBand ) {
+    double ** A , *B , factor ;
+    int i , j , k , jend , size , band ;
+    A = myBand -> A ;
+    B = myBand -> B ;
+    size = myBand -> size ;
+    band = myBand -> band ;
+
+    for (k = 0; k < size; k ++) {
+        if (fabs (A[k][k]) <= 1e-4 ) { Error (" Cannot eleminate with such a pivot ") ; }
+
+        jend = MIN (k+band , size) ;
+        for (i = k+1; i < jend; i++) {
+            factor = A[k][i] / A[k][k];
+            for (j = i; j < jend; j++)
+                A [i][j] = A[i][j] - A[k][j] * factor ;
+            B[i] = B[i] - B[k] * factor ;
         }
     }
 
-    return(myBand->B);
+    for (i = (size - 1); i >= 0; i--) {
+        factor = 0;
+        jend = MIN (i + band, size ) ;
+        for (j = i + 1; j < jend; j++)
+            factor += A[i][j] * B[j];
+        B[i] = (B[i] - factor ) / A[i][i];
+    }
+
+    return ( myBand -> B ) ;
 }
+
 
 
 #endif
