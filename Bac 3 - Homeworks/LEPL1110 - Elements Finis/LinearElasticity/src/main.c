@@ -33,7 +33,7 @@ int main(void)
     geoMeshImport();
     geoSetDomainName(0,"Symmetry");
     geoSetDomainName(7,"Bottom");
-    geoMeshWrite("../data/elasticity.txt");
+    geoMeshWrite("./data/elasticity.txt");
     
         
 //
