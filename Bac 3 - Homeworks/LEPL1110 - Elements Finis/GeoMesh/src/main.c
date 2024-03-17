@@ -1,7 +1,7 @@
 /*
  *  main.c
  *  Library for EPL1110 : Finite Elements for dummies
- *  Utilisation de l'API de GMSH pour créer un maillage
+ *  Utilisation de l'API de GMSH pour crï¿½er un maillage
  *
  *  Copyright (C) 2023 UCL-IMMC : Vincent Legat
  *  All rights reserved.
@@ -61,11 +61,11 @@ int main(void)
 //  -2- Creation du fichier du maillage
 //
     
-    char filename[] = "../data/mesh.txt";
+    char filename[] = "./data/mesh.txt";
     geoMeshWrite(filename);
 
 //
-//  -3- Champ de la taille de référence du maillage
+//  -3- Champ de la taille de rï¿½fï¿½rence du maillage
 //
 
     double *meshSizeField = malloc(theGeometry->theNodes->nNodes*sizeof(double));
@@ -129,7 +129,7 @@ int main(void)
             
             
             
-            sprintf(theMessage, "%s : %d ",theGeometry->theDomains[domain]->name,domain);
+            // sprintf(theMessage, "%s : %d ",theGeometry->theDomains[domain]->name,domain);
  
             
             glColor3f(1.0,0.0,0.0); glfemMessage(theMessage);
