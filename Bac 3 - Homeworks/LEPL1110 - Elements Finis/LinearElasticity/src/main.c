@@ -103,7 +103,7 @@ int main(void)
         if (mode == 0) {
             domain = domain % theGeometry->nDomains;
             glfemPlotDomain( theGeometry->theDomains[domain]); 
-            sprintf(theMessage, "%s : %d ",theGeometry->theDomains[domain]->name,domain);
+            // sprintf(theMessage, "%s : %d ",theGeometry->theDomains[domain]->name,domain);
              glColor3f(1.0,0.0,0.0); glfemMessage(theMessage);  }
             
          glfwSwapBuffers(window);
@@ -121,5 +121,3 @@ int main(void)
     exit(EXIT_SUCCESS);
     return 0;  
 }
-
- 

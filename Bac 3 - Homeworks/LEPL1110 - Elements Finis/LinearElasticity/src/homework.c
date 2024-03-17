@@ -63,13 +63,49 @@ double *femElasticitySolve(femProblem *theProblem)
     double g   = theProblem->g;
     double **A = theSystem->A;
     double *B  = theSystem->B;
-    
-    
-  //
-  //  A faire :-)
-  //                
-                
-                
+
+    for (iElem = 0; iElem < theMesh->nElem; iElem++) {
+        for (j = 0; j < nLocal; j++) {
+            map[j] = theMesh->elem[iElem * nLocal + j];
+            mapX[j] = 2 * map[j];
+            mapY[j] = 2 * map[j] + 1;
+            x[j] = theNodes->X[map[j]];
+            y[j] = theNodes->Y[map[j]];
+        }
+
+        for (int iInteg = 0; iInteg < theRule->n; iInteg++) {
+            femDiscretePhi2(theSpace, theRule->xsi[iInteg], theRule->eta[iInteg], phi);
+            femDiscreteDphi2(theSpace, theRule->xsi[iInteg], theRule->eta[iInteg], dphidxsi, dphideta);
+
+            double dxdxsi = 0.0;
+            double dxdeta = 0.0;
+            double dydxsi = 0.0;
+            double dydeta = 0.0;
+            for (i = 0; i < theSpace->n; i++) {
+                dxdxsi += x[i] * dphidxsi[i];
+                dxdeta += x[i] * dphideta[i];
+                dydxsi += y[i] * dphidxsi[i];
+                dydeta += y[i] * dphideta[i];
+            }
+            double HitTheRoadJac = fabs(dxdxsi * dydeta - dxdeta * dydxsi);
+
+            for (i = 0; i < theSpace->n; i++) {
+                dphidx[i] = (dphidxsi[i] * dydeta - dphideta[i] * dydxsi) / HitTheRoadJac;
+                dphidy[i] = (dphideta[i] * dxdxsi - dphidxsi[i] * dxdeta) / HitTheRoadJac;
+            }
+            for (i = 0; i < theSpace->n; i++) {
+                for (j = 0; j < theSpace->n; j++) {
+                    A[mapX[i]][mapX[j]] += (dphidx[i] * dphidx[j] * a + dphidy[i] * dphidy[j] * c) * HitTheRoadJac * theRule->weight[iInteg];
+                    A[mapY[i]][mapY[j]] += (dphidy[i] * dphidy[j] * a + dphidx[i] * dphidx[j] * c) * HitTheRoadJac * theRule->weight[iInteg];
+                    A[mapX[i]][mapY[j]] += (dphidx[i] * dphidy[j] * b + dphidy[i] * dphidx[j] * c) * HitTheRoadJac * theRule->weight[iInteg];
+                    A[mapY[i]][mapX[j]] += (dphidy[i] * dphidx[j] * b + dphidx[i] * dphidy[j] * c) * HitTheRoadJac * theRule->weight[iInteg];
+                }
+            }
+            for (i = 0; i < theSpace->n; i++) {
+                B[mapY[i]] -= phi[i] * g * rho * HitTheRoadJac * theRule->weight[iInteg];
+            }
+        }
+    }
   
     int *theConstrainedNodes = theProblem->constrainedNodes;     
     for (int i=0; i < theSystem->size; i++) {
