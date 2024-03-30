@@ -50,6 +50,9 @@ void femMeshRenumber(femMesh *theMesh, femRenumType renumType)
                 theMesh->nodes->number[positions[i]] = i;
             }
             break;
+        
+        case FEM_PROPNUM :
+            printf("no renum for now");
 // 
 // end
 //

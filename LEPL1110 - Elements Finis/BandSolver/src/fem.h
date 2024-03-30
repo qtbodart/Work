@@ -26,7 +26,7 @@
 
 typedef enum {FEM_TRIANGLE,FEM_QUAD} femElementType;
 typedef enum {FEM_FULL,FEM_BAND,FEM_ITER} femSolverType;
-typedef enum {FEM_NO,FEM_XNUM,FEM_YNUM} femRenumType;
+typedef enum {FEM_NO,FEM_XNUM,FEM_YNUM, FEM_PROPNUM} femRenumType;
 
 typedef struct {
     int nNodes;

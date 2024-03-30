@@ -22,7 +22,7 @@ int main(void)
     
     femSolverType solverType = FEM_BAND;
     femRenumType  renumType  = FEM_XNUM;
-    char meshFileName[] = "./data/rectQuad1682.txt";
+    char meshFileName[] = "./data/mesh.txt";
     
     // Pour Windows, remplacer l'argument :
     // ("../data/triangles101.txt") 
