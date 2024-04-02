@@ -1,7 +1,5 @@
 #include "fem.h"
 
-double** A_copie_non_contrain;
-double* B_copie_non_contrain;
 
 void femElasticityAssembleElements(femProblem *theProblem){
     femFullSystem  *theSystem = theProblem->system;
@@ -64,7 +62,6 @@ void femElasticityAssembleElements(femProblem *theProblem){
                                             dphidx[i] * c * dphidx[j]) * jac * weight; }}
              for (i = 0; i < theSpace->n; i++) {
                 B[mapY[i]] -= phi[i] * g * rho * jac * weight; }}} 
-
 }
 
 
@@ -84,32 +81,31 @@ void femElasticityAssembleNeumann(femProblem *theProblem){
         femBoundaryCondition *theCondition = theProblem->conditions[iBnd];
         femBoundaryType type = theCondition->type;
         double value = theCondition->value;
-        // Seulement si c'est une condition de Neumann
-        if(type == NEUMANN_X || type == NEUMANN_Y){
-            // On parcourt les éléments de bord où il y a la condition
-            for (iElem = 0; iElem < theCondition->domain->nElem; iElem++) {
-                iEdge = theCondition->domain->elem[iElem]; // Car la condition ne doit être appliquée que sur les bords concernés. 
-                for (j=0; j < nLocal; j++) {
-                    map[j]  = theEdges->elem[iEdge*nLocal+j];
-                    if(type == NEUMANN_X){
-                        mapU[j] = 2*map[j];
-                    }
-                    if(type == NEUMANN_Y){
-                        mapU[j] = 2*map[j] + 1;
-                    }
-                    x[j]    = theNodes->X[map[j]];
-                    y[j]    = theNodes->Y[map[j]];
-                    }
 
-                // On fait l'intégration numérique
-                for (iInteg=0; iInteg < theRule->n; iInteg++) {    
-                    double jacobien = sqrt((x[1]-x[0])*(x[1]-x[0]) + (y[1]-y[0])*(y[1]-y[0]))/2; // h/2
-                    double xsi    = theRule->xsi[iInteg];
-                    double weight = theRule->weight[iInteg];  
-                    femDiscretePhi(theSpace,xsi,phi);
-                    for (i = 0; i < theSpace->n; i++) {
-                        B[mapU[i]] += phi[i] * value * weight*jacobien; 
-                    }
+        if(theCondition->type != NEUMANN_X && theCondition->type != NEUMANN_Y){
+            return;
+        }
+
+        for (iElem = 0; iElem < theCondition->domain->nElem; iElem++){
+            iEdge = theCondition->domain->elem[iElem];
+
+            for (i = 0; i < nLocal; i++){
+                map[i] = theEdges->elem[(nLocal*iEdge) + i];
+                mapU[i] = (theCondition->type == NEUMANN_X) ? 2*map[i] : 2*map[i]+1;
+                x[i] = theNodes->X[map[i]];
+                y[i] = theNodes->Y[map[i]];
+            }
+
+            for (iInteg = 0; iInteg < theRule->n; iInteg++){
+                double dx  = (x[1]-x[0]);    double dy = (y[1]-y[0]);
+                double J   = sqrt(dx*dx + dy*dy)/2;
+                double xsi = theRule->xsi[iInteg];
+                double w   = theRule->weight[iInteg]; 
+
+                femDiscretePhi(theSpace,xsi,phi);
+                
+                for (j = 0; j < theSpace->n; j++) {
+                    B[mapU[j]] += phi[j]*w*J*value;
                 }
             }
         }
@@ -117,58 +113,21 @@ void femElasticityAssembleNeumann(femProblem *theProblem){
 }
 
 
+
 double *femElasticitySolve(femProblem *theProblem){
-    femFullSystem  *theSystem = theProblem->system;
+ 
+    //       
+    // A completer :-) 
+    //  
 
-    femElasticityAssembleElements(theProblem);
-    femElasticityAssembleNeumann(theProblem);
-
-    // Pour pouvoir garder la matrice en copie pour la dernière fonction. 
-    A_copie_non_contrain = malloc(theSystem->size * sizeof(double*));
-    for (int i = 0; i < theSystem->size; i++) {
-        A_copie_non_contrain[i] = malloc(theSystem->size * sizeof(double));
-        memcpy(A_copie_non_contrain[i], theProblem->system->A[i], theProblem->system->size * sizeof(double));
-    }
-
-    B_copie_non_contrain = malloc(theSystem->size * sizeof(double));
-    memcpy(B_copie_non_contrain, theProblem->system->B, theProblem->system->size * sizeof(double));
-  
-    int *theConstrainedNodes = theProblem->constrainedNodes; // Liste des numéros de la contrainte associé à un noeud.
-    for (int i=0; i < theSystem->size; i++) { // i = le numéro du noeud.    
-        if (theConstrainedNodes[i] != -1) { // Si une condition est appliquée sur le noeud. 
-            //printf("Constrained Nodes : %d\n", theConstrainedNodes[i]);
-            //printf("Condition : %s\n", theProblem->conditions[theConstrainedNodes[i]]->domain->name);
-            // Via les prints, on voit que la numéro d'une condition est bien liée sur un domaine précis.
-
-            double value = theProblem->conditions[theConstrainedNodes[i]]->value;
-            femFullSystemConstrain(theSystem,i,value); 
-        }
-    }
-
-    femFullSystemEliminate(theSystem);
-
-    for(int i = 0; i<theSystem->size; i++){
-        theProblem->soluce[i] = theSystem->B[i];}  
-
-    return theProblem->soluce; 
+     return theProblem->soluce;
 }
 
 double * femElasticityForces(femProblem *theProblem){        
            
-    double *soluce = theProblem->soluce;
-    femFullSystem *sys = theProblem->system;
+    //       
+    // A completer :-) 
+    //  
 
-    for (int i = 0; i < sys -> size; i++) {
-        double AU = 0.0;
-        for (int j = 0; j < sys -> size; j++) {
-            AU += A_copie_non_contrain[i][j]*soluce[j];
-        }
-        theProblem->residuals[i] += AU - B_copie_non_contrain[i];
-    }
-    for(int i = 0; i<sys->size; i++){
-        free(A_copie_non_contrain[i]);
-    }
-    free(A_copie_non_contrain);
-    free(B_copie_non_contrain);
     return theProblem->residuals;
 }
