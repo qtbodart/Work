@@ -95,6 +95,7 @@ int main(void)
         if (glfwGetKey(window,'X') == GLFW_PRESS)   newRenumType  = FEM_XNUM; 
         if (glfwGetKey(window,'Y') == GLFW_PRESS)   newRenumType  = FEM_YNUM; 
         if (glfwGetKey(window,'N') == GLFW_PRESS)   newRenumType  = FEM_NO; 
+        if (glfwGetKey(window,'P') == GLFW_PRESS)   newRenumType  = FEM_PROPNUM; 
        
         glfwSwapBuffers(window);
         glfwPollEvents();
