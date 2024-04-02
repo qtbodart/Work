@@ -83,7 +83,7 @@ void femElasticityAssembleNeumann(femProblem *theProblem){
         double value = theCondition->value;
 
         if(theCondition->type != NEUMANN_X && theCondition->type != NEUMANN_Y){
-            return;
+            continue;
         }
 
         for (iElem = 0; iElem < theCondition->domain->nElem; iElem++){
