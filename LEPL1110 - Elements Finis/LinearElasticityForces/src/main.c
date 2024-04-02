@@ -41,7 +41,7 @@ int main(void)
     geoSetDomainName(7,"Bottom");
     geoSetDomainName(1,"Top");
 
-    geoMeshWrite("../data/elasticity.txt");
+    geoMeshWrite("./data/elasticity.txt");
     
         
 //
