@@ -1,5 +1,7 @@
 #include "fem.h"
 
+double** oldA;
+double* oldB;
 
 void femElasticityAssembleElements(femProblem *theProblem){
     femFullSystem  *theSystem = theProblem->system;
@@ -61,7 +63,7 @@ void femElasticityAssembleElements(femProblem *theProblem){
                     A[mapY[i]][mapY[j]] += (dphidy[i] * a * dphidy[j] + 
                                             dphidx[i] * c * dphidx[j]) * jac * weight; }}
              for (i = 0; i < theSpace->n; i++) {
-                B[mapY[i]] -= phi[i] * g * rho * jac * weight; }}} 
+                B[mapY[i]] -= phi[i] * g * rho * jac * weight; }}}
 }
 
 
@@ -114,20 +116,56 @@ void femElasticityAssembleNeumann(femProblem *theProblem){
 
 
 
-double *femElasticitySolve(femProblem *theProblem){
- 
-    //       
-    // A completer :-) 
-    //  
+double* femElasticitySolve(femProblem *theProblem){
+    femElasticityAssembleElements(theProblem);
+    femElasticityAssembleNeumann(theProblem);
 
-     return theProblem->soluce;
+    femFullSystem* theSystem = theProblem->system;
+    int s = theSystem->size;
+    int i;
+
+    oldA = malloc(s*sizeof(double*));
+    for (i = 0; i < s; i++){
+        oldA[i] = malloc(s*sizeof(double));
+        memcpy(oldA[i], theProblem->system->A[i], s*sizeof(double));    
+    }
+    oldB = malloc(s*sizeof(double));
+    memcpy(oldB,theProblem->system->B, s*sizeof(double));
+
+    int* cNodes = theProblem->constrainedNodes;
+    for (i = 0; i < s; i++){
+        if (cNodes[i] != -1){
+            femFullSystemConstrain(theSystem,i,theProblem->conditions[cNodes[i]]->value);
+        }
+    }
+    femFullSystemEliminate(theSystem);
+
+    for (i = 0; i<s; i++){
+        theProblem->soluce[i] = theSystem->B[i];
+    }
+
+    return theProblem->soluce;
 }
 
-double * femElasticityForces(femProblem *theProblem){        
-           
-    //       
-    // A completer :-) 
-    //  
+double* femElasticityForces(femProblem *theProblem){        
+    int s = theProblem->system->size;
+    double* sol = theProblem->soluce;
+    int i, j;
+    double A_U;
+
+    for (i = 0; i < s; i++){
+        A_U = 0;
+        for (j = 0; j < s; j++){
+            A_U += oldA[i][j]*sol[j];
+        }
+        theProblem->residuals[i] += A_U - oldB[i];
+    }
+
+    for (i = 0; i < s; i++){
+        free(oldA[i]);
+    }
+    free(oldA);
+    free(oldB);
 
     return theProblem->residuals;
 }
