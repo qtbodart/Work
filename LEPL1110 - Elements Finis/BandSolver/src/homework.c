@@ -53,6 +53,7 @@ void femMeshRenumber(femMesh *theMesh, femRenumType renumType)
         
         case FEM_PROPNUM :
             printf("no renum for now\n");
+            break;
 // 
 // end
 //
