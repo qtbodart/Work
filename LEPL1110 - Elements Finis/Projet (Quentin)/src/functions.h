@@ -8,7 +8,7 @@
 #define MAXNAME 256
 
 typedef struct{
-    char* name;
+    char name[MAXNAME];
     int nElements;
     int* elements;
 } Domain;
@@ -27,8 +27,13 @@ typedef struct{
     int* elements;
 
     int nDomains;
-    Domain* domains;
+    Domain** domains;
 } Mesh;
+
+/*
+Frees all memory allocated to `Mesh fmesh`
+*/
+void freeMesh();
 
 /*
 Converts the `.txt` file into a "Mesh" structure so that it can be used directly in the code.
