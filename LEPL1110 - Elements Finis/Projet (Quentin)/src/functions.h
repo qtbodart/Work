@@ -7,28 +7,30 @@
 #define TRUE  1
 #define MAXNAME 256
 
+typedef struct{
+    char* name;
+    int nElements;
+    int* elements;
+} Domain;
 
-typedef enum {FEM_TRIANGLE,FEM_QUAD} ElementType;
-typedef enum {FEM_FULL,FEM_BAND,FEM_ITER} SolverType;
-typedef enum {FEM_NO,FEM_XNUM,FEM_YNUM, FEM_PROPNUM} RenumType;
-
-typedef struct {
+typedef struct{
     int nNodes;
-    double *X;
-    double *Y;
-    int *number;
-} Nodes;
+    int* num;
+    double* X;
+    double* Y;
 
-typedef struct {
-    int nLocalNode;
-    int nElem;
-    int* elem;
-    Nodes* nodes;
+    int nEdges;
+    double* edges;
+
+    int nElements;
+    int elementNodes;
+    double* elements;
+
+    int nDomains;
+    Domain* domains;
 } Mesh;
 
-typedef struct {
-    Mesh* mesh;
-    int nElem;
-    int* elem;
-    char name[MAXNAME];
-} Domain;
+/*
+Converts the `.txt` file into a "Mesh" structure so that it can be used directly in the code.
+*/
+Mesh* parseFile(char* filename);
