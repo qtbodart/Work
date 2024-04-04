@@ -20,11 +20,11 @@ typedef struct{
     double* Y;
 
     int nEdges;
-    double* edges;
+    int* edges;
 
     int nElements;
     int elementNodes;
-    double* elements;
+    int* elements;
 
     int nDomains;
     Domain* domains;
@@ -33,4 +33,4 @@ typedef struct{
 /*
 Converts the `.txt` file into a "Mesh" structure so that it can be used directly in the code.
 */
-Mesh* parseFile(char* filename);
+Mesh* parseFile();

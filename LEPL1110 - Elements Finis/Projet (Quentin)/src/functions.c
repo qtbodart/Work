@@ -1,4 +1,4 @@
-#include <functions.h>
+#include "functions.h"
 
 Mesh* parseFile(const char* filename){
     Mesh* output = malloc(sizeof(Mesh));
@@ -7,9 +7,9 @@ Mesh* parseFile(const char* filename){
     char elementType[MAXNAME];
 
     // Scans for information about the number of nodes, edges, shapes and domains there is in the file
-    fscanf(file, "Number of nodes %d \n", output->nNodes);
-    fscanf(file, "Number of edges %d \n", output->nEdges);
-    fscanf(file, "Number of %s %d \n", elementType, output->nElements);
+    fscanf(file, "Number of nodes %d \n", &output->nNodes);
+    fscanf(file, "Number of edges %d \n", &output->nEdges);
+    fscanf(file, "Number of %s %d \n", elementType, &output->nElements);
     fscanf(file, "Number of domains %d\n", &output->nDomains);
 
     // Sets the type of element we'll be working with (either triangles or quads)
@@ -18,6 +18,7 @@ Mesh* parseFile(const char* filename){
     // Gets the position of each node and gives them a numerotation
     output->X = malloc(output->nNodes * sizeof(double));
     output->Y = malloc(output->nNodes * sizeof(double));
+    output->num = malloc(output->nNodes *  sizeof(int));
     for (int i = 0; i < output->nNodes; i++){
         fscanf(file, "%*d : %le %le \n", &output->X[i], &output->Y[i]);
         output->num[i] = i;
