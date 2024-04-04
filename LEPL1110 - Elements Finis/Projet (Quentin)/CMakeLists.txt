@@ -3,4 +3,4 @@ project(finalProject)
 set(EXEC_NAME fp)
 
 
-add_executable(${EXEC_NAME} src/main.c)
+add_executable(${EXEC_NAME} src/main.c src/functions.c)
