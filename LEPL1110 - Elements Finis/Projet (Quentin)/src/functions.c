@@ -41,7 +41,19 @@ Mesh* parseFile(const char* filename){
 
     // Gets the domains
     output->domains = malloc(output->nDomains*sizeof(Domain));
-    
+    for (int iDomain = 0; iDomain < output->nDomains; iDomain++) {
+        Domain* newDomain = malloc(sizeof(Domain));
+        fscanf(file, "  Domain : %*d \n");
+        fscanf(file, "  Name : %[^\n]s \n", (char *)&newDomain->name);
+        fscanf(file, "  Number of elements : %6d\n", &newDomain->nElements);
+        newDomain->elements = malloc(sizeof(int) * 2 * newDomain->nElements);
+        for (int i = 0; i < newDomain->nElements; i++) {
+            fscanf(file, "%6d", &newDomain->elements[i]);
+            if ((i + 1) != newDomain->nElements && (i + 1) % 10 == 0){
+                fscanf(file, "\n");
+            }
+        }
+    }
 
     return output;
 }
