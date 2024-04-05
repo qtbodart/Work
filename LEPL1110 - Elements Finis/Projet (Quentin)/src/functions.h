@@ -31,7 +31,7 @@ typedef struct{
 } Mesh;
 
 /*
-Frees all memory allocated to `Mesh fmesh`
+Frees all memory allocated to `fmesh`
 */
 void freeMesh();
 

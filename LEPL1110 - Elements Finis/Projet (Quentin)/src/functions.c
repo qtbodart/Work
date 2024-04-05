@@ -42,21 +42,31 @@ Mesh* parseFile(const char* filename){
     }
 
     // Extracting all domains
-    fscanf(file, "Number of domains %d\n", &output->nDomains);
+    fgets(line, MAXNAME, file);
+    sscanf(line, "Number of domains %d", &output->nDomains);
     int nDomains = output->nDomains;
     output->domains = malloc(sizeof(Domain *) * nDomains);
     for (int iDomain = 0; iDomain < nDomains; iDomain++) {
         Domain *theDomain = malloc(sizeof(Domain));
         output->domains[iDomain] = theDomain;
-        fscanf(file, "  Domain : %*d \n");
-        fscanf(file, "  Name : %s \n", (char *)&theDomain->name);
-        fscanf(file, "  Number of elements : %6d\n", &theDomain->nElements);
-        theDomain->elements = malloc(sizeof(int) * 2 * theDomain->nElements);
-        for (int i = 0; i < theDomain->nElements; i++) {
-        fscanf(file, "%6d", &theDomain->elements[i]);
-        if ((i + 1) != theDomain->nElements && (i + 1) % 10 == 0)
-            fscanf(file, "\n");
-        }
+        fgets(line, MAXNAME, file);
+        sscanf(line, "  Domain : %*d \n");
+        fgets(line, MAXNAME, file);
+        sscanf(line, "  Name : %s \n", (char *)&theDomain->name);
+        fgets(line, MAXNAME, file);
+        sscanf(line, "  Number of elements : %6d\n", &theDomain->nElements);
+        theDomain->elements = malloc(sizeof(int) * theDomain->nElements);
+        const char s[2] = " ";
+        int j = 0;
+        do{
+            fgets(line, MAXNAME, file);
+            char* token = strtok(line,s);
+            while ( token != NULL) {
+                theDomain->elements[j] = atoi(token);
+                token = strtok(NULL, s);
+                j++;
+            }
+        } while (j == theDomain->nElements-1);
     }
 
     fclose(file);
