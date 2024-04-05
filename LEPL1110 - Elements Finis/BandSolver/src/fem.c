@@ -16,6 +16,31 @@ static const double _gaussTri3Xsi[3]     = { 0.166666666666667, 0.66666666666666
 static const double _gaussTri3Eta[3]     = { 0.166666666666667, 0.166666666666667, 0.666666666666667};
 static const double _gaussTri3Weight[3]  = { 0.166666666666667, 0.166666666666667, 0.166666666666667};
 
+/*
+Beginning of modifications
+*/
+void initializeQueue(Queue* q){ q->first = 0;  q->last = 0; }
+int queueFull(Queue* q){ return (q->last-q->first == 1000); }
+int queueEmpty(Queue* q){ return (q->last-q->first == 0); }
+void addToQueue(int value, Queue* q){
+    if (queueFull(&q)){
+        printf("Tried to add value to already full queue!\n");
+    } else {
+        q->data[q->last%1000] = value;
+        q->last++;
+    }
+}
+int popFromQueue(Queue* q){
+    if (queueEmpty(&q)){
+        printf("Tried to retrieve value from already empty queue!\n");
+    } else {
+        q->first++;
+        return (q->data[(q->first-1)%1000]);
+    }
+}
+/*
+End of modifications
+*/
 
 femIntegration *femIntegrationCreate(int n, femElementType type)
 {

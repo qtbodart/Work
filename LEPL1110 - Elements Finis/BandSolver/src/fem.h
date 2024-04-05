@@ -28,6 +28,24 @@ typedef enum {FEM_TRIANGLE,FEM_QUAD} femElementType;
 typedef enum {FEM_FULL,FEM_BAND,FEM_ITER} femSolverType;
 typedef enum {FEM_NO,FEM_XNUM,FEM_YNUM, FEM_PROPNUM} femRenumType;
 
+/*
+Beginning of modifications
+*/
+typedef struct {
+    int data[1000];
+    int first, last;
+} Queue;
+
+void initializeQueue(Queue* q);
+int queueFull(Queue* q);
+int queueEmpty(Queue* q);
+void addToQueue(int value, Queue* q);
+int popFromQueue(Queue* q);
+
+/*
+End of modifications
+*/
+
 typedef struct {
     int nNodes;
     double *X;

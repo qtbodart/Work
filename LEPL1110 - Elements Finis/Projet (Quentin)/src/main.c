@@ -47,6 +47,7 @@ void checkParsedFile(verbose){
 }
 
 int main(void){
-    checkParsedFile(TRUE);
+    Mesh* fileMesh = parseFile("./data/mesh.txt");
+    freeMesh(fileMesh);
     return 0;
 }
