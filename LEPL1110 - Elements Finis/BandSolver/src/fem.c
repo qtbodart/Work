@@ -23,7 +23,7 @@ void initializeQueue(Queue* q){ q->first = 0;  q->last = 0; }
 int queueFull(Queue* q){ return (q->last-q->first == 1000); }
 int queueEmpty(Queue* q){ return (q->last-q->first == 0); }
 void addToQueue(int value, Queue* q){
-    if (queueFull(&q)){
+    if (queueFull(q)){
         printf("Tried to add value to already full queue!\n");
     } else {
         q->data[q->last%1000] = value;
@@ -31,7 +31,7 @@ void addToQueue(int value, Queue* q){
     }
 }
 int popFromQueue(Queue* q){
-    if (queueEmpty(&q)){
+    if (queueEmpty(q)){
         printf("Tried to retrieve value from already empty queue!\n");
     } else {
         q->first++;

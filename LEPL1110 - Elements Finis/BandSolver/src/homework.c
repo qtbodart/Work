@@ -52,35 +52,36 @@ void femMeshRenumber(femMesh *theMesh, femRenumType renumType)
             break;
         
         case FEM_PROPNUM :
-            Queue q;
+            Queue* q = (Queue *) malloc(sizeof(Queue));
+            initializeQueue(q);
             int i, curNode;
 
-            addToQueue(0,&q);
+            addToQueue(0,q);
             if (theMesh->nLocalNode == 3){
                 i = 0;
-                while (!queueEmpty(&q)){
-                    curNode = popFromQueue(&q);
+                while (!queueEmpty(q)){
+                    curNode = popFromQueue(q);
                     theMesh->nodes->number[i] = curNode;
                     i++;
                     for (int i = 0; i < theMesh->nElem; i++){
                         if (curNode == theMesh->elem[3*i]){
-                            addToQueue(theMesh->elem[3*i+1],&q);
-                            addToQueue(theMesh->elem[3*i+2],&q);
+                            addToQueue(theMesh->elem[3*i+1],q);
+                            addToQueue(theMesh->elem[3*i+2],q);
                         }
                         if (curNode == theMesh->elem[3*i+1]){
-                            addToQueue(theMesh->elem[3*i],&q);
-                            addToQueue(theMesh->elem[3*i+2],&q);
+                            addToQueue(theMesh->elem[3*i],q);
+                            addToQueue(theMesh->elem[3*i+2],q);
                         }
                         if (curNode == theMesh->elem[3*i+2]){
-                            addToQueue(theMesh->elem[3*i],&q);
-                            addToQueue(theMesh->elem[3*i+1],&q);
+                            addToQueue(theMesh->elem[3*i],q);
+                            addToQueue(theMesh->elem[3*i+1],q);
                         }
                     }
                 }
             }
             
 
-            free(&q);
+            free(q);
             break;
 // 
 // end
