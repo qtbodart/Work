@@ -31,17 +31,16 @@ typedef enum {FEM_NO,FEM_XNUM,FEM_YNUM, FEM_PROPNUM} femRenumType;
 /*
 Beginning of modifications
 */
-typedef struct {
-    int data[1000];
-    int first, last;
+typedef struct{
+    int first, last, lData, *data;
 } Queue;
 
-void initializeQueue(Queue* q);
+Queue* createQueue();
+void freeQueue(Queue* q);
 int queueFull(Queue* q);
 int queueEmpty(Queue* q);
-void addToQueue(int value, Queue* q);
-int popFromQueue(Queue* q);
-
+int queueRemove(Queue* q);
+void queueAdd(int value, Queue* q);
 /*
 End of modifications
 */

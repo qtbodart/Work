@@ -8,6 +8,8 @@
  */
 
 #include "fem.h"
+#include <errno.h>
+#define QUEUE_SIZE 10000
 
 static const double _gaussQuad4Xsi[4]    = {-0.577350269189626,-0.577350269189626, 0.577350269189626, 0.577350269189626};
 static const double _gaussQuad4Eta[4]    = { 0.577350269189626,-0.577350269189626,-0.577350269189626, 0.577350269189626};
@@ -19,24 +21,48 @@ static const double _gaussTri3Weight[3]  = { 0.166666666666667, 0.16666666666666
 /*
 Beginning of modifications
 */
-void initializeQueue(Queue* q){ q->first = 0;  q->last = 0; }
-int queueFull(Queue* q){ return (q->last-q->first == 1000); }
-int queueEmpty(Queue* q){ return (q->last-q->first == 0); }
-void addToQueue(int value, Queue* q){
-    if (queueFull(q)){
-        printf("Tried to add value to already full queue!\n");
-    } else {
-        q->data[q->last%1000] = value;
-        q->last++;
-    }
+Queue* createQueue(){
+    Queue* q = malloc(sizeof(Queue));
+    q->first = 0;
+    q->last = 0;
+    q->lData = 10;
+    q->data = malloc(q->lData*sizeof(int));
+    if (errno != 0) {perror("Error while initializing Queue");}
+    return q;
 }
-int popFromQueue(Queue* q){
+
+void freeQueue(Queue* q){
+    free(q->data);
+    free(q);
+    if (errno != 0) {perror("Error while freeing Queue");}
+}
+
+int queueFull(Queue* q){return (q->last-q->first == q->lData);}
+int queueEmpty(Queue* q){return (q->first == q->last);}
+
+int queueRemove(Queue* q){
     if (queueEmpty(q)){
-        printf("Tried to retrieve value from already empty queue!\n");
+        printf("Tried to retrieve value fron empty queue!\n");
     } else {
         q->first++;
-        return (q->data[(q->first-1)%1000]);
+        return q->data[(q->first-1)%q->lData];
     }
+}
+
+void queueAdd(int value, Queue* q){
+    if (queueFull(q) == 1){
+        int* newData = malloc(q->lData*2*sizeof(int));
+        for (int i = 0; i < q->lData; i++){
+            newData[i] = queueRemove(q);
+        }
+        q->first = 0;
+        q->last = q->lData;
+        q->lData *= 2;
+        free(q->data);
+        q->data = newData;
+    }
+    q->data[q->last%q->lData] = value;
+    q->last++;
 }
 /*
 End of modifications
