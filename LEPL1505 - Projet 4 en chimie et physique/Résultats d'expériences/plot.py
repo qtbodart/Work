@@ -92,6 +92,19 @@ def pltDSC(filename):
     plt.plot(t, hf)
     plt.show()
 
+def pltAllDSC(filenames):
+    thfs = []
+    for filename in filenames:
+        t, hf = parseDSC(filename)
+        thfs.append([t,hf])
+    
+    plt.title("DSC")
+    plt.xlabel("Temperature [°C]")
+    plt.ylabel("Heatflow [W/g]")
+    for i in range(len(filenames)):
+        plt.plot(thfs[i][0], [thfs[i][1][j]+i*0.75 for j in range(len(thfs[i][1]))])
+    plt.show()
+
 # Change "/" into "\\" on Windows 
 def pltAll():
     pltDSC("DSC/1e chauffe.txt")
@@ -101,5 +114,5 @@ def pltAll():
     pltTGA("TGA/TGA.txt")
 
 
-
 pltAll()
+pltAllDSC(["DSC/1e chauffe.txt","DSC/2e chauffe.txt","DSC/Refroidissement.txt"])
