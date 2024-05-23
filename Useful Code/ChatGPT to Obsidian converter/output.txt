@@ -1,0 +1,28 @@
+Voici un résumé de la page 8 de votre document :
+
+### Différentiabilité et ses Implications
+
+1. **Définition de la Différentiabilité pour Fonctions de Plusieurs Variables :**
+   - Une fonction $f: U \subseteq \mathbb{R}^n \rightarrow \mathbb{R}$ est différentiable en un point $A$ si l'erreur de l'approximation linéaire de $f$ autour de $A$ tend vers zéro plus rapidement que la distance à $A$ diminue.
+
+2. **Lien entre Différentiabilité et Dérivées Partielles :**
+   - Si $f$ est différentiable en $A$, toutes les dérivées partielles de $f$ existent en ce point. La différentielle de $f$ en $A$ peut alors être exprimée par le vecteur de ses dérivées partielles (gradient).
+
+3. **Équation du Plan Tangent à partir de la Différentiabilité :**
+   - L'équation du plan tangent au graphe de $f$ en un point $(A, f(A))$ est donnée par :
+     $z = f(A) + \nabla f(A) \cdot (X - A)$
+   - Ce plan est une bonne approximation linéaire de $f$ près de $A$.
+
+4. **Théorème de l'Application Linéaire :**
+   - Pour une fonction $F: U \subseteq \mathbb{R}^n \rightarrow \mathbb{R}^m$ différentiable en $A$, l'application linéaire $L_A$ qui approxime $F$ près de $A$ est donnée par la matrice jacobienne de $F$ en $A$.
+
+5. **Continuité des Fonctions Différentiables :**
+   - Si une fonction est différentiable en un point, elle est également continue en ce point. Cela découle de la définition même de la différentiabilité et de l'approximation linéaire qui est continue.
+
+6. **Propriétés des Fonctions Continues :**
+   - La continuité d'une fonction en un point implique des propriétés importantes comme le théorème des valeurs intermédiaires et le théorème des bornes atteintes sur des domaines fermés et bornés.
+
+7. **Utilisation de la Différentiabilité dans l'Optimisation :**
+   - Les conditions de différentiabilité et la disponibilité des dérivées partielles permettent de déterminer les points critiques d'une fonction, qui sont essentiels pour résoudre des problèmes d'optimisation.
+
+Cette page approfondit les concepts de différentiabilité pour les fonctions de plusieurs variables, soulignant l'importance de la différentiabilité non seulement pour la compréhension théorique des fonctions mais aussi pour des applications pratiques telles que l'optimisation et la modélisation géométrique via des plans tangents.
