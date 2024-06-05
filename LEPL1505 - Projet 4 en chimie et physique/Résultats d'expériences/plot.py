@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import csv
+import scipy as sp
 
 # unset GTK_PATH
 
@@ -17,8 +18,11 @@ def parseFTIR(filename):
 
 def pltFTIR(filename):
     wn, t = parseFTIR(filename)
+    peaks, _ = sp.signal.find_peaks([-value for value in wn])
+    print(f"Peaks found : {[value for value in peaks]}")
 
-    plt.title("FTIR - " + filename.split("/")[1].split(".")[0])
+    # plt.title("FTIR - " + filename.split("/")[1].split(".")[0])
+    plt.title("FTIR")
     plt.xlabel("Wave number [cm-1]")
     plt.ylabel("Transmittance")
     plt.plot(wn, t)
@@ -100,9 +104,16 @@ def pltAllDSC(filenames):
     
     plt.title("DSC")
     plt.xlabel("Temperature [°C]")
+    plt.yticks([0,1])
     plt.ylabel("Heatflow [W/g]")
     for i in range(len(filenames)):
+        if filenames[i] == "DSC/Refroidissement.txt":
+            index = thfs[i][1].index(max(thfs[i][1]))
+        else:
+            index = thfs[i][1].index(min(thfs[i][1]))
+        print(f"Extrema heat flow : {thfs[i][1][index]} at temperature {thfs[i][0][index]}\n")
         plt.plot(thfs[i][0], [thfs[i][1][j]+i*0.75 for j in range(len(thfs[i][1]))])
+    plt.legend(["First heating", "Second heating", "Cooling"],loc="upper left")
     plt.show()
 
 # Change "/" into "\\" on Windows 
@@ -114,5 +125,5 @@ def pltAll():
     pltTGA("TGA/TGA.txt")
 
 
-pltAll()
+# pltAll()
 pltAllDSC(["DSC/1e chauffe.txt","DSC/2e chauffe.txt","DSC/Refroidissement.txt"])

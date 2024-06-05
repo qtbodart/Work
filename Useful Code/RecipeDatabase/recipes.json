@@ -1,0 +1,37 @@
+{
+    "Chocolate Protein Bars": {
+        "Ingredients": [
+            "Honey(45g)",
+            "Peanut Butter(30g)",
+            "Coconut Oil(50g)",
+            "Oat Flakes(90g)",
+            "Almonds(25g)",
+            "Chocolate Chips",
+            "Vanilla Extract(Optional)"
+        ],
+        "Directions": "Cut the almonds and mix everything. Leave in fridge 2 hours until set.",
+        "Servings": ""
+    },
+    "Tjap Tjoy": {
+        "Ingredients": [
+            "Chicken(300-500g)",
+            "Red Pepper(1)",
+            "Green Pepper(1)",
+            "Carrot(1)",
+            "Edible-podded peas(50-100g)",
+            "Tomatoes(2)",
+            "Yellow Oignon(1)",
+            "Garlic(2 tsp)",
+            "Ginger(1 tsp)",
+            "Oyster sauce(2 tbsp)",
+            "Soy sauce(4 tbsp)",
+            "Black pepper(to taste)",
+            "Spring Onions(1-2 stalks)",
+            "Lime(1)",
+            "Neutral Oil(1 tbsp)",
+            "Rice(~200g)"
+        ],
+        "Directions": "Cut the chicken into cubes and the spring onion into rings.\nHeat the wok pan with the oil and put the chicken cubes in the pan. Turn regularly until brown on all sides.\nAdd the vegetables to the chicken and fry it.\nAdd the ginger, oignon and garlic and continue to stir fry.\nWhen the vegetables turn soft, add the soy and oyster sauce with 6 tbsp of water and heat for a few more minutes.\nSqueeze the lime and mix well, then garnish with spring onions and serve with rice.",
+        "Servings": "3-4"
+    }
+}
