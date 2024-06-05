@@ -33,5 +33,17 @@
         ],
         "Directions": "Cut the chicken into cubes and the spring onion into rings.\nHeat the wok pan with the oil and put the chicken cubes in the pan. Turn regularly until brown on all sides.\nAdd the vegetables to the chicken and fry it.\nAdd the ginger, oignon and garlic and continue to stir fry.\nWhen the vegetables turn soft, add the soy and oyster sauce with 6 tbsp of water and heat for a few more minutes.\nSqueeze the lime and mix well, then garnish with spring onions and serve with rice.",
         "Servings": "3-4"
+    },
+    "Crepes": {
+        "Ingredients": [
+            "Flour(1 mug)",
+            "Milk(1 mug)",
+            "Eggs(4)",
+            "Sugar(to taste)",
+            "Salt(1 tsp)",
+            "Neutral Oil(3 tbsp)"
+        ],
+        "Directions": "Mix all the ingredients together until smooth. Oil a pan and wipe the excess with a paper towel before cooking.",
+        "Servings": "~15 crepes"
     }
 }
