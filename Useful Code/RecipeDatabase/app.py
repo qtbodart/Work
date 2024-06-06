@@ -54,9 +54,12 @@ def mainloop():
             case "S":
                 output = get_recipe()
                 if type(output) != str:
-                    print(f"\nIngredients : {", ".join(output["Ingredients"])}\n")
-                    print(f"Instructions : {output["Directions"]}\n")
-                    print(f"Number of servings : {output["Servings"] if output["Servings"] != "" else "Unknown"}\n")
+                    ingredients_str = ', '.join(output["Ingredients"])
+                    instructions_str = output["Directions"]
+                    servings_str = output["Servings"] if output["Servings"] != "" else "Unknown"
+                    print(f"\nIngredients : {ingredients_str}\n")
+                    print(f"Instructions : {instructions_str}\n")
+                    print(f"Number of servings : {servings_str}\n")
                 elif output == "UnknownRecipe":
                     print("Recipe unknown, please try again.")
                 continue
