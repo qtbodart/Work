@@ -73,16 +73,14 @@ def mainLoop():
             work_boolvar.set(not work_boolvar.get())
             if work_boolvar.get():
                 current_session_strvar.set("work")
-                duration = 1800
+                duration = 3600
                 while rd.choice([True,False,True]) and cur_time+duration+1800 < end_time and duration < 7200:
                     duration+=1800
                 CS_end_time_s_intvar.set(cur_time+duration)
             
             else:
                 current_session_strvar.set("rest")
-                duration = 1800
-                while not rd.choice([True,False,True]) and cur_time+duration+1800 < end_time and duration < 7200:
-                    duration+=1800
+                duration = 900 + rd.choice([0,900])
                 CS_end_time_s_intvar.set(cur_time+duration)
             
             session_boolvar.set(True)
@@ -112,14 +110,14 @@ CS_end_time_s_intvar = tk.IntVar() # end of session in seconds
 ## strings
 end_time_strvar = tk.StringVar()                      # user input
 error_strvar = tk.StringVar()                         # error string, given "Wrong input, try again." if an error is encountered
-current_session_strvar = tk.StringVar(value="pause")  # string representing current user state, second window
+current_session_strvar = tk.StringVar(value="work")  # string representing current user state, second window
 time_left_strvar = tk.StringVar()                     # session time left, second window
 time_worked_strvar = tk.StringVar()                   # time worked
 
 ## booleans
 session_boolvar = tk.BooleanVar(value=True)  # Represents if the user is currently in session
 pause_boolvar = tk.BooleanVar(value=False)
-work_boolvar = tk.BooleanVar(value=rd.choice([True,False,True]))
+work_boolvar = tk.BooleanVar(value=True)
 #####################
 
 ###### widgets ######
@@ -141,5 +139,5 @@ pause_button = ttk.Button(window, text="Pause", command=pause_function)
 #####################
 
 time()
-CS_end_time_s_intvar.set(get_cur_t()+10)
+CS_end_time_s_intvar.set(get_cur_t()+3600)
 window.mainloop()
