@@ -28,7 +28,7 @@ rest_probability = 0.1                                                          
 #                                                                               #
 # CHUNKS                                                                        #
 # The amount of minutes into which the work and rest intervals are sliced.      #
-chunk = 15                                                                     #
+chunk = 5                                                                       #
 # For example:                                                                  #
 # min_work_duration = 60                                                        #
 # max_work_duration = 120                                                       #
@@ -38,7 +38,7 @@ chunk = 15                                                                     #
 # OTHERS                                                                        #
 #                                                                               #
 # "work" and "rest" begins the schedule with this session, and "random" chooses #
-begin_with = "random"
+begin_with = "random"                                                           #
 # DEBUG                                                                         #
 # prints some info on the command panel if True                                 #
 debug = True                                                                    #
