@@ -10,8 +10,8 @@ import scipy.stats as stats
 #                                                                               #
 # DURATIONS                                                                     #
 min_work_duration = 60   # Minimum amount of time per work session (in minutes) #
-max_work_duration = 180  # Maximum amount of time per work session (in minutes) #
-min_rest_duration = 15   # Minimum amount of time per rest session (in minutes) #
+max_work_duration = 120  # Maximum amount of time per work session (in minutes) #
+min_rest_duration = 30   # Minimum amount of time per rest session (in minutes) #
 max_rest_duration = 60   # Maximum amount of time per rest session (in minutes) #
 #                                                                               #
 #                                                                               #
@@ -19,7 +19,7 @@ max_rest_duration = 60   # Maximum amount of time per rest session (in minutes) 
 # The amount of time spent working or resting is determined randomly,           #
 # through the two variables below.                                              #
 work_probability = 0.6                                                          #
-rest_probability = 0.4                                                          #
+rest_probability = 0.1                                                          #
 # For example :                                                                 #
 # work_probability = 0   -> work time likely from min to (min + max)/2          #
 # work_probability = 0.5 -> work time equally distributed from min to max       #
@@ -28,14 +28,17 @@ rest_probability = 0.4                                                          
 #                                                                               #
 # CHUNKS                                                                        #
 # The amount of minutes into which the work and rest intervals are sliced.      #
-chunk = 10                                                                      #
+chunk = 15                                                                     #
 # For example:                                                                  #
 # min_work_duration = 60                                                        #
 # max_work_duration = 120                                                       #
 # chunk = 30                                                                    #
 # Every work session, the code will choose a duration between : [60,90,120]     #
 #                                                                               #
+# OTHERS                                                                        #
 #                                                                               #
+# "work" and "rest" begins the schedule with this session, and "random" chooses #
+begin_with = "random"
 # DEBUG                                                                         #
 # prints some info on the command panel if True                                 #
 debug = True                                                                    #
@@ -126,8 +129,10 @@ def pause_function():
 
     if pause:
         pause_boolvar.set(False)
+        pause_button_strvar.set("Pause")
     else:
         pause_boolvar.set(True)
+        pause_button_strvar.set("Resume")
 
 def mainLoop():
     loop_init = t.monotonic_ns()                  # Allows to tell how much time is spent in the loop
@@ -199,11 +204,12 @@ time_left_strvar = tk.StringVar()                     # session time left, secon
 time_worked_strvar = tk.StringVar()                   # time worked
 CS_label_strvar = tk.StringVar(value="Current session : ")
 TL_label_strvar = tk.StringVar(value="Time left : ")
+pause_button_strvar = tk.StringVar(value="Pause")
 
 ## booleans
 session_boolvar = tk.BooleanVar(value=True)  # Represents if the user is currently in session
 pause_boolvar = tk.BooleanVar(value=False)
-work_boolvar = tk.BooleanVar(value=bool(rd.choice([True,False,True])))
+work_boolvar = tk.BooleanVar(value=[True if begin_with=="work" else [False if begin_with=="pause" else bool(rd.choice([True, False]))][0]][0])
 #####################
 
 ###### widgets ######
@@ -218,7 +224,7 @@ CS_label = ttk.Label(window, textvariable=CS_label_strvar)
 CS_var_label = ttk.Label(window, textvariable=current_session_strvar)
 TL_label = ttk.Label(window, textvariable=TL_label_strvar)
 TL_var_label = ttk.Label(window, textvariable=time_left_strvar)
-pause_button = ttk.Button(window, text="Pause", command=pause_function)
+pause_button = ttk.Button(window, textvariable=pause_button_strvar, command=pause_function)
 
 # last widgets
 
