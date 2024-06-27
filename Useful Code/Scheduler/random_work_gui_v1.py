@@ -46,31 +46,31 @@ debug = True                                                                    
 
 # functions
 def get_work():
-    choices = [(min_work_duration+i*chunk)*60 for i in range((max_work_duration-min_work_duration)//chunk)]
+    choices = [(min_work_duration+i*chunk)*60 for i in range((max_work_duration-min_work_duration)//chunk+1)]
     #          |____________________________|                 |__________________________________________|
     #            explained in CHUNKS above                  number of chunk that fit the interval [min,max]
 
     mu = (min_work_duration+work_probability*(max_work_duration-min_work_duration))*60
     sigma = 12*(max_work_duration-min_work_duration)
-    print(f"mu : {mu} , sigma : {sigma}\n")
     probabilities = stats.norm.pdf(choices,mu,sigma)
-    print(f"Not normalized probabilities : {probabilities}\n")
     probabilities = probabilities/(sum(probabilities))
-    print(f"Choices : {choices}\nProbs : {probabilities}\n")
+    if debug:
+        print(f"mu : {mu} , sigma : {sigma}")
+        print(f"Choices : {[i//60 for i in choices]}\nProbs : {probabilities}\n")
     return rd.choice(choices, 1, p=probabilities)[0]
 
 def get_rest():
-    choices = [(min_rest_duration+i*chunk)*60 for i in range((max_rest_duration-min_rest_duration)//chunk)]
+    choices = [(min_rest_duration+i*chunk)*60 for i in range((max_rest_duration-min_rest_duration)//chunk+1)]
     #          |____________________________|                 |__________________________________________|
     #            explained in CHUNKS above                  number of chunk that fit the interval [min,max]
     
     mu = (min_rest_duration+rest_probability*(max_rest_duration-min_rest_duration))*60
     sigma = 12*(max_rest_duration-min_rest_duration)
-    print(f"mu : {mu} , sigma : {sigma}\n")
     probabilities = stats.norm.pdf(choices,mu,sigma)
-    print(f"\nNot normalized probabilities : {probabilities}\n")
     probabilities = probabilities/(sum(probabilities))
-    print(f"Choices : {choices}\nProbs : {probabilities}\n")
+    if debug:
+        print(f"mu : {mu} , sigma : {sigma}")
+        print(f"Choices : {[i//60 for i in choices]}\nProbs : {probabilities}\n")
     return rd.choice(choices, 1, p=probabilities)[0]
 
 def switch_to_main():
