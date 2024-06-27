@@ -84,7 +84,8 @@ def switch_to_main():
         CS_var_label.grid(row=0, column=1, sticky=tk.E)
         TL_label.grid(row=1,column=0, sticky=tk.W)
         TL_var_label.grid(row=1,column=1, sticky=tk.E)
-        pause_button.grid(row=2, sticky=tk.W)
+        pause_button.grid(row=2, column=0, sticky=tk.W)
+        stop_button.grid(row=2, column=1, sticky=tk.E)
 
         mainLoop()
     except:
@@ -96,6 +97,7 @@ def end_loop():
     current_session_strvar.set(sec_to_string(time_worked_ns_intvar.get()*1e-9))
     time_left_strvar.set(sec_to_string(time_played_ns_intvar.get()*1e-9))
     pause_button.grid_forget()
+    stop_button.grid_forget()
 
 def time():
     cur_time = str(dt.datetime.now()).split(" ")[1]
@@ -134,6 +136,9 @@ def pause_function():
         pause_boolvar.set(True)
         pause_button_strvar.set("Resume")
 
+def stop_function():
+    stop_boolvar.set(True)
+
 def mainLoop():
     loop_init = t.monotonic_ns()                  # Allows to tell how much time is spent in the loop
     end_time = end_time_s_intvar.get()            # End of schedule, in seconds
@@ -141,9 +146,10 @@ def mainLoop():
     session_end_time = CS_end_time_s_intvar.get() # End of session, in seconds
     session_bool = session_boolvar.get()          # Represents current state, True means the user's currently in session
     pause = pause_boolvar.get()                   # Represents if the user's currently on pause
+    stopped = stop_boolvar.get()
 
     # print(f"Current time : {sec_to_string(cur_time)} \tEnd time : {sec_to_string(end_time)}\tSession end time : {sec_to_string(session_end_time)}\tSession : {current_session_strvar.get()}")
-    if cur_time < end_time:
+    if cur_time < end_time and not stopped:
         if not pause:
             if not session_bool:
                 # if we're not in pause and not in session, we need to choose the next session
@@ -210,7 +216,7 @@ pause_button_strvar = tk.StringVar(value="Pause")
 session_boolvar = tk.BooleanVar(value=True)  # Represents if the user is currently in session
 pause_boolvar = tk.BooleanVar(value=False)
 work_boolvar = tk.BooleanVar(value=[True if begin_with=="work" else [False if begin_with=="pause" else bool(rd.choice([True, False]))][0]][0])
-#####################
+stop_boolvar = tk.BooleanVar(value=False)
 
 ###### widgets ######
 # first widgets
@@ -225,6 +231,7 @@ CS_var_label = ttk.Label(window, textvariable=current_session_strvar)
 TL_label = ttk.Label(window, textvariable=TL_label_strvar)
 TL_var_label = ttk.Label(window, textvariable=time_left_strvar)
 pause_button = ttk.Button(window, textvariable=pause_button_strvar, command=pause_function)
+stop_button = ttk.Button(window, text="Stop", command=stop_function)
 
 # last widgets
 
