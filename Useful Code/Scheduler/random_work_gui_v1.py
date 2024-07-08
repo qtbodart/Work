@@ -56,7 +56,7 @@ def get_work():
     probabilities = probabilities/(sum(probabilities))
     if debug:
         print(f"mu : {mu} , sigma : {sigma}")
-        print(f"Choices : {[i//60 for i in choices]}\nProbs : {probabilities}\n")
+        print(f"Choices : {[i//60 for i in choices]}\nProbs : {probabilities*100}\n")
     return rd.choice(choices, 1, p=probabilities)[0]
 
 def get_rest():
@@ -179,6 +179,8 @@ def mainLoop():
                 if session_end_time-cur_time <= 0:
                     session_boolvar.set(False)
                 else:
+                    if debug:
+                        print(f"Time worked : {sec_to_string(time_worked_ns_intvar.get()*1e-9)}   Time rested : {sec_to_string(time_played_ns_intvar.get()*1e-9)}", end="\r")
                     time_left_strvar.set(sec_to_string(session_end_time-cur_time))
                     if work_boolvar.get():
                         time_worked_ns_intvar.set(time_worked_ns_intvar.get()+(t.monotonic_ns()-loop_init)+1e9)
@@ -199,8 +201,8 @@ window.title("Schedule")
 cur_time_s_intvar = tk.IntVar()    # current time in seconds, updated by @time()
 end_time_s_intvar = tk.IntVar()    # end of schedule in seconds
 CS_end_time_s_intvar = tk.IntVar() # end of session in seconds
-time_worked_ns_intvar = tk.IntVar() # Keeps track of the amount of time spent
-time_played_ns_intvar = tk.IntVar() # working or playing, in nanoseconds
+time_worked_ns_intvar = tk.IntVar(value=0) # Keeps track of the amount of time spent
+time_played_ns_intvar = tk.IntVar(value=0) # working or playing, in nanoseconds
 
 ## strings
 end_time_strvar = tk.StringVar()                      # user input
@@ -237,6 +239,7 @@ stop_button = ttk.Button(window, text="Stop", command=stop_function)
 
 #####################
 
-time()
-CS_end_time_s_intvar.set(get_cur_t()+10)
-window.mainloop()
+if __name__ == "__main__":
+    time()
+    CS_end_time_s_intvar.set(get_cur_t()+1)
+    window.mainloop()
