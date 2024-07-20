@@ -9,7 +9,7 @@ import scipy.stats as stats
 ################  USER-DEFINED VARIABLES (modify as seen fit)  ##################
 #                                                                               #
 # DURATIONS                                                                     #
-min_work_duration = 60   # Minimum amount of time per work session (in minutes) #
+min_work_duration = 30   # Minimum amount of time per work session (in minutes) #
 max_work_duration = 120  # Maximum amount of time per work session (in minutes) #
 min_rest_duration = 30   # Minimum amount of time per rest session (in minutes) #
 max_rest_duration = 60   # Maximum amount of time per rest session (in minutes) #
@@ -18,8 +18,8 @@ max_rest_duration = 60   # Maximum amount of time per rest session (in minutes) 
 # PROBABILITES                                                                  #
 # The amount of time spent working or resting is determined randomly,           #
 # through the two variables below.                                              #
-work_probability = 0.6                                                          #
-rest_probability = 0.1                                                          #
+work_probability = 0.2                                                          #
+rest_probability = 0.3                                                          #
 # For example :                                                                 #
 # work_probability = 0   -> work time likely from min to (min + max)/2          #
 # work_probability = 0.5 -> work time equally distributed from min to max       #
@@ -38,7 +38,7 @@ chunk = 5                                                                       
 # OTHERS                                                                        #
 #                                                                               #
 # "work" and "rest" begins the schedule with this session, and "random" chooses #
-begin_with = "random"                                                           #
+begin_with = "work"                                                             #
 # DEBUG                                                                         #
 # prints some info on the command panel if True                                 #
 debug = True                                                                    #
@@ -210,8 +210,8 @@ error_strvar = tk.StringVar()                         # error string, given "Wro
 current_session_strvar = tk.StringVar(value="pause")  # string representing current user state, second window
 time_left_strvar = tk.StringVar()                     # session time left, second window
 time_worked_strvar = tk.StringVar()                   # time worked
-CS_label_strvar = tk.StringVar(value="Current session : ")
-TL_label_strvar = tk.StringVar(value="Time left : ")
+CS_label_strvar = tk.StringVar(value="   Current session : ")
+TL_label_strvar = tk.StringVar(value="   Time left : ")
 pause_button_strvar = tk.StringVar(value="Pause")
 
 ## booleans
@@ -222,7 +222,10 @@ stop_boolvar = tk.BooleanVar(value=False)
 
 ###### widgets ######
 # first widgets
-label = ttk.Label(window, text="End of session (hh:mm) : ").grid(row=0, column=0)
+menu_bar = tk.Menu(window)
+menu_settings = tk.Menu(menu_bar, tearoff=0)
+menu_timing = tk.Menu(menu_bar, tearoff=0)
+label = ttk.Label(window, text="  End of session (hh:mm) : ").grid(row=0, column=0)
 error_label = ttk.Label(window, textvariable=error_strvar).grid(row=1, column=1)
 entry = ttk.Entry(window,textvariable=end_time_strvar).grid(row=0,column=1)
 entry_button = ttk.Button(window, text="validate", command=switch_to_main).grid(row=0,column=2) # switches to the second window after retrieving @end_time_strvar
@@ -240,6 +243,14 @@ stop_button = ttk.Button(window, text="Stop", command=stop_function)
 #####################
 
 if __name__ == "__main__":
+    window.config(menu=menu_bar)
+    menu_bar.add_cascade(label="Settings",menu=menu_settings)
+    menu_bar.add_cascade(label="Timing",menu=menu_timing)
+    menu_settings.add_command(label="Begin session with ...")
+    menu_timing.add_command(label="Min. time worked", command=tk.NewWindow(window))
+    menu_timing.add_command(label="Max. time worked")
+    menu_timing.add_command(label="Min. time rested")
+    menu_timing.add_command(label="Max. time rested")
     time()
     CS_end_time_s_intvar.set(get_cur_t()+1)
     window.mainloop()
