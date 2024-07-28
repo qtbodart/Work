@@ -11,6 +11,18 @@ import json
 with open("settings.json","r") as file:
     settings = json.load(file)
 settings_keys = (list)(settings.keys())
+print(settings_keys)
+setting_description = {
+    "min_work_duration" : "Minimum amount of time per work session (in minutes)",
+    "max_work_duration" : "Maximum amount of time per work session (in minutes)",
+    "min_rest_duration" : "Minimum amount of time per rest session (in minutes)",
+    "max_rest_duration" : "Maximum amount of time per rest session (in minutes)",
+    "work_probability"  : "Value between 0 and 1. Shifts the time probabilities of a work session. For example, if close to 0, work sessions will likely last \"min_work_duration\"",
+    "rest_probability"  : "Value between 0 and 1. Shifts the time probabilities of a rest session. For example, if close to 0, rest sessions will likely last \"min_work_duration\"",
+    "chunk"             : "Work and rest session durations will be multiples of this value",
+    "begin_with"        : "Either \"work\", \"rest\" or \"random\". The schedule will begin with the selected type of session",
+    "debug"             : "Prints data about the probabilities on the console"
+}   
 
 class GUI:
     def __init__(self):
@@ -58,35 +70,34 @@ class GUI:
 
         ########## widgets #########
         # first widgets
-        self.menu_bar = tk.Menu(self.window)
-        self.menu_settings = tk.Menu(self.menu_bar, tearoff=0)
-        self.menu_timing = tk.Menu(self.menu_bar, tearoff=0)
         self.label = ttk.Label(self.window, text="  End of session (hh:mm) : ").grid(row=0, column=0)
         self.error_label = ttk.Label(self.window, textvariable=self.error_strvar).grid(row=1, column=1)
         self.entry = ttk.Entry(self.window,textvariable=self.end_time_strvar).grid(row=0,column=1)
         self.entry_button = ttk.Button(self.window, text="validate", command=self.switch_to_main).grid(row=0,column=2) # switches to the second window after retrieving @end_time_strvar
 
         # second widgets (CS = Current Session, TL = Time Left)
-        self.CS_label = ttk.Label(self.window, textvariable=self.CS_label_strvar)
-        self.CS_var_label = ttk.Label(self.window, textvariable=self.current_session_strvar)
-        self.TL_label = ttk.Label(self.window, textvariable=self.TL_label_strvar)
-        self.TL_var_label = ttk.Label(self.window, textvariable=self.time_left_strvar)
-        self.pause_button = ttk.Button(self.window, textvariable=self.pause_button_strvar, command=self.pause_function)
-        self.stop_button = ttk.Button(self.window, text="Stop", command=self.stop_function)
+        self.content = ttk.Frame(self.window, border=2, relief='groove')
+        self.CS_label = ttk.Label(self.content, textvariable=self.CS_label_strvar)
+        self.CS_var_label = ttk.Label(self.content, textvariable=self.current_session_strvar)
+        self.TL_label = ttk.Label(self.content, textvariable=self.TL_label_strvar)
+        self.TL_var_label = ttk.Label(self.content, textvariable=self.time_left_strvar)
+        self.pause_button = ttk.Button(self.content, textvariable=self.pause_button_strvar, command=self.pause_function)
+        self.stop_button = ttk.Button(self.content, text="Stop", command=self.stop_function)
+
+        ### Menu config ###
+        self.menu_bar = tk.Menu(self.window,bg='blue',fg='white')
+        self.menu_settings = tk.Menu(self.menu_bar, tearoff=0)
+        self.menu_timing = tk.Menu(self.menu_bar, tearoff=0)
 
         self.window.config(menu=self.menu_bar)
         self.menu_bar.add_cascade(label="Settings",menu=self.menu_settings)
         self.menu_bar.add_cascade(label="Timing",menu=self.menu_timing)
         self.menu_settings.add_command(label="Begin session with ...")
-        self.menu_timing.add_command(label="Min. time worked")
-        self.menu_timing.add_command(label="Max. time worked")
-        self.menu_timing.add_command(label="Min. time rested")
-        self.menu_timing.add_command(label="Max. time rested")
 
+        ### Initialization ###
         self.time()
         self.CS_end_time_s_intvar.set(self.get_cur_t()+1)
         self.window.mainloop()
-    
 
     def get_work(self):
         choices = [(self.min_work_duration+i*self.chunk)*60 for i in range((self.max_work_duration-self.min_work_duration)//self.chunk+1)]
@@ -129,10 +140,10 @@ class GUI:
             self.TL_var_label.grid(row=1,column=1, sticky=tk.E)
             self.pause_button.grid(row=2, column=0, sticky=tk.W)
             self.stop_button.grid(row=2, column=1, sticky=tk.E)
-
+            self.content.pack()
+            self.window.config(bg='grey')
             self.mainLoop()
         except:
-            
             self.error_strvar.set("Wrong input, try again.")
 
     def end_loop(self):
