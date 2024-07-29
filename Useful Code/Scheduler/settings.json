@@ -1,11 +1,11 @@
 {
-    "min_work_duration": 30,
+    "min_work_duration": 60,
     "max_work_duration": 120,
-    "min_rest_duration": 30,
-    "max_rest_duration": 60,
+    "min_rest_duration": 60,
+    "max_rest_duration": 120,
     "work_probability": 0.2,
     "rest_probability": 0.3,
     "chunk": 10,
     "begin_with": "work",
-    "debug": true
+    "debug": 1
 }

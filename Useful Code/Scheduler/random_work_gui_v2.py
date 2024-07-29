@@ -17,10 +17,10 @@ setting_description = {
     "max_work_duration" : "Maximum amount of time per work session (in minutes)",
     "min_rest_duration" : "Minimum amount of time per rest session (in minutes)",
     "max_rest_duration" : "Maximum amount of time per rest session (in minutes)",
-    "work_probability"  : "Value between 0 and 1. Shifts the time probabilities of a work session. For example, if close to 0, work sessions will likely last \"min_work_duration\"",
-    "rest_probability"  : "Value between 0 and 1. Shifts the time probabilities of a rest session. For example, if close to 0, rest sessions will likely last \"min_work_duration\"",
+    "work_probability"  : "Value between 0 and 1. Shifts the time probabilities of a work session. \nFor example, if close to 0, work sessions will likely last \"min_work_duration\" minutes",
+    "rest_probability"  : "Value between 0 and 1. Shifts the time probabilities of a rest session. \nFor example, if close to 1, rest sessions will likely last \"max_rest_duration\" minutes",
     "chunk"             : "Work and rest session durations will be multiples of this value",
-    "begin_with"        : "Either \"work\", \"rest\" or \"random\". The schedule will begin with the selected type of session",
+    "begin_with"        : "Either \"work\", \"rest\" or \"random\". \nThe schedule will begin with the selected type of session",
     "debug"             : "Prints data about the probabilities on the console"
 }   
 
@@ -34,14 +34,10 @@ class GUI:
         self.max_work_duration = settings["max_work_duration"]  
         self.min_rest_duration = settings["min_rest_duration"]  
         self.max_rest_duration = settings["max_rest_duration"]   
-
         self.work_probability = settings["work_probability"]
         self.rest_probability = settings["rest_probability"]
-
         self.chunk = settings["chunk"]
-
         self.begin_with = settings["begin_with"]
-
         self.debug = settings["debug"]
 
         ####### TK variables #######
@@ -91,13 +87,171 @@ class GUI:
 
         self.window.config(menu=self.menu_bar)
         self.menu_bar.add_cascade(label="Settings",menu=self.menu_settings)
-        self.menu_bar.add_cascade(label="Timing",menu=self.menu_timing)
-        self.menu_settings.add_command(label="Begin session with ...")
+        self.menu_settings.add_command(label="Set settings", command=self.set_settings)
 
         ### Initialization ###
         self.time()
         self.CS_end_time_s_intvar.set(self.get_cur_t()+1)
         self.window.mainloop()
+
+    def set_settings(self):
+        # initializing new window
+        self.new_window = tk.Toplevel()
+        self.new_window.title("Settings")
+
+        ##### SETTINGS WIDGETS/VARIABLES #####
+        # min_work_duration
+        minwd_frame = ttk.Frame(self.new_window)
+        self.minwd_entry_strvar = tk.StringVar(self.new_window, value=self.min_work_duration)
+        minwd_entry = ttk.Entry(minwd_frame, textvariable=self.minwd_entry_strvar)
+        minwd_label = ttk.Label(minwd_frame, text="min_work_duration")
+        minwd_description = ttk.Label(minwd_frame, text=setting_description["min_work_duration"])
+        minwd_label.grid(row=0, column=0, sticky=tk.W)
+        minwd_entry.grid(row=0, column=1, sticky=tk.E)
+        minwd_description.grid(row = 1, columnspan=2, sticky=tk.W)
+
+        # max_work_duration
+        maxwd_frame = ttk.Frame(self.new_window)
+        self.maxwd_entry_strvar = tk.StringVar(self.new_window, value=self.max_work_duration)
+        maxwd_entry = ttk.Entry(maxwd_frame, textvariable=self.maxwd_entry_strvar)
+        maxwd_label = ttk.Label(maxwd_frame, text="max_work_duration")
+        maxwd_description = ttk.Label(maxwd_frame, text=setting_description["max_work_duration"])
+        maxwd_label.grid(row=0, column=0, sticky=tk.W)
+        maxwd_entry.grid(row=0, column=1, sticky=tk.E)
+        maxwd_description.grid(row = 1, columnspan=2, sticky=tk.W)
+
+        # min_rest_duration
+        minrd_frame = ttk.Frame(self.new_window)
+        self.minrd_entry_strvar = tk.StringVar(self.new_window, value=self.min_rest_duration)
+        minrd_entry = ttk.Entry(minrd_frame, textvariable=self.minrd_entry_strvar)
+        minrd_label = ttk.Label(minrd_frame, text="min_rest_duration")
+        minrd_description = ttk.Label(minrd_frame, text=setting_description["min_rest_duration"])
+        minrd_label.grid(row=0, column=0, sticky=tk.W)
+        minrd_entry.grid(row=0, column=1, sticky=tk.E)
+        minrd_description.grid(row = 1, columnspan=2, sticky=tk.W)
+
+        # max_rest_duration
+        maxrd_frame = ttk.Frame(self.new_window)
+        self.maxrd_entry_strvar = tk.StringVar(self.new_window, value=self.max_rest_duration)
+        maxrd_entry = ttk.Entry(maxrd_frame, textvariable=self.maxrd_entry_strvar)
+        maxrd_label = ttk.Label(maxrd_frame, text="max_rest_duration")
+        maxrd_description = ttk.Label(maxrd_frame, text=setting_description["max_rest_duration"])
+        maxrd_label.grid(row=0, column=0, sticky=tk.W)
+        maxrd_entry.grid(row=0, column=1, sticky=tk.E)
+        maxrd_description.grid(row = 1, columnspan=2, sticky=tk.W)
+
+        # work_probability
+        wp_frame = ttk.Frame(self.new_window)
+        self.wp_entry_strvar = tk.StringVar(self.new_window, value=self.work_probability)
+        wp_entry = ttk.Entry(wp_frame, textvariable=self.wp_entry_strvar)
+        wp_label = ttk.Label(wp_frame, text="work_probability")
+        wp_description = ttk.Label(wp_frame, text=setting_description["work_probability"])
+        wp_label.grid(row=0, column=0, sticky=tk.W)
+        wp_entry.grid(row=0, column=1, sticky=tk.E)
+        wp_description.grid(columnspan=2, rowspan=2, sticky=tk.NSEW)
+
+        # rest_probability
+        rp_frame = ttk.Frame(self.new_window)
+        self.rp_entry_strvar = tk.StringVar(self.new_window, value=self.rest_probability)
+        rp_entry = ttk.Entry(rp_frame, textvariable=self.rp_entry_strvar)
+        rp_label = ttk.Label(rp_frame, text="rest_probability")
+        rp_description = ttk.Label(rp_frame, text=setting_description["rest_probability"])
+        rp_label.grid(row=0, column=0, sticky=tk.W)
+        rp_entry.grid(row=0, column=1, sticky=tk.E)
+        rp_description.grid(columnspan=2, rowspan=2, sticky=tk.NSEW)
+
+        # chunk
+        chunk_frame = ttk.Frame(self.new_window)
+        self.chunk_entry_strvar = tk.StringVar(self.new_window, value=self.chunk)
+        chunk_entry = ttk.Entry(chunk_frame, textvariable=self.chunk_entry_strvar)
+        chunk_label = ttk.Label(chunk_frame, text="chunk")
+        chunk_description = ttk.Label(chunk_frame, text=setting_description["chunk"])
+        chunk_label.grid(row=0, column=0, sticky=tk.W)
+        chunk_entry.grid(row=0, column=1, sticky=tk.E)
+        chunk_description.grid(columnspan=2, rowspan=2, sticky=tk.NSEW)
+
+        # begin_with
+        bw_frame = ttk.Frame(self.new_window)
+        self.bw_entry_strvar = tk.StringVar(self.new_window, value=self.begin_with)
+        bw_entry = ttk.Entry(bw_frame, textvariable=self.bw_entry_strvar)
+        bw_label = ttk.Label(bw_frame, text="begin_with")
+        bw_description = ttk.Label(bw_frame, text=setting_description["begin_with"])
+        bw_label.grid(row=0, column=0, sticky=tk.W)
+        bw_entry.grid(row=0, column=1, sticky=tk.E)
+        bw_description.grid(columnspan=2, rowspan=2, sticky=tk.NSEW)
+
+        # debug
+        debug_frame = ttk.Frame(self.new_window)
+        self.debug_entry_strvar = tk.StringVar(self.new_window, value=self.debug)
+        debug_entry = ttk.Entry(debug_frame, textvariable=self.debug_entry_strvar)
+        debug_label = ttk.Label(debug_frame, text="debug")
+        debug_description = ttk.Label(debug_frame, text=setting_description["debug"])
+        debug_label.grid(row=0, column=0, sticky=tk.W)
+        debug_entry.grid(row=0, column=1, sticky=tk.E)
+        debug_description.grid(columnspan=2, rowspan=2, sticky=tk.NSEW)
+
+        # save button
+        save_button = ttk.Button(self.new_window, text="Save", command=self.save_settings)
+
+        # grid manager
+        minwd_frame.grid(pady=10, sticky=tk.W)
+        maxwd_frame.grid(pady=10, sticky=tk.W)
+        minrd_frame.grid(pady=10, sticky=tk.W)
+        maxrd_frame.grid(pady=10, sticky=tk.W)
+        wp_frame.grid(pady=10, sticky=tk.W)
+        rp_frame.grid(pady=10, sticky=tk.W)
+        chunk_frame.grid(pady=10, sticky=tk.W)
+        bw_frame.grid(pady=10, sticky=tk.W)
+        debug_frame.grid(pady=10, sticky=tk.W)
+        save_button.grid(pady=10, sticky=tk.W)
+
+        # putting new window on top
+        self.new_window.attributes('-topmost', True)
+        self.new_window.update()
+        self.new_window.attributes('-topmost', False)
+
+    def save_settings(self):
+        # min_work_duration
+        self.min_work_duration = int(self.minwd_entry_strvar.get())
+        settings["min_work_duration"] = self.min_work_duration
+
+        # max_work_duration
+        self.max_work_duration = int(self.maxwd_entry_strvar.get())
+        settings["max_work_duration"] = self.max_work_duration
+
+        # min_rest_duration
+        self.min_rest_duration = int(self.minrd_entry_strvar.get())
+        settings["min_rest_duration"] = self.min_rest_duration
+
+        # max_work_duration
+        self.max_rest_duration = int(self.maxrd_entry_strvar.get())
+        settings["max_rest_duration"] = self.max_work_duration
+
+        # work_probability
+        self.work_probability = float(self.wp_entry_strvar.get())
+        settings["work_probability"] = self.work_probability
+
+        # rest_probability
+        self.rest_probability = float(self.rp_entry_strvar.get())
+        settings["rest_probability"] = self.rest_probability
+
+        # chunk
+        self.chunk = int(self.chunk_entry_strvar.get())
+        settings["chunk"] = self.chunk
+
+        # begin_with
+        self.begin_with = self.bw_entry_strvar.get()
+        settings["begin_with"] = self.begin_with
+
+        # debug
+        self.debug = int(self.debug_entry_strvar.get())
+        settings["debug"] = self.debug
+
+        with open("settings.json", "w") as file:
+            newData = json.dumps(settings, indent=4)
+            print(newData)
+            file.write(newData)
+
 
     def get_work(self):
         choices = [(self.min_work_duration+i*self.chunk)*60 for i in range((self.max_work_duration-self.min_work_duration)//self.chunk+1)]
@@ -110,7 +264,7 @@ class GUI:
         probabilities = probabilities/(sum(probabilities))
         if self.debug:
             print(f"mu : {mu} , sigma : {sigma}")
-            print(f"Choices : {[i//60 for i in choices]}\nProbs : {probabilities*100}\n")
+            print(f"Choices : {[i//60 for i in choices]}\nProbs : {[probability*100 for probability in probabilities]}\n")
         return rd.choice(choices, 1, p=probabilities)[0]
 
     def get_rest(self):
@@ -124,7 +278,7 @@ class GUI:
         probabilities = probabilities/(sum(probabilities))
         if self.debug:
             print(f"mu : {mu} , sigma : {sigma}")
-            print(f"Choices : {[i//60 for i in choices]}\nProbs : {probabilities}\n")
+            print(f"Choices : {[i//60 for i in choices]}\nProbs : {[probability*100 for probability in probabilities]}\n")
         return rd.choice(choices, 1, p=probabilities)[0]
 
     def switch_to_main(self):
