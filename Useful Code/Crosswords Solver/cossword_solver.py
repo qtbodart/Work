@@ -83,12 +83,16 @@ def findWords(orientation):
         case "antidiagonal":
             cur_table = getAntiDiagonal()
     
+    n = 0
     for n_line, line in enumerate(cur_table):
         for word in words:
             if word in line :
                 output.append((str(orientation) + str(n_line) + " upright", word))
+                n+=1
             if word in line[::-1]:
                 output.append((str(orientation) + str(n_line) + " reversed", word))
+                n+=1
+    print(n)
 
 def findAllWords():
     findWords("horizontal")
