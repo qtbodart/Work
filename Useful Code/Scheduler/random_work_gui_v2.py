@@ -61,7 +61,7 @@ class GUI:
         ## booleans
         self.session_boolvar = tk.BooleanVar(value=True)  # Represents if the user is currently in session
         self.pause_boolvar = tk.BooleanVar(value=False)
-        self.work_boolvar = tk.BooleanVar(value=[True if self.begin_with=="work" else [False if self.begin_with=="pause" else bool(rd.choice([True, False]))][0]][0])
+        self.work_boolvar = tk.BooleanVar(value=[True if self.begin_with=="rest" else [False if self.begin_with=="work" else bool(rd.choice([True, False]))][0]][0])
         self.stop_boolvar = tk.BooleanVar(value=False)
 
         ########## widgets #########
@@ -223,9 +223,9 @@ class GUI:
         self.min_rest_duration = int(self.minrd_entry_strvar.get())
         settings["min_rest_duration"] = self.min_rest_duration
 
-        # max_work_duration
+        # max_rest_duration
         self.max_rest_duration = int(self.maxrd_entry_strvar.get())
-        settings["max_rest_duration"] = self.max_work_duration
+        settings["max_rest_duration"] = self.max_rest_duration
 
         # work_probability
         self.work_probability = float(self.wp_entry_strvar.get())
@@ -249,7 +249,8 @@ class GUI:
 
         with open("settings.json", "w") as file:
             newData = json.dumps(settings, indent=4)
-            print(newData)
+            if self.debug:
+                print(newData)
             file.write(newData)
 
 
@@ -263,8 +264,8 @@ class GUI:
         probabilities = stats.norm.pdf(choices,mu,sigma)
         probabilities = probabilities/(sum(probabilities))
         if self.debug:
-            print(f"mu : {mu} , sigma : {sigma}")
-            print(f"Choices : {[i//60 for i in choices]}\nProbs : {[probability*100 for probability in probabilities]}\n")
+            print(f"\n\nmu : {mu} , sigma : {sigma}")
+            print(f"Choices : {[i//60 for i in choices]}\nProbs : {[int(probability*100) for probability in probabilities]}\n")
         return rd.choice(choices, 1, p=probabilities)[0]
 
     def get_rest(self):
@@ -277,8 +278,8 @@ class GUI:
         probabilities = stats.norm.pdf(choices,mu,sigma)
         probabilities = probabilities/(sum(probabilities))
         if self.debug:
-            print(f"mu : {mu} , sigma : {sigma}")
-            print(f"Choices : {[i//60 for i in choices]}\nProbs : {[probability*100 for probability in probabilities]}\n")
+            print(f"\n\nmu : {mu} , sigma : {sigma}")
+            print(f"Choices : {[i//60 for i in choices]}\nProbs : {[int(probability*100) for probability in probabilities]}\n")
         return rd.choice(choices, 1, p=probabilities)[0]
 
     def switch_to_main(self):
