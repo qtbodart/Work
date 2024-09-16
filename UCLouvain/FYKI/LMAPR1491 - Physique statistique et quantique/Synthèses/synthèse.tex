@@ -1,0 +1,34 @@
+% !TEX root = /home/qtbodart/Git/Work/UCLouvain/FYKI/LMAPR1491 - Physique statistique et quantique/Synthèses/synthèse.tex
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{ {./Images/} }
+\usepackage{amsmath}
+\renewcommand{\familydefault}{\sfdefault}
+
+\title{Synthèse LMAPR1491}
+\author{Quentin Bodart}
+\date{Q1 2024-2025}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+
+\section*{Introduction}
+    Le but de la physique statistique est d'exprimer les propriétés d'un matériau (grandeurs thermodynamiques) à partir d'une moyenne prise sur la dynamique des constituants (atomes/molécules) du système.
+    Elle permet, par le bias d'un \textbf{Postulat Statistique}, de déterminer le comportement d'un matériau via la construction d'une \textbf{Physique statistique} de manière simplifiée.
+
+\section{Théorie Cinétique des Gaz (TCG)}
+    La \textbf{Théorie Cinétique des Gaz} applique les lois de la mécanique classique (Newton) aux composants microscopiques du gaz de manière "statistique". Elle ne peut s'appliquer qu'à un gaz constitué d'un grand nombre de molécules identiques, se meuvant aléatoirement, et dont la distance moyenne est bien plus grande que leurs dimensions. Elle considère les collisions entre molécules et les parois comme élastiques.
+
+    \subsection{Pression sur le réservoir}
+        La force exercée par une molécule sur la paroi est égale au taux de transfert de quantité de mouvement à la paroi.
+        Considérant la distance entre deux parois $d$ et une quantité de mouvement $p = 2 mv_{x i}$ où $v_{x i}$ désigne la vitesse de la particule i dans la direction de l'axe x, on peut écrire:
+        $$
+        F_i = \frac{2mv_{x i}}{2 d/v_{x i}} = \frac{mv_{x i}^2}{d}
+        $$ \\
+        La force totale exercée par toutes les $N$ molécules sur la paroi est donc:
+        $$
+        F = \sum F_i = \frac{m}{d} (v_{x1}^2 + v_{x2}^2 + ... + v_{xN}^2)
+        $$
+\end{document}
