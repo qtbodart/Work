@@ -39,50 +39,49 @@ public class Wildfire {
     public int burnForest(int [][] forest) {
         if (forest == null || forest.length == 0 || forest[0].length == 0) return -1;
 
-        int rows = forest.length;
-        int cols = forest[0].length;
         int minutes = 0;
-
-        // Initializing a queue with burning trees and count total trees
+        int numberTrees = 0;
+        int numberBurning = 0;
+        int numberBurned = 0;
         Queue<int[]> queue = new LinkedList<>();
-        int totalTrees = 0;
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
+        for (int i = 0; i < forest.length; i++) {
+            for (int j = 0; j < forest[i].length; j++) {
+                if (forest[i][j] == BURNING) {
+                    queue.offer(new int[]{i, j});
+                    numberBurning++;
+                }
                 if (forest[i][j] == TREE) {
-                    totalTrees++;
-                } else if (forest[i][j] == BURNING) {
-                    queue.add(new int[]{i, j});
+                    numberTrees++;
                 }
             }
         }
 
-        if (totalTrees == 0) return -1; // No trees to burn from the start
+        if (numberBurning == 0 || numberTrees == 0) return -1;
 
-        int[][] directions = {{0,1},{-1,0},{0,-1},{1,0}};
+        int[][] directions = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
         while (!queue.isEmpty()) {
             int size = queue.size();
-            boolean fireSpread = false;
-
+            boolean hasBurned = false;
             for (int i = 0; i < size; i++) {
-                int[] cur = queue.poll();
-                int x = cur[0];
-                int y = cur[1];
-
+                int[] current = queue.poll();
+                int x = current[0];
+                int y = current[1];
                 for (int[] direction : directions) {
                     int newX = x + direction[0];
                     int newY = y + direction[1];
-
-                    if (newX >= 0 && newX < rows && newY >= 0 && newY < cols && forest[newX][newY] == TREE) {
-                        queue.add(new int[]{newX, newY});
-                        totalTrees--;
-                        fireSpread = true;
+                    if (newX >= 0 && newY >= 0 && newX < forest.length && newY < forest[newX].length && forest[newX][newY] == TREE) {
+                        queue.offer(new int[]{newX, newY});
+                        forest[newX][newY] = BURNING;
+                        hasBurned = true;
+                        numberBurned++;
                     }
                 }
             }
-            if (fireSpread) {
+            if (hasBurned) {
                 minutes++;
             }
         }
-        return totalTrees == 0 ? minutes : -1;
+
+        return (numberBurned == numberTrees) ? minutes : -1;
     }
 }
