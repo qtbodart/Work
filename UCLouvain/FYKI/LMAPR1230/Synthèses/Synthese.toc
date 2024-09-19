@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Introduction et rappels}{2}{}%
+\contentsline {subsection}{\numberline {1.1}La chimie organique}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Le carbone}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Pourquoi le carbone?}{2}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Hybridation}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Théorie VSEPR}{4}{}%
+\contentsline {subsection}{\numberline {1.4}Représenter une molécule}{5}{}%
+\contentsline {subsubsection}{\numberline {1.4.1}Formules}{5}{}%
+\contentsline {subsubsection}{\numberline {1.4.2}Structure de Lewis}{5}{}%
+\contentsline {subsection}{\numberline {1.5}Les hydrocarbures}{6}{}%
+\contentsline {subsubsection}{\numberline {1.5.1}Les alcanes}{6}{}%
+\contentsline {subsubsection}{\numberline {1.5.2}Nomenclature}{6}{}%
+\contentsline {subsubsection}{\numberline {1.5.3}Groupes alkyles}{7}{}%
+\contentsline {subsubsection}{\numberline {1.5.4}Alcanes Cycliques}{7}{}%
+\contentsline {subsection}{\numberline {1.6}Les groupes fonctionnels}{8}{}%
