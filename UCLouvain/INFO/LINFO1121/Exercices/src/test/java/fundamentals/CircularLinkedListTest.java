@@ -23,6 +23,14 @@ import java.util.*;
 @Grade
 public class CircularLinkedListTest {
 
+    @Grade(value=0.5)
+    @Order(0)
+    @Test
+    public void simpleValueTest(){
+        CircularLinkedList<String> list = new CircularLinkedList<>();
+        assertTrue(list.isEmpty());
+        assertEquals(0, list.size());
+    }
 
     @Grade(value=0.5)
     @Order(0)
@@ -79,5 +87,7 @@ public class CircularLinkedListTest {
             assertEquals(bIter.next(),aIter.next());
         }
     }
+
+
 
 }

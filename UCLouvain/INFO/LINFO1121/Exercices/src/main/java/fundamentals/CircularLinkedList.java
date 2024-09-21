@@ -28,8 +28,8 @@ import java.util.NoSuchElementException;
 public class CircularLinkedList<Item> implements Iterable<Item> {
 
     private long nOp = 0; // count the number of operations
-    private int n;          // size of the stack
-    private Node  last;   // trailer of the list
+    private int n = 0;          // size of the stack
+    private Node last = null;   // trailer of the list
 
     // helper linked list class
     private class Node {
@@ -37,23 +37,11 @@ public class CircularLinkedList<Item> implements Iterable<Item> {
         private Node next;
     }
 
-    public CircularLinkedList() {
-        // TODO initialize instance variables
-    }
+    public boolean isEmpty() { return n == 0; }
 
-    public boolean isEmpty() {
-        // TODO
-         return false;
-    }
+    public int size() { return n; }
 
-    public int size() {
-        // TODO
-         return -1;
-    }
-
-    private long nOp() {
-        return nOp;
-    }
+    private long nOp() { return nOp; }
 
 
 
@@ -62,8 +50,21 @@ public class CircularLinkedList<Item> implements Iterable<Item> {
      * @param item the item to append
      */
     public void enqueue(Item item) {
-        // TODO
-
+        System.out.println("Enqueued " + item.toString());
+        if (this.isEmpty()){
+            last = new Node();
+            last.item = item;
+            last.next = last;
+            n++;
+            nOp++;
+            return;
+        }
+        Node newNode = new Node();
+        newNode.item = item;
+        newNode.next = last.next;
+        last.next = newNode;
+        n++;
+        nOp++;
     }
 
     /**
@@ -72,7 +73,23 @@ public class CircularLinkedList<Item> implements Iterable<Item> {
      * Returns the element that was removed from the list.
      */
     public Item remove(int index) {
-         return null;
+        if (this.isEmpty()){
+            throw new NoSuchElementException();
+        }
+        if (index < 0 || index >= n){
+            throw new IndexOutOfBoundsException();
+        }
+
+        Node cur = last;
+        for (int i = 0; i < index; i++) {
+            cur = cur.next;
+        }
+        Item output = cur.next.item;
+        cur.next = cur.next.next;
+        n--;
+        nOp++;
+        System.out.println("Removed " + output.toString());
+        return output;
     }
 
 
@@ -95,17 +112,27 @@ public class CircularLinkedList<Item> implements Iterable<Item> {
      */
     private class ListIterator implements Iterator<Item> {
 
-        // TODO You probably need a constructor here and some instance variables
+        Node current = last.next;
+        long oldnOp = nOp();
 
 
         @Override
         public boolean hasNext() {
-             return false;
+            return !(current == last);
         }
 
         @Override
         public Item next() {
-             return null;
+            if (!hasNext()){
+                throw new NoSuchElementException();
+            }
+            if (oldnOp != nOp()) {
+                throw new ConcurrentModificationException();
+            }
+            Item item = current.item;
+            current = current.next;
+            System.out.println("item " + item.toString() + " iterated");
+            return item;
         }
 
     }
