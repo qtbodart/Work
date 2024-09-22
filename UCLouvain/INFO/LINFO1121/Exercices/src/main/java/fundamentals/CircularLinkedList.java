@@ -63,6 +63,7 @@ public class CircularLinkedList<Item> implements Iterable<Item> {
         newNode.item = item;
         newNode.next = last.next;
         last.next = newNode;
+        last = newNode;
         n++;
         nOp++;
     }
@@ -118,7 +119,7 @@ public class CircularLinkedList<Item> implements Iterable<Item> {
 
         @Override
         public boolean hasNext() {
-            return !(current == last);
+            return true;
         }
 
         @Override
