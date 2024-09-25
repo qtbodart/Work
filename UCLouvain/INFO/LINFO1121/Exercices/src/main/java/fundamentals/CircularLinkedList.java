@@ -6,19 +6,19 @@ import java.util.NoSuchElementException;
 
 /**
  * Author Pierre Schaus
- *
+ * _
  * We are interested in the implementation of a circular simply linked list,
  * i.e. a list for which the last position of the list refers, as the next position,
  * to the first position of the list.
- *
+ * _
  * The addition of a new element (enqueue method) is done at the end of the list and
  * the removal (remove method) is done at a particular index of the list.
- *
+ * _
  * A (single) reference to the end of the list (last) is necessary to perform all operations on this queue.
- *
+ * _
  * You are therefore asked to implement this circular simply linked list by completing the class see (TODO's)
  * Most important methods are:
- *
+ * _
  * - the enqueue to add an element;
  * - the remove method [The exception IndexOutOfBoundsException is thrown when the index value is not between 0 and size()-1];
  * - the iterator (ListIterator) used to browse the list in FIFO.
@@ -28,8 +28,8 @@ import java.util.NoSuchElementException;
 public class CircularLinkedList<Item> implements Iterable<Item> {
 
     private long nOp = 0; // count the number of operations
-    private int n = 0;          // size of the stack
-    private Node last = null;   // trailer of the list
+    private int n;          // size of the stack
+    private Node last;   // trailer of the list
 
     // helper linked list class
     private class Node {
@@ -37,12 +37,22 @@ public class CircularLinkedList<Item> implements Iterable<Item> {
         private Node next;
     }
 
-    public boolean isEmpty() { return n == 0; }
+    public CircularLinkedList() {
+        this.n = 0;
+        this.last = null;
+    }
 
-    public int size() { return n; }
+    public boolean isEmpty() {
+        return this.n == 0;
+    }
 
-    private long nOp() { return nOp; }
+    public int size() {
+        return this.n;
+    }
 
+    private long nOp() {
+        return this.nOp;
+    }
 
 
     /**

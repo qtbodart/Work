@@ -1,6 +1,6 @@
 package graphs;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Sophie and Marc want to reduce the bubbles
@@ -86,10 +86,111 @@ public class Bubbles {
      *         ForbiddenRelation and in the list.
      */
     public static List<ForbiddenRelation> cleanBubbles(List<Contact> contacts, int n) {
-        // TODO
-         return null;
-    }
+//        System.out.println("Cleaning bubbles at order "+n);
+//        System.out.println("Contact list given : ");
+//        for (Contact contact : contacts) {
+//            System.out.println(contact.a + " <-> " + contact.b);
+//        }
 
+        Map<String, Integer> degreeMap = new HashMap<>(); // Map of degrees of nodes, each node representing a person
+        Map<String, Set<String>> adjacencyMap = new HashMap<>(); // Map of contacts between people
+        Set<ForbiddenRelation> forbiddenRelations = new HashSet<>(); // Return value, set of forbidden relations, allows to exclude duplicates
+
+        // FIRST IDEA :
+        // Initializing @degreeMap and @adjacencyMap while ignoring "high-priority" links
+        // "High-priority" links are contacts given in @contacts which would increment both nodes' degree over the limit @n
+        // Example : n=4, degreeMap.get(contact.a) = 4, degreeMap.get(contact.b) = 5
+        // Then @contact is considered a "high-priority" link and is automatically put into @forbiddenRelations.
+        // DOES NOT WORK -> Commented the "early pruning" part
+        for (Contact contact : contacts) {
+            String personA = contact.a;
+            String personB = contact.b;
+
+            // Checks if this @contact hasn't been already processed
+            if (adjacencyMap.getOrDefault(personA, new HashSet<>()).contains(personB) || adjacencyMap.getOrDefault(personB, new HashSet<>()).contains(personA)) {
+                continue;
+            }
+
+            int degreeA = degreeMap.getOrDefault(personA, 0);
+            int degreeB = degreeMap.getOrDefault(personB, 0);
+
+//            if (degreeA >= n && degreeB >= n) {
+//                forbiddenRelations.add(new ForbiddenRelation(personA, personB));
+//            } else {
+                degreeMap.put(personA, degreeA + 1);
+                degreeMap.put(personB, degreeB + 1);
+
+                adjacencyMap.computeIfAbsent(personA, k -> new HashSet<>()).add(personB);
+                adjacencyMap.computeIfAbsent(personB, k -> new HashSet<>()).add(personA);
+//            }
+        }
+
+        System.out.println("Adjacency map : ");
+        for (Map.Entry<String, Set<String>> entry : adjacencyMap.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+        System.out.println("Degree map : ");
+        for (Map.Entry<String, Integer> entry : degreeMap.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+        System.out.println("\n");
+
+        boolean changed;
+        do{
+            changed = false;
+            for (String person : degreeMap.keySet()) {
+                int degree = degreeMap.get(person);
+                Set<String> toRemove = adjacencyMap.get(person);
+
+                System.out.println("Removing links from " + person + ":");
+
+                if (degree <= n || toRemove == null) {
+                    continue;
+                }
+
+                // Remove "high priority" links first
+                Iterator<String> itPrio = toRemove.iterator();
+                while (itPrio.hasNext() && degree > n) {
+                    String neighbor = itPrio.next();
+                    if (degreeMap.getOrDefault(neighbor, 0) > n) {
+                        System.out.println("Removing (Priority)" + person + "<->" + neighbor);
+                        itPrio.remove();
+                        adjacencyMap.get(neighbor).remove(person);
+                        forbiddenRelations.add(new ForbiddenRelation(person, neighbor));
+
+                        degreeMap.put(person, degreeMap.get(person) - 1);
+                        degreeMap.put(neighbor, degreeMap.get(neighbor) - 1);
+
+                        degree = degreeMap.get(neighbor);
+                        changed = true;
+                    }
+                }
+
+                // Then remove other links
+                Iterator<String> it = toRemove.iterator();
+                while (it.hasNext() && degree > n) {
+                    String neighbor = it.next();
+                    System.out.println(person + "<->" + neighbor);
+                    it.remove();
+                    adjacencyMap.get(neighbor).remove(person);
+                    forbiddenRelations.add(new ForbiddenRelation(person, neighbor));
+
+                    degreeMap.put(person, degreeMap.get(person) - 1);
+                    degreeMap.put(neighbor, degreeMap.get(neighbor) - 1);
+
+                    degree = degreeMap.get(neighbor);
+                    changed = true;
+                }
+            }
+        }while (changed);
+
+        System.out.println("\nForbidden Relations: ");
+        for (ForbiddenRelation forbiddenRelation : forbiddenRelations) {
+            System.out.println(forbiddenRelation.a + " <-> " + forbiddenRelation.b);
+        }
+        System.out.println("\n");
+        return new ArrayList<>(forbiddenRelations);
+    }
 }
 
 
