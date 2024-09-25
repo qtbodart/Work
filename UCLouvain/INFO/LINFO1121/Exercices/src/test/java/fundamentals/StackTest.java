@@ -30,8 +30,8 @@ public class StackTest {
             assertEquals(2, (int) stack.pop());
             assertEquals(1, (int) stack.pop());
             assertTrue(stack.empty());
-
         }
+
     }
 
 }

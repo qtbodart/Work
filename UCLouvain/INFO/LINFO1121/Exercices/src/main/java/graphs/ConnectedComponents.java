@@ -20,14 +20,12 @@ import java.util.List;
  *
  */
 public class ConnectedComponents {
-
-
+    private static boolean[] passed;
     /**
      * @return the number of connected components in g
      */
     public static int numberOfConnectedComponents(Graph g) {
-        // TODO
-         return -1;
+        passed = new boolean[g.V()];
     }
 
     static class Graph {
@@ -41,6 +39,10 @@ public class ConnectedComponents {
             {
                 edges[i] = new ArrayList<>();
             }
+        }
+
+        private static void iterativeTraversal(Graph g, int node){
+
         }
 
         /**
