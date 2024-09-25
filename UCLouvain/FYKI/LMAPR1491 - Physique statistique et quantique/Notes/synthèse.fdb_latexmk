@@ -1,0 +1,23 @@
+# Fdb version 4
+["pdflatex"] 1727244909.07192 "/home/qtbodart/Git/Work/UCLouvain/FYKI/LMAPR1491 - Physique statistique et quantique/Notes/synthèse.tex" "synthèse.pdf" "synthèse" 1727244909.25418 2
+  "/etc/texmf/web2c/texmf.cnf" 1725561544.73911 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/qtbodart/Git/Work/UCLouvain/FYKI/LMAPR1491 - Physique statistique et quantique/Notes/synthèse.tex" 1727244908.57168 14083 659a0d4e803d00cc1ac05d6d7cd1d12a ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1705352648 20144 147463a6a579f4597269ef9565205cfe ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1705352648 8448 dbc0dbf4156c0bb9ba01a1c685d3bad0 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def" 1663965824 19448 1e988b341dda20961a6b931bcde55519 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty" 1654720880 18387 8f900a490197ebaf93c02ae9476d4b09 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty" 1654720880 8010 a8d949cbdbc5c983593827c9eec252e1 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty" 1654720880 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty" 1654720880 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1725567377 6851204 97fb1eb612eca6a35a60f86fa2a7153f ""
+  "pdfpages.sty" 0 -1 0 ""
+  "synthèse.aux" 1727244909.06969 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "synthèse.tex" 1727244908.57168 14083 659a0d4e803d00cc1ac05d6d7cd1d12a ""
+  (generated)
+  "synthèse.aux"
+  "synthèse.log"
+  "synthèse.pdf"
+  (rewritten before read)
