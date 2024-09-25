@@ -23,11 +23,7 @@ import java.util.*;
  */
 public class WordTransformationSP {
 
-    /**
-     * Rotate the substring between start and end of a given string s
-     * eg. s = HAMBURGER, rotation(s,4,8) = HAMBEGRUR i.e. HAMB + EGRU + R
-     */
-    /**
+    /*
      * Rotate the substring between start and end of a given string s
      * eg. s = HAMBURGER, rotation(s,4,8) = HAMBEGRUR i.e. HAMB + EGRU + R
      *

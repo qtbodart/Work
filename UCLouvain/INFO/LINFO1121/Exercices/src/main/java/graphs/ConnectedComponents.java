@@ -21,11 +21,20 @@ import java.util.List;
  */
 public class ConnectedComponents {
     private static boolean[] passed;
+    static int ncc;
     /**
      * @return the number of connected components in g
      */
     public static int numberOfConnectedComponents(Graph g) {
         passed = new boolean[g.V()];
+        ncc = 0;
+        for (int e = 0; e < g.V(); e++) {
+            if (!passed[e]) {
+                Graph.iterativeTraversal(g, e);
+                ncc++;
+            }
+        }
+        return ncc;
     }
 
     static class Graph {
@@ -42,7 +51,12 @@ public class ConnectedComponents {
         }
 
         private static void iterativeTraversal(Graph g, int node){
-
+            passed[node] = true;
+            for (int cur : g.adj(node)) {
+                if (!passed[cur]) {
+                    iterativeTraversal(g, cur);
+                }
+            }
         }
 
         /**
