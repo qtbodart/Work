@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.26)  26 SEP 2024 10:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.26)  26 SEP 2024 10:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -163,20 +163,20 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (./Synthese.aux)
 \openout1 = `Synthese.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count280
@@ -234,36 +234,36 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 32.
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 25.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 44--51
+Underfull \hbox (badness 10000) in paragraph at lines 37--44
 
  []
 
 <./Images/hybridation_carbone.png, id=10, 606.76688pt x 414.04688pt>
 File: ./Images/hybridation_carbone.png Graphic file (type png)
 <use ./Images/hybridation_carbone.png>
-Package pdftex.def Info: ./Images/hybridation_carbone.png  used on input line 70.
+Package pdftex.def Info: ./Images/hybridation_carbone.png  used on input line 63.
 (pdftex.def)             Requested size: 303.38269pt x 207.02292pt.
 <./Images/liaison_double_c_c.png, id=12, 535.2497pt x 320.69812pt>
 File: ./Images/liaison_double_c_c.png Graphic file (type png)
 <use ./Images/liaison_double_c_c.png>
-Package pdftex.def Info: ./Images/liaison_double_c_c.png  used on input line 76.
+Package pdftex.def Info: ./Images/liaison_double_c_c.png  used on input line 69.
 (pdftex.def)             Requested size: 267.62419pt x 160.34866pt.
 <./Images/liaison_triple_c_c.png, id=13, 458.46281pt x 344.03531pt>
 File: ./Images/liaison_triple_c_c.png Graphic file (type png)
 <use ./Images/liaison_triple_c_c.png>
-Package pdftex.def Info: ./Images/liaison_triple_c_c.png  used on input line 79.
+Package pdftex.def Info: ./Images/liaison_triple_c_c.png  used on input line 72.
 (pdftex.def)             Requested size: 229.23083pt x 172.01723pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--80
+Underfull \hbox (badness 10000) in paragraph at lines 60--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--80
+Underfull \hbox (badness 10000) in paragraph at lines 60--73
 
  []
 
@@ -271,10 +271,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--80
 <./Images/VSEPR.png, id=26, 490.83376pt x 322.95656pt>
 File: ./Images/VSEPR.png Graphic file (type png)
 <use ./Images/VSEPR.png>
-Package pdftex.def Info: ./Images/VSEPR.png  used on input line 90.
+Package pdftex.def Info: ./Images/VSEPR.png  used on input line 83.
 (pdftex.def)             Requested size: 343.58128pt x 226.06804pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--91
+Underfull \hbox (badness 10000) in paragraph at lines 77--84
 
  []
 
@@ -282,50 +282,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--91
 <./Images/structures_planes.png, id=32, 496.10344pt x 85.82062pt>
 File: ./Images/structures_planes.png Graphic file (type png)
 <use ./Images/structures_planes.png>
-Package pdftex.def Info: ./Images/structures_planes.png  used on input line 102.
+Package pdftex.def Info: ./Images/structures_planes.png  used on input line 95.
 (pdftex.def)             Requested size: 297.66435pt x 51.49275pt.
 <./Images/formule_topologique.png, id=33, 370.38374pt x 59.47218pt>
 File: ./Images/formule_topologique.png Graphic file (type png)
 <use ./Images/formule_topologique.png>
-Package pdftex.def Info: ./Images/formule_topologique.png  used on input line 105.
+Package pdftex.def Info: ./Images/formule_topologique.png  used on input line 98.
 (pdftex.def)             Requested size: 296.30739pt x 47.5778pt.
 <./Images/charge_formelle.png, id=34, 384.6872pt x 166.37157pt>
 File: ./Images/charge_formelle.png Graphic file (type png)
 <use ./Images/charge_formelle.png>
-Package pdftex.def Info: ./Images/charge_formelle.png  used on input line 111.
+Package pdftex.def Info: ./Images/charge_formelle.png  used on input line 104.
 (pdftex.def)             Requested size: 384.68625pt x 166.37114pt.
 
-Overfull \hbox (39.68625pt too wide) in paragraph at lines 109--112
+Overfull \hbox (39.68625pt too wide) in paragraph at lines 102--105
 [] 
  []
 
 <./Images/nomenclature_alcanes.png, id=35, 347.79938pt x 250.68657pt>
 File: ./Images/nomenclature_alcanes.png Graphic file (type png)
 <use ./Images/nomenclature_alcanes.png>
-Package pdftex.def Info: ./Images/nomenclature_alcanes.png  used on input line 116.
+Package pdftex.def Info: ./Images/nomenclature_alcanes.png  used on input line 109.
 (pdftex.def)             Requested size: 347.79852pt x 250.68594pt.
 
-Overfull \hbox (2.79852pt too wide) in paragraph at lines 115--117
+Overfull \hbox (2.79852pt too wide) in paragraph at lines 108--110
 [] 
  []
 
 [5 <./Images/structures_planes.png> <./Images/formule_topologique.png> <./Images/charge_formelle.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
 
  []
 
 <./Images/groupes_alkyles.png, id=42, 476.53032pt x 218.31563pt>
 File: ./Images/groupes_alkyles.png Graphic file (type png)
 <use ./Images/groupes_alkyles.png>
-Package pdftex.def Info: ./Images/groupes_alkyles.png  used on input line 135.
+Package pdftex.def Info: ./Images/groupes_alkyles.png  used on input line 128.
 (pdftex.def)             Requested size: 190.60875pt x 87.32469pt.
 <./Images/groupes_alkyles_particuliers.png, id=43, 457.71pt x 206.27063pt>
 File: ./Images/groupes_alkyles_particuliers.png Graphic file (type png)
 <use ./Images/groupes_alkyles_particuliers.png>
-Package pdftex.def Info: ./Images/groupes_alkyles_particuliers.png  used on input line 136.
+Package pdftex.def Info: ./Images/groupes_alkyles_particuliers.png  used on input line 129.
 (pdftex.def)             Requested size: 183.08075pt x 82.50677pt.
 
-Overfull \hbox (30.91171pt too wide) in paragraph at lines 134--137
+Overfull \hbox (30.91171pt too wide) in paragraph at lines 127--130
 [] [] 
  []
 
@@ -333,10 +333,10 @@ Overfull \hbox (30.91171pt too wide) in paragraph at lines 134--137
 <./Images/alcanes_cycliques.png, id=48, 447.17062pt x 234.1247pt>
 File: ./Images/alcanes_cycliques.png Graphic file (type png)
 <use ./Images/alcanes_cycliques.png>
-Package pdftex.def Info: ./Images/alcanes_cycliques.png  used on input line 139.
+Package pdftex.def Info: ./Images/alcanes_cycliques.png  used on input line 132.
 (pdftex.def)             Requested size: 447.16953pt x 234.12411pt.
 
-Overfull \hbox (102.16953pt too wide) in paragraph at lines 139--140
+Overfull \hbox (102.16953pt too wide) in paragraph at lines 132--133
 [] 
  []
 
@@ -344,25 +344,25 @@ Overfull \hbox (102.16953pt too wide) in paragraph at lines 139--140
 <./Images/cetone.png, id=56, 122.70844pt x 105.39375pt>
 File: ./Images/cetone.png Graphic file (type png)
 <use ./Images/cetone.png>
-Package pdftex.def Info: ./Images/cetone.png  used on input line 148.
+Package pdftex.def Info: ./Images/cetone.png  used on input line 141.
 (pdftex.def)             Requested size: 61.35406pt x 52.69673pt.
 <./Images/aldehyde.png, id=57, 121.20282pt x 108.405pt>
 File: ./Images/aldehyde.png Graphic file (type png)
 <use ./Images/aldehyde.png>
-Package pdftex.def Info: ./Images/aldehyde.png  used on input line 149.
+Package pdftex.def Info: ./Images/aldehyde.png  used on input line 142.
 (pdftex.def)             Requested size: 60.60126pt x 54.20236pt.
 <./Images/acide_carboxylique.png, id=58, 152.82094pt x 112.92188pt>
 File: ./Images/acide_carboxylique.png Graphic file (type png)
 <use ./Images/acide_carboxylique.png>
-Package pdftex.def Info: ./Images/acide_carboxylique.png  used on input line 150.
+Package pdftex.def Info: ./Images/acide_carboxylique.png  used on input line 143.
 (pdftex.def)             Requested size: 76.41026pt x 56.46078pt.
 <./Images/ester.png, id=59, 156.585pt x 109.91063pt>
 File: ./Images/ester.png Graphic file (type png)
 <use ./Images/ester.png>
-Package pdftex.def Info: ./Images/ester.png  used on input line 151.
+Package pdftex.def Info: ./Images/ester.png  used on input line 144.
 (pdftex.def)             Requested size: 78.2923pt x 54.95517pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
@@ -370,25 +370,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--154
 <Slides/CM2.pdf, id=68, page=3, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 3>
-Package pdftex.def Info: Slides/CM2.pdf , page3 used on input line 168.
+Package pdftex.def Info: Slides/CM2.pdf , page3 used on input line 161.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=69, page=4, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 4>
-Package pdftex.def Info: Slides/CM2.pdf , page4 used on input line 170.
+Package pdftex.def Info: Slides/CM2.pdf , page4 used on input line 163.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=70, page=5, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 5>
-Package pdftex.def Info: Slides/CM2.pdf , page5 used on input line 172.
+Package pdftex.def Info: Slides/CM2.pdf , page5 used on input line 165.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--184
+Underfull \hbox (badness 10000) in paragraph at lines 168--177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--184
+Underfull \hbox (badness 10000) in paragraph at lines 168--177
 
  []
 
@@ -402,22 +402,22 @@ pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs w
 <Slides/CM2.pdf, id=206, page=7, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 7>
-Package pdftex.def Info: Slides/CM2.pdf , page7 used on input line 184.
+Package pdftex.def Info: Slides/CM2.pdf , page7 used on input line 177.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--192
+Underfull \hbox (badness 10000) in paragraph at lines 180--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--192
+Underfull \hbox (badness 10000) in paragraph at lines 180--185
 
  []
 
 <Slides/CM2.pdf, id=207, page=10, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 10>
-Package pdftex.def Info: Slides/CM2.pdf , page10 used on input line 192.
+Package pdftex.def Info: Slides/CM2.pdf , page10 used on input line 185.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 [10 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
@@ -426,12 +426,12 @@ pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs w
 <Slides/CM2.pdf, id=249, page=16, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 16>
-Package pdftex.def Info: Slides/CM2.pdf , page16 used on input line 201.
+Package pdftex.def Info: Slides/CM2.pdf , page16 used on input line 194.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=250, page=13, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 13>
-Package pdftex.def Info: Slides/CM2.pdf , page13 used on input line 205.
+Package pdftex.def Info: Slides/CM2.pdf , page13 used on input line 198.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
  [11 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
@@ -440,17 +440,17 @@ pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs w
 <Slides/CM2.pdf, id=308, page=22, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 22>
-Package pdftex.def Info: Slides/CM2.pdf , page22 used on input line 226.
+Package pdftex.def Info: Slides/CM2.pdf , page22 used on input line 219.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=309, page=24, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 24>
-Package pdftex.def Info: Slides/CM2.pdf , page24 used on input line 231.
+Package pdftex.def Info: Slides/CM2.pdf , page24 used on input line 224.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=310, page=25, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 25>
-Package pdftex.def Info: Slides/CM2.pdf , page25 used on input line 234.
+Package pdftex.def Info: Slides/CM2.pdf , page25 used on input line 227.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
  [12 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
@@ -459,12 +459,12 @@ pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs w
 <Slides/CM2.pdf, id=389, page=27, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 27>
-Package pdftex.def Info: Slides/CM2.pdf , page27 used on input line 250.
+Package pdftex.def Info: Slides/CM2.pdf , page27 used on input line 243.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=390, page=28, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 28>
-Package pdftex.def Info: Slides/CM2.pdf , page28 used on input line 251.
+Package pdftex.def Info: Slides/CM2.pdf , page28 used on input line 244.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
  [13 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
@@ -473,30 +473,30 @@ pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs w
 <Slides/CM2.pdf, id=559, page=35, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 35>
-Package pdftex.def Info: Slides/CM2.pdf , page35 used on input line 255.
+Package pdftex.def Info: Slides/CM2.pdf , page35 used on input line 248.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=560, page=38, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 38>
-Package pdftex.def Info: Slides/CM2.pdf , page38 used on input line 271.
+Package pdftex.def Info: Slides/CM2.pdf , page38 used on input line 264.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
  [14 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
 pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 272--276
+Underfull \hbox (badness 10000) in paragraph at lines 265--269
 
  []
 
 <Slides/CM2.pdf, id=630, page=41, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 41>
-Package pdftex.def Info: Slides/CM2.pdf , page41 used on input line 276.
+Package pdftex.def Info: Slides/CM2.pdf , page41 used on input line 269.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=631, page=43, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 43>
-Package pdftex.def Info: Slides/CM2.pdf , page43 used on input line 280.
+Package pdftex.def Info: Slides/CM2.pdf , page43 used on input line 273.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 [15 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
@@ -505,17 +505,17 @@ pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs w
 <Slides/CM2.pdf, id=727, page=44, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 44>
-Package pdftex.def Info: Slides/CM2.pdf , page44 used on input line 282.
+Package pdftex.def Info: Slides/CM2.pdf , page44 used on input line 275.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=728, page=45, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 45>
-Package pdftex.def Info: Slides/CM2.pdf , page45 used on input line 283.
+Package pdftex.def Info: Slides/CM2.pdf , page45 used on input line 276.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=729, page=46, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 46>
-Package pdftex.def Info: Slides/CM2.pdf , page46 used on input line 286.
+Package pdftex.def Info: Slides/CM2.pdf , page46 used on input line 279.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
  [16 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
@@ -527,17 +527,17 @@ pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs w
 <Slides/CM2.pdf, id=840, page=47, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 47>
-Package pdftex.def Info: Slides/CM2.pdf , page47 used on input line 287.
+Package pdftex.def Info: Slides/CM2.pdf , page47 used on input line 280.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=841, page=48, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 48>
-Package pdftex.def Info: Slides/CM2.pdf , page48 used on input line 288.
+Package pdftex.def Info: Slides/CM2.pdf , page48 used on input line 281.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 <Slides/CM2.pdf, id=842, page=50, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 50>
-Package pdftex.def Info: Slides/CM2.pdf , page50 used on input line 291.
+Package pdftex.def Info: Slides/CM2.pdf , page50 used on input line 284.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
  [17 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
@@ -549,7 +549,7 @@ pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs w
 <Slides/CM2.pdf, id=924, page=51, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 51>
-Package pdftex.def Info: Slides/CM2.pdf , page51 used on input line 292.
+Package pdftex.def Info: Slides/CM2.pdf , page51 used on input line 285.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
  [18 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
@@ -561,10 +561,10 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4194 strings out of 474222
- 70761 string characters out of 5748733
+ 4193 strings out of 474222
+ 70749 string characters out of 5748733
  1934975 words of memory out of 5000000
- 26387 multiletter control sequences out of 15000+600000
+ 26386 multiletter control sequences out of 15000+600000
  564381 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,6n,79p,332b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s

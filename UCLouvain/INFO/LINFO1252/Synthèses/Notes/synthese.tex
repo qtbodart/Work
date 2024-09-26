@@ -2,15 +2,16 @@
 \usepackage{graphicx} % Required for inserting images
 \graphicspath{ {./Images/} }
 \usepackage{pdfpages}
-\newcommand{\insertslide}[2]{%
-\hspace*{-2.4cm}
-\fbox{\includegraphics[page=#2,scale=0.5]{#1}}
+\newcommand{\insertslide}[2]{
+\begin{center}
+    \fbox{\includegraphics[page=#2,scale=0.25]{#1}}
+\end{center}
 }
 % \insertslide{Slides/CM1.pdf}{1} to insert first page of CM1.pdf, for example.
 \usepackage{amsmath}
 \renewcommand{\familydefault}{\sfdefault}
 
-\title{Synthèse LINFO1252}
+\title{Notes LINFO1252}
 \author{Quentin Bodart}
 \date{Q1 2024-2025}
 
@@ -160,9 +161,132 @@
                     Ils peuvent aussi contenir des \textbf{variables}:\\
                     \includegraphics[scale=.5]{script_variables.png}\\\\
                     et des \textbf{conditionnelles} :\\
-                    \includegraphics[scale=.5]{conditionnelles.png}\\
+                    \includegraphics[scale=.4]{conditionnelles.png}\\
                     et des \textbf{boucles for}:\\
                     \includegraphics[scale=.6]{script_boucle_for.png}
+\pagebreak
+\section{CM2 : language C et compléments}
+    \subsection{Le language C}
+        Jusqu'en 1970, les OS étaient codés en assembleur, ce qui était 
+        très chronophage et difficile à maintenir, d'où la nécessité d'un 
+        language plus haut niveau, mais toujours proche de la machine : le C.
+        Son objectif était de concevoir un language :
+        \begin{itemize}
+            \item Haut niveau (structuré)
+            \item Proche du matériel (accès direct à la mémoire et traduction direct au processeur)
+            \item Efficace (non-interprété et sans machine virtuelle)
+            \item Portable
+        \end{itemize}
+        
+        \subsubsection{Préprocesseur}
+            Le code C est tout d’abord transformé par un
+            préprocesseur avant d’être compilé en
+            langage machine par le compilateur.\\
+            Les directives telles que "\#include" ou "\#define" y sont remplacées
+            par du texte spécifique à la commande.\\
+            C'est seulement après ça que le code est compilé en code machine.
 
-    
+        \subsubsection{headers}
+            Les directives \#include du préprocesseur permettent d’importer
+            des définitions de fonctions, de constantes, etc. d’une librairie \\
+            Séparation entre fichiers headers (.h) et sources (.c) :
+            \begin{itemize}
+                \item Le header contient la défnition des fonctions, suffisante pour savoir
+                comment générer le code pour les appeler
+                \item Le code source contient la mise en œuvre de ces fonctions
+                \item \#include “monheader.h” pour inclure un header du dossier
+                courant (du même projet)
+                \item \#include $<$header.h$>$ pour inclure un header standard
+            \end{itemize}
+        
+        \subsubsection{Intégration avec le shell}
+            \insertslide{Slides/CM2.pdf}{15}
+            Le tableau d'argument donné à main se termine toujours par NULL.
+        
+        \subsubsection{Affichage formatté}
+            Pour afficher un String formatté en C, on peut utiliser la fonction printf:
+            \insertslide{Slides/CM2.pdf}{16}
+            Modificateurs (format specifiers):\\
+            \begin{tabular}{|c|c|}
+                \hline
+                \%c & char \\
+                \hline
+                \%d / \%i & signed int \\
+                \hline
+                \%e / \%E & scientific notation \\
+                \hline
+                \%f & float \\
+                \hline
+                \%ld / \%li & long \\
+                \hline
+                \%lf & double \\
+                \hline
+                \%Lf & long double \\
+                \hline
+            \end{tabular}
+    \subsection{Types de données}
+        \begin{itemize}
+            \item int, long : variable entière
+            \item char : charactère
+            \item double, float : nombre en virgule flottante
+            \item booléens : définis dans stdbool.h, true ou false
+            \item String : pas d'objet String en c, 
+            seulement une chaîne de char $\rightarrow$ longueur de la chaîne inconnue !
+            \item Structures de contrôle : while, for, if, ...
+        \end{itemize}
+        La taille occupée par un type de donnée peut être récupérée via \textbf{sizeof()}.
+        \subsubsection{nombre signés et flottants}
+            Les entiers, en C, sont signés par défaut :
+            \insertslide{Slides/CM2.pdf}{22}
+            Via le mot-clé "unsigned", on peu "dé-signer" un type de donnée :
+            \insertslide{Slides/CM2.pdf}{21}
+            Représentation de nombres flottants:
+            \insertslide{Slides/CM2.pdf}{23}
+        
+        \subsubsection{Caractères}
+            Les caractères en C sont représentés par un nombre, en accord avec la
+            norme ASCII.\\
+            Deux types de charactères :
+            \begin{itemize}
+                \item 0x0....... : permet de représenter les caractères anglais
+                \item 0x1....... : permet de représenter les caractères accentués
+            \end{itemize}
+            \insertslide{Slides/CM2.pdf}{26}
+        
+        \subsubsection{Chaînes de caractères}
+            En C, une chaîne de charactères est stockée sous la forme d'un tableau.\\
+            Le dernier élément du tableau contient le charactère "$\backslash$0".
+        
+        \subsubsection{Pointeurs}
+            Un \textbf{pointeur} est une variable qui contient l’adresse à
+            laquelle est stockée un autre élément (variable, fonction, etc.)\\
+            La mémoire peut être vue comme une suite de "cases" (octets) avec des 
+            adresses consécutives (index de chaque octet).
+            \begin{itemize}
+                \item On peut créer un pointeur en utilisant le caractère "*" et récupérer
+                une adresse en utilsant le caractère "\&".
+                \item Le charctère "*" peut aussi être utilisée sur un pointeur pour récupérer sa valeur (déréférencement)
+                \item En pratique, char[] et char* sont équivalents.
+                \item Les pointeurs permettent de passer une variable par référence à une fonction.
+            \end{itemize}
+        
+        \subsubsection{Pointeurs vers une fonction}
+            Une fonction contient une séquence d'instructions, commençant à l'adresse
+            où est stockée sa première instruction.\\
+            On peut stocker l'adresse d'une fonction dans un \textbf{pointeur de fonction}:\\
+            Déclaration : type (*ptr)([type\_arg]+)\\
+            Exemple :
+            \insertslide{Slides/CM2.pdf}{50}
+        
+        \subsubsection{Manipulation de bits}
+            4 opérateurs binaires :
+            \begin{itemize}
+                \item tilde : inversion $\rightarrow$ tilde00000000 = 11111111
+                \item \& : ET $\rightarrow$ 11111010 \& 01011111 = 01011010
+                \item $|$ : OU $\rightarrow$ 11111010 $|$ 01011111 = 11111111
+                \item \^ : OU exclusif $\rightarrow$ 11111010 \^ 01011111 = 10100101
+            \end{itemize}
+
+    \subsection{Compléments de C}
+        Rien de nouveau ?
 \end{document}
