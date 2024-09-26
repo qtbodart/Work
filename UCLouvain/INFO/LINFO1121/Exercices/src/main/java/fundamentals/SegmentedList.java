@@ -66,25 +66,50 @@ public interface SegmentedList<T> extends Iterable<T> {
 
 class SegmentedListImpl<T> implements SegmentedList<T> {
 
-    // TODO: Implement the SegmentedList interface here
+    int n_segment;
+    int n_elements;
+    int nOp;
+    ArrayList<ArrayList<T>> segments;
+
+    public SegmentedListImpl() {
+        n_segment = 0;
+        n_elements = 0;
+        nOp = 0;
+        segments = new ArrayList<>();
+    }
 
 
     // Add a new segment (list) to the SegmentedList.
     public void addSegment(List<T> segment) {
+        segments.add(new ArrayList<>(segment));
+        n_segment++;
+        n_elements += segment.size();
+        nOp++;
     }
 
     // Remove a segment by its index.
     public void removeSegment(int index) {
+        n_elements -= segments.get(index).size();
+        segments.remove(index);
+        n_segment--;
+        nOp++;
     }
 
     // Get the total size of the segmented list (across all segments).
     public int size() {
-         return -1;
+         return n_elements;
     }
 
     // Retrieve an element at a global index (spanning all segments).
     public T get(int globalIndex) {
-         return null;
+         int elements_checked = 0;
+         for (List<T> segment : segments) {
+             if (globalIndex < elements_checked+segment.size()) {
+                 return segment.get(globalIndex-elements_checked);
+             }
+             elements_checked+=segment.size();
+         }
+         throw new IndexOutOfBoundsException();
     }
 
 
@@ -92,7 +117,29 @@ class SegmentedListImpl<T> implements SegmentedList<T> {
     // Return an iterator for the segmented list.
     @Override
     public Iterator<T> iterator() {
-         return null;
+         return new SegListIterator<T>();
+    }
+
+    private class SegListIterator<T> implements Iterator<T> {
+
+        private int elementIndex = 0;
+        private int segmentIndex = 0;
+        private int enOps;
+
+        @Override
+        public boolean hasNext() {
+            return
+        }
+
+        @Override
+        public T next() {
+            return null;
+        }
+
+        @Override
+        public void remove() {
+            Iterator.super.remove();
+        }
     }
 
 

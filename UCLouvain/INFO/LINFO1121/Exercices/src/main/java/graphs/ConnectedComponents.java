@@ -27,14 +27,7 @@ public class ConnectedComponents {
      */
     public static int numberOfConnectedComponents(Graph g) {
         passed = new boolean[g.V()];
-        ncc = 0;
-        for (int e = 0; e < g.V(); e++) {
-            if (!passed[e]) {
-                Graph.iterativeTraversal(g, e);
-                ncc++;
-            }
-        }
-        return ncc;
+        return 0;
     }
 
     static class Graph {
