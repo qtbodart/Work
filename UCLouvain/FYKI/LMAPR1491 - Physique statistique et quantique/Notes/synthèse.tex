@@ -1,8 +1,13 @@
-% !TEX root = /home/qtbodart/Git/Work/UCLouvain/FYKI/LMAPR1491 - Physique statistique et quantique/Synthèses/synthèse.tex
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
 \graphicspath{ {./Images/} }
 \usepackage{pdfpages}
+\newcommand{\insertslide}[3]{
+\begin{center}
+    \fbox{\includegraphics[page=#2,scale=#3]{#1}}
+\end{center}
+}
+% \insertslide{Slides/CM1.pdf}{1} to insert first page of CM1.pdf, for example.
 \usepackage{amsmath}
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -231,4 +236,52 @@
             On peut enfin calculer $c_V$ dans le modèle d'Einstein : \\
             \includegraphics[scale = .5]{c_v_einstein.png}
         %TODO Système à deux états
+\pagebreak
+\section{CM 3}
+    \subsection{Ensemble Canonique}
+        \insertslide{Slides/CM3}{2}{.6}
+    \subsection{Fonction de partition}
+        \insertslide{Slides/CM3}{3}{.6}
+        \insertslide{Slides/CM3}{4}{.6}
+        \subsubsection{Propriétés de la fonction de partition}
+            Une des propriétés les plus importantes de la fonction de partition est qu'elle est \textbf{multiplicative},
+            c'est-à-dire que la fonction de partition d'un système (Z barré) est \textbf{équivalente au produit des fonctions de partition
+            de chaque constituant} (Z)!\\\\
+            Considérons un ensemble composé de $\tilde N$ éléments discernables, alors:
+            \begin{itemize}
+                \item L’énergie du système est la somme des énergies sur les éléments
+                qui sont indépendants, discernables et non-interagissants
+                \item Chaque élément peut-être dans un ensemble d’états différents de l'état du système global
+                \item Chaque élément ne doit pas être identique que ce soit au niveau
+                énergétique ou sur le nombre d’états orbitaux possibles.
+            \end{itemize}
+            La fonction de partition peut être utilisée avec le formalisme de l'ensemble Canonique
+            afin de retrouver bien plus facilement les propriétés de modèles tels que le système à 
+            deux états, le modèle d'Einstein ou encore le modèle des gaz parfaits. (c.f. CM3)
+    
+    \subsection{Densité d'états}
+        Dans le formalisme canonique, il est souvent nécessaire d'effectuer la somme
+        $$
+        \sum_i (...) e^{-\beta E_j}
+        $$
+        La sommation s’effectue sur tous les états j du système, $E_j$ étant l’énergie du j ème état.\\
+        Pour des systèmes macroscopiques, les énergies $E_j$ sont très peu espacées, ce qui permet de remplacer la somme:
+        $$
+        \sum_i (...) e^{-\beta E_j} \tilde = \int_{E_{min}}^\infty (...) e^{-\beta E} D(E) dE
+        $$
+        où $E_min$ = Energie de l’état fondamental du système (énergie minimale possible) et
+        $D(E)$ = fonction "densité d’état" définie par le nombre d’états dans l’intervalle $dE \rightarrow D(E)dE$
+
+    \subsection{Modèle de Debye}
+        Le modèle de Debye reprend le modèle d'Einstein et assigne à chaque oscillateur une fréquence dépendante de la longueur d'onde ($w(\lambda)$).
+    
+    \subsection{Théorie du corps noir}
+        Le problème du corps noir consiste à comprendre et
+        décrire mathématiquement ce qui se passe quand un
+        morceau de fer chauffé passe de la couleur rouge à
+        la couleur blanche, en émettant une quantité de
+        lumière de plus en plus importante.\\\\
+        L'intensité lumineuse dégagée par un corps noir est donnée par $I = \sigma T^4$, avec $\sigma$ la constante de Stefan-Boltzmann.\\
+        En utilisant le formalisme canonique, on trouve aussi que l'énergie interne d'un corps noir varie en $T^4$.
+
 \end{document}

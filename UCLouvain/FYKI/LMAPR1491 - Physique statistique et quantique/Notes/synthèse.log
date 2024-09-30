@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.5)  25 SEP 2024 08:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.26)  30 SEP 2024 12:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -41,28 +41,342 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen141
 \Gin@req@width=\dimen142
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/pdfpages.sty
+Package: pdfpages 2024/08/20 v0.6b Insert pages of external PDF documents (AM)
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count195
+\calc@Bcount=\count196
+\calc@Adimen=\dimen143
+\calc@Bdimen=\dimen144
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count197
+\calc@Cskip=\skip52
+) (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen145
+\ESO@tempdimb=\dimen146
+ (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+))
+\AM@pagewidth=\dimen147
+\AM@pageheight=\dimen148
+\AM@fboxrule=\dimen149
+ (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2024/01/21 v0.5y Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count198
+\AM@pagebox=\box51
+\AM@global@opts=\toks18
+\AM@pagecnt=\count199
+\AM@toc@title=\toks19
+\AM@lof@heading=\toks20
+\c@AM@survey=\count266
+\AM@templatesizebox=\box52
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip53
 
-! LaTeX Error: File `pdfpages.sty' not found.
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen150
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen151
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count267
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count268
+\leftroot@=\count269
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count270
+\DOTSCASE@=\count271
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen152
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count272
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count273
+\dotsspace@=\muskip16
+\c@parentequation=\count274
+\dspbrk@lvl=\count275
+\tag@help=\toks22
+\row@=\count276
+\column@=\count277
+\maxfields@=\count278
+\andhelp@=\toks23
+\eqnshift@=\dimen153
+\alignsep@=\dimen154
+\tagshift@=\dimen155
+\tagwidth@=\dimen156
+\totwidth@=\dimen157
+\lineht@=\dimen158
+\@envbody=\toks24
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count279
+\l__pdf_internal_box=\box55
+) (./synthèse.aux)
+\openout1 = `synthèse.aux'.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count280
+\scratchdimen=\dimen159
+\scratchbox=\box56
+\nofMPsegments=\count281
+\nofMParguments=\count282
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count283
+\MPscratchDim=\dimen160
+\MPnumerator=\count284
+\makeMPintoPDFobject=\count285
+\everyMPtoPDFconversion=\toks27
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (./synthèse.toc)
+\tf@toc=\write3
+\openout3 = `synthèse.toc'.
 
-Enter file name: 
-/home/qtbodart/Git/Work/UCLouvain/FYKI/LMAPR1491 - Physique statistique et quantique/Notes/synthèse.tex:6: Emergency stop.
-<read *> 
-         
-l.6 \usepackage
-               {amsmath}^^M
-*** (cannot \read from terminal in nonstop modes)
+ [1
 
- 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (6.63918pt too wide) in paragraph at lines 24--26
+\OT1/cmss/m/n/10 Le but de la physique statis-tique est d'exprimer les pro-pri^^Set^^Ses d'un mat^^Seriau (grandeurs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--38
+
+ []
+
+[2]
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 69.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
+File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 82--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
+
+ []
+
+[3{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<./Images/chaleurs_specifiques.png, id=22, 372.64218pt x 353.82187pt>
+File: ./Images/chaleurs_specifiques.png Graphic file (type png)
+<use ./Images/chaleurs_specifiques.png>
+Package pdftex.def Info: ./Images/chaleurs_specifiques.png  used on input line 119.
+(pdftex.def)             Requested size: 186.32063pt x 176.91049pt.
+LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 120.
+<./Images/gaz_diatomique.png, id=24, 326.72063pt x 101.62968pt>
+File: ./Images/gaz_diatomique.png Graphic file (type png)
+<use ./Images/gaz_diatomique.png>
+Package pdftex.def Info: ./Images/gaz_diatomique.png  used on input line 125.
+(pdftex.def)             Requested size: 326.71982pt x 101.62943pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--131
+
+ []
+
+[4 <./Images/chaleurs_specifiques.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 133--140
+
+ []
+
+
+Overfull \hbox (4.85185pt too wide) in paragraph at lines 133--140
+\OML/cmm/m/it/10 ^^^$\OT1/cmss/m/n/10 , $\OML/cmm/m/it/10 ^^^[]$\OT1/cmss/m/n/10 , $\OML/cmm/m/it/10 ^^^[]$ \OT1/cmss/m/n/10 et $\OML/cmm/m/it/10 ^^^[]$ \OT1/cmss/m/n/10 sont toutes des \OT1/cmss/bx/n/10 Cu-mu-la-tive Dis-tri-bu-tion Func-tion \OT1/cmss/m/n/10 (c.f. LEPL1109).
+ []
+
+[5 <./Images/gaz_diatomique.png>]
+<./Images/espace_de_phase_exs.png, id=36, 451.6875pt x 189.70876pt>
+File: ./Images/espace_de_phase_exs.png Graphic file (type png)
+<use ./Images/espace_de_phase_exs.png>
+Package pdftex.def Info: ./Images/espace_de_phase_exs.png  used on input line 159.
+(pdftex.def)             Requested size: 225.84319pt x 94.85414pt.
+ [6 <./Images/espace_de_phase_exs.png>]
+<./Images/niveaux_d_energie.png, id=43, 417.05812pt x 191.21437pt>
+File: ./Images/niveaux_d_energie.png Graphic file (type png)
+<use ./Images/niveaux_d_energie.png>
+Package pdftex.def Info: ./Images/niveaux_d_energie.png  used on input line 196.
+(pdftex.def)             Requested size: 333.64694pt x 152.9717pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--225
+
+ []
+
+[7 <./Images/niveaux_d_energie.png>]
+<./Images/c_v_einstein.png, id=49, 429.10312pt x 366.61969pt>
+File: ./Images/c_v_einstein.png Graphic file (type png)
+<use ./Images/c_v_einstein.png>
+Package pdftex.def Info: ./Images/c_v_einstein.png  used on input line 237.
+(pdftex.def)             Requested size: 214.55103pt x 183.30939pt.
+ [8 <./Images/c_v_einstein.png>]
+<Slides/CM3.pdf, id=54, page=2, 598.235pt x 845.1575pt>
+File: Slides/CM3.pdf Graphic file (type pdf)
+<use Slides/CM3.pdf, page 2>
+Package pdftex.def Info: Slides/CM3.pdf , page2 used on input line 242.
+(pdftex.def)             Requested size: 358.94377pt x 507.09842pt.
+
+Overfull \hbox (20.74376pt too wide) in paragraph at lines 242--242
+ [] 
+ []
+
+
+Overfull \vbox (14.3873pt too high) has occurred while \output is active []
+
+ [9 <./Slides/CM3.pdf>]
+<Slides/CM3.pdf, id=121, page=3, 598.235pt x 845.1575pt>
+File: Slides/CM3.pdf Graphic file (type pdf)
+<use Slides/CM3.pdf, page 3>
+Package pdftex.def Info: Slides/CM3.pdf , page3 used on input line 244.
+(pdftex.def)             Requested size: 358.94377pt x 507.09842pt.
+
+Overfull \hbox (20.74376pt too wide) in paragraph at lines 244--244
+ [] 
+ []
+
+<Slides/CM3.pdf, id=122, page=4, 598.235pt x 845.1575pt>
+File: Slides/CM3.pdf Graphic file (type pdf)
+<use Slides/CM3.pdf, page 4>
+Package pdftex.def Info: Slides/CM3.pdf , page4 used on input line 245.
+(pdftex.def)             Requested size: 358.94377pt x 507.09842pt.
+
+Overfull \hbox (20.74376pt too wide) in paragraph at lines 245--245
+ [] 
+ []
+
+[10 <./Slides/CM3.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 247--251
+
+ []
+
+[11 <./Slides/CM3.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 279--286
+
+ []
+
+[12] [13] (./synthèse.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+ ) 
 Here is how much of TeX's memory you used:
- 676 strings out of 476139
- 9705 string characters out of 5794455
- 1922975 words of memory out of 5000000
- 22754 multiletter control sequences out of 15000+600000
- 558069 words of font info for 36 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 57i,0n,65p,307b,36s stack positions out of 10000i,1000n,20000p,200000b,200000s
-/home/qtbodart/Git/Work/UCLouvain/FYKI/LMAPR1491 - Physique statistique et quantique/Notes/synthèse.tex:6:  ==> Fatal error occurred, no output PDF file produced!
+ 4046 strings out of 474222
+ 65983 string characters out of 5748733
+ 1932975 words of memory out of 5000000
+ 26238 multiletter control sequences out of 15000+600000
+ 564737 words of font info for 59 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 68i,6n,79p,570b,207s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb>
+Output written on synthèse.pdf (13 pages, 1334759 bytes).
+PDF statistics:
+ 399 PDF objects out of 1000 (max. 8388607)
+ 243 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+
