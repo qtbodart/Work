@@ -1,0 +1,63 @@
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ cd folder1
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1/folder1$ ls
+file1
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1/folder1$ cat file1
+Maintenant vous devez sortir de ce dossier en tapant
+cd ..
+Et ensuite trouver et ouvrir le fichier suivant dans folder2 sans utiliser cd(1posix). Pour cela, utilisez
+ls folder2        # liste le contenu du répertoir folder2
+cat folder2/nom   # remplacez nom par le nom du fichier
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1/folder1$ cd ..
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ ls folder2
+file2
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ cat folder2/file2
+Bien, l'instruction suivante est dans folder3/zqdspz/mptcp/file3, vous pouvez soit aller dans le dossier folder3/zqdspz/mptcp/ avec cd(1posix), soit directement lire folder3/zqdspz/mptcp/file3 depuis la racine de l'arborescence de l'exercice.
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ cat folder3/zqdspz/mptcp/file3
+Quel est le nombre de *bytes* dans folder3/zqdspz/mptcp/fileWithChar ? Pour le savoir, utilisez wc(1).
+Attention, pour afficher le nombre de bytes dans un fichier, vous devez utiliser un paramètre spécifique. Tapez
+man wc
+pour savoir comment wc(1) fonctionne.
+L'instruction suivante est dans le fichier folder4/mission.
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ ^C
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ cat folder3/zqdspz/mptcp/fileWithChar | wc -c
+59
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ cat folder4/mission
+Maintenant vous allez apprendre à écrire dans un fichier. Il y a quelques éditeurs en ligne de commande. Un des plus facile d'utilisation est nano.
+Ici nous vous demandons d'ouvrir numberOfBytes, de l'éditer (remplacer le 0 par le nombre de bytes retourné par wc(1) à l'exercice précédent) et le sauvegarder.
+Pour cela, ouvrez-le avec
+nano numberOfBytes
+enregristrez avec ctrl+o puis entrée
+quittez avec ctrl+x.
+
+Pour exécuter un script ou un exécutable, vous devez taper ./cheminVersLExecutable
+Ici il y a un petit script, nextMission, qui vérifie que vous avez écrit la bonne réponse dans numberOfBytes. Exécutez-le depuis le folder4 pour obtenir la prochaine instruction.
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ ls folder4
+mission  nextMission  numberOfBytes
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ nano folder4/numberOfBytes
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ ./folder4/nextMission
+Bien, maintenant allez dans le folder5 et executez mission
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ ./folder5/mission
+Vous pouvez donner des arguments à un exécutable : vous devez juste les séparer par un espace. Ici, écrivez
+./mission next
+pour avoir la suite des instructions
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ ./folder5/mission next
+grep(1) cherche dans les fichiers passés en arguments les lignes contenant le PATTERN donné.
+Cherchez la ligne contenant "lsinf1252" dans le fichier lorem.
+Ensuite, appelez ce script avec le mot de passe comme seul argument.
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ grep "lsinf1252" folder5/lorem
+lsinf1252, le prochain mot de passe est "obo".
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ ./folder5/mission obo
+Félicitation, vous avez réussi le CTF !
+Pour générer le code à entrer sur inginious, saisissez votre *pseudo inginious* et pressez entrée
+qbodart
+Le code a fournir à inginious est :
+cc1plus: fatal error: main.cpp: Aucun fichier ou dossier de ce nom
+compilation terminated.
+./folder5/mission: ligne 21: ./chiffre: Aucun fichier ou dossier de ce nom
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1$ cd folder5
+qtbodart@quentin-x705uv:~/Bureau/UCL/INFO/LINFO1252/Exercices Inginious/Capture The Flag 1/folder5$ ./mission obo
+Félicitation, vous avez réussi le CTF !
+Pour générer le code à entrer sur inginious, saisissez votre *pseudo inginious* et pressez entrée
+qbodart
+Le code a fournir à inginious est :
+pbo
