@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.26)  26 SEP 2024 10:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.26)  3 OCT 2024 10:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -227,13 +227,13 @@ Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)) (./Synthese.toc)
+)) (./Synthese.toc [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write3
 \openout3 = `Synthese.toc'.
 
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+ [2]
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 25.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -242,17 +242,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--44
 
  []
 
-<./Images/hybridation_carbone.png, id=10, 606.76688pt x 414.04688pt>
+<./Images/hybridation_carbone.png, id=13, 606.76688pt x 414.04688pt>
 File: ./Images/hybridation_carbone.png Graphic file (type png)
 <use ./Images/hybridation_carbone.png>
 Package pdftex.def Info: ./Images/hybridation_carbone.png  used on input line 63.
 (pdftex.def)             Requested size: 303.38269pt x 207.02292pt.
-<./Images/liaison_double_c_c.png, id=12, 535.2497pt x 320.69812pt>
+<./Images/liaison_double_c_c.png, id=15, 535.2497pt x 320.69812pt>
 File: ./Images/liaison_double_c_c.png Graphic file (type png)
 <use ./Images/liaison_double_c_c.png>
 Package pdftex.def Info: ./Images/liaison_double_c_c.png  used on input line 69.
 (pdftex.def)             Requested size: 267.62419pt x 160.34866pt.
-<./Images/liaison_triple_c_c.png, id=13, 458.46281pt x 344.03531pt>
+<./Images/liaison_triple_c_c.png, id=16, 458.46281pt x 344.03531pt>
 File: ./Images/liaison_triple_c_c.png Graphic file (type png)
 <use ./Images/liaison_triple_c_c.png>
 Package pdftex.def Info: ./Images/liaison_triple_c_c.png  used on input line 72.
@@ -267,8 +267,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--73
 
  []
 
-[2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3 <./Images/hybridation_carbone.png> <./Images/liaison_double_c_c.png>]
-<./Images/VSEPR.png, id=26, 490.83376pt x 322.95656pt>
+[3{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4 <./Images/hybridation_carbone.png> <./Images/liaison_double_c_c.png>]
+<./Images/VSEPR.png, id=29, 490.83376pt x 322.95656pt>
 File: ./Images/VSEPR.png Graphic file (type png)
 <use ./Images/VSEPR.png>
 Package pdftex.def Info: ./Images/VSEPR.png  used on input line 83.
@@ -278,28 +278,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--84
 
  []
 
-[4 <./Images/liaison_triple_c_c.png> <./Images/VSEPR.png>]
-<./Images/structures_planes.png, id=32, 496.10344pt x 85.82062pt>
+[5 <./Images/liaison_triple_c_c.png> <./Images/VSEPR.png>]
+<./Images/structures_planes.png, id=35, 496.10344pt x 85.82062pt>
 File: ./Images/structures_planes.png Graphic file (type png)
 <use ./Images/structures_planes.png>
 Package pdftex.def Info: ./Images/structures_planes.png  used on input line 95.
 (pdftex.def)             Requested size: 297.66435pt x 51.49275pt.
-<./Images/formule_topologique.png, id=33, 370.38374pt x 59.47218pt>
+<./Images/formule_topologique.png, id=36, 370.38374pt x 59.47218pt>
 File: ./Images/formule_topologique.png Graphic file (type png)
 <use ./Images/formule_topologique.png>
 Package pdftex.def Info: ./Images/formule_topologique.png  used on input line 98.
 (pdftex.def)             Requested size: 296.30739pt x 47.5778pt.
-<./Images/charge_formelle.png, id=34, 384.6872pt x 166.37157pt>
+<./Images/charge_formelle.png, id=37, 384.6872pt x 166.37157pt>
 File: ./Images/charge_formelle.png Graphic file (type png)
 <use ./Images/charge_formelle.png>
 Package pdftex.def Info: ./Images/charge_formelle.png  used on input line 104.
-(pdftex.def)             Requested size: 384.68625pt x 166.37114pt.
-
-Overfull \hbox (39.68625pt too wide) in paragraph at lines 102--105
-[] 
- []
-
-<./Images/nomenclature_alcanes.png, id=35, 347.79938pt x 250.68657pt>
+(pdftex.def)             Requested size: 307.75017pt x 133.09741pt.
+<./Images/nomenclature_alcanes.png, id=38, 347.79938pt x 250.68657pt>
 File: ./Images/nomenclature_alcanes.png Graphic file (type png)
 <use ./Images/nomenclature_alcanes.png>
 Package pdftex.def Info: ./Images/nomenclature_alcanes.png  used on input line 109.
@@ -309,17 +304,17 @@ Overfull \hbox (2.79852pt too wide) in paragraph at lines 108--110
 [] 
  []
 
-[5 <./Images/structures_planes.png> <./Images/formule_topologique.png> <./Images/charge_formelle.png>]
+[6 <./Images/structures_planes.png> <./Images/formule_topologique.png> <./Images/charge_formelle.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 112--114
 
  []
 
-<./Images/groupes_alkyles.png, id=42, 476.53032pt x 218.31563pt>
+<./Images/groupes_alkyles.png, id=45, 476.53032pt x 218.31563pt>
 File: ./Images/groupes_alkyles.png Graphic file (type png)
 <use ./Images/groupes_alkyles.png>
 Package pdftex.def Info: ./Images/groupes_alkyles.png  used on input line 128.
 (pdftex.def)             Requested size: 190.60875pt x 87.32469pt.
-<./Images/groupes_alkyles_particuliers.png, id=43, 457.71pt x 206.27063pt>
+<./Images/groupes_alkyles_particuliers.png, id=46, 457.71pt x 206.27063pt>
 File: ./Images/groupes_alkyles_particuliers.png Graphic file (type png)
 <use ./Images/groupes_alkyles_particuliers.png>
 Package pdftex.def Info: ./Images/groupes_alkyles_particuliers.png  used on input line 129.
@@ -329,34 +324,29 @@ Overfull \hbox (30.91171pt too wide) in paragraph at lines 127--130
 [] [] 
  []
 
-[6 <./Images/nomenclature_alcanes.png>]
-<./Images/alcanes_cycliques.png, id=48, 447.17062pt x 234.1247pt>
+[7 <./Images/nomenclature_alcanes.png>]
+<./Images/alcanes_cycliques.png, id=52, 447.17062pt x 234.1247pt>
 File: ./Images/alcanes_cycliques.png Graphic file (type png)
 <use ./Images/alcanes_cycliques.png>
 Package pdftex.def Info: ./Images/alcanes_cycliques.png  used on input line 132.
-(pdftex.def)             Requested size: 447.16953pt x 234.12411pt.
-
-Overfull \hbox (102.16953pt too wide) in paragraph at lines 132--133
-[] 
- []
-
-[7 <./Images/groupes_alkyles.png> <./Images/groupes_alkyles_particuliers.png> <./Images/alcanes_cycliques.png>]
-<./Images/cetone.png, id=56, 122.70844pt x 105.39375pt>
+(pdftex.def)             Requested size: 313.01729pt x 163.88615pt.
+ [8 <./Images/groupes_alkyles.png> <./Images/groupes_alkyles_particuliers.png> <./Images/alcanes_cycliques.png>]
+<./Images/cetone.png, id=59, 122.70844pt x 105.39375pt>
 File: ./Images/cetone.png Graphic file (type png)
 <use ./Images/cetone.png>
 Package pdftex.def Info: ./Images/cetone.png  used on input line 141.
 (pdftex.def)             Requested size: 61.35406pt x 52.69673pt.
-<./Images/aldehyde.png, id=57, 121.20282pt x 108.405pt>
+<./Images/aldehyde.png, id=60, 121.20282pt x 108.405pt>
 File: ./Images/aldehyde.png Graphic file (type png)
 <use ./Images/aldehyde.png>
 Package pdftex.def Info: ./Images/aldehyde.png  used on input line 142.
 (pdftex.def)             Requested size: 60.60126pt x 54.20236pt.
-<./Images/acide_carboxylique.png, id=58, 152.82094pt x 112.92188pt>
+<./Images/acide_carboxylique.png, id=61, 152.82094pt x 112.92188pt>
 File: ./Images/acide_carboxylique.png Graphic file (type png)
 <use ./Images/acide_carboxylique.png>
 Package pdftex.def Info: ./Images/acide_carboxylique.png  used on input line 143.
 (pdftex.def)             Requested size: 76.41026pt x 56.46078pt.
-<./Images/ester.png, id=59, 156.585pt x 109.91063pt>
+<./Images/ester.png, id=62, 156.585pt x 109.91063pt>
 File: ./Images/ester.png Graphic file (type png)
 <use ./Images/ester.png>
 Package pdftex.def Info: ./Images/ester.png  used on input line 144.
@@ -366,213 +356,272 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
-[8 <./Images/cetone.png> <./Images/aldehyde.png> <./Images/acide_carboxylique.png> <./Images/ester.png>]
-<Slides/CM2.pdf, id=68, page=3, 845.1575pt x 597.23125pt>
+[9 <./Images/cetone.png> <./Images/aldehyde.png> <./Images/acide_carboxylique.png> <./Images/ester.png>]
+<Slides/CM2.pdf, id=71, page=3, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 3>
 Package pdftex.def Info: Slides/CM2.pdf , page3 used on input line 161.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=69, page=4, 845.1575pt x 597.23125pt>
+<Slides/CM2.pdf, id=72, page=4, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 4>
 Package pdftex.def Info: Slides/CM2.pdf , page4 used on input line 163.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=70, page=5, 845.1575pt x 597.23125pt>
+ [10 <./Slides/CM2.pdf> <./Slides/CM2.pdf
+
+pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Slides/CM2.pdf, id=162, page=5, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 5>
-Package pdftex.def Info: Slides/CM2.pdf , page5 used on input line 165.
+Package pdftex.def Info: Slides/CM2.pdf , page5 used on input line 166.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--177
+Underfull \hbox (badness 10000) in paragraph at lines 169--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--177
+Underfull \hbox (badness 10000) in paragraph at lines 169--178
 
  []
 
-[9 <./Slides/CM2.pdf> <./Slides/CM2.pdf
-
-pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Slides/CM2.pdf
-
-pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<Slides/CM2.pdf, id=206, page=7, 845.1575pt x 597.23125pt>
+<Slides/CM2.pdf, id=163, page=7, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 7>
-Package pdftex.def Info: Slides/CM2.pdf , page7 used on input line 177.
+Package pdftex.def Info: Slides/CM2.pdf , page7 used on input line 178.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+[11 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--185
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--185
+pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 181--186
 
  []
 
-<Slides/CM2.pdf, id=207, page=10, 845.1575pt x 597.23125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--186
+
+ []
+
+<Slides/CM2.pdf, id=238, page=10, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 10>
-Package pdftex.def Info: Slides/CM2.pdf , page10 used on input line 185.
+Package pdftex.def Info: Slides/CM2.pdf , page10 used on input line 186.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-[10 <./Slides/CM2.pdf> <./Slides/CM2.pdf
-
-pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<Slides/CM2.pdf, id=249, page=16, 845.1575pt x 597.23125pt>
+<Slides/CM2.pdf, id=239, page=16, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 16>
-Package pdftex.def Info: Slides/CM2.pdf , page16 used on input line 194.
+Package pdftex.def Info: Slides/CM2.pdf , page16 used on input line 195.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=250, page=13, 845.1575pt x 597.23125pt>
+[12 <./Slides/CM2.pdf> <./Slides/CM2.pdf
+
+pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Slides/CM2.pdf, id=293, page=13, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 13>
-Package pdftex.def Info: Slides/CM2.pdf , page13 used on input line 198.
+Package pdftex.def Info: Slides/CM2.pdf , page13 used on input line 200.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
- [11 <./Slides/CM2.pdf> <./Slides/CM2.pdf
-
-pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<Slides/CM2.pdf, id=308, page=22, 845.1575pt x 597.23125pt>
+ [13 <./Slides/CM2.pdf>]
+<Slides/CM2.pdf, id=317, page=22, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 22>
-Package pdftex.def Info: Slides/CM2.pdf , page22 used on input line 219.
+Package pdftex.def Info: Slides/CM2.pdf , page22 used on input line 221.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=309, page=24, 845.1575pt x 597.23125pt>
+<Slides/CM2.pdf, id=318, page=24, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
 <use Slides/CM2.pdf, page 24>
-Package pdftex.def Info: Slides/CM2.pdf , page24 used on input line 224.
-(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=310, page=25, 845.1575pt x 597.23125pt>
-File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 25>
-Package pdftex.def Info: Slides/CM2.pdf , page25 used on input line 227.
-(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
- [12 <./Slides/CM2.pdf> <./Slides/CM2.pdf
-
-pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<Slides/CM2.pdf, id=389, page=27, 845.1575pt x 597.23125pt>
-File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 27>
-Package pdftex.def Info: Slides/CM2.pdf , page27 used on input line 243.
-(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=390, page=28, 845.1575pt x 597.23125pt>
-File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 28>
-Package pdftex.def Info: Slides/CM2.pdf , page28 used on input line 244.
-(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
- [13 <./Slides/CM2.pdf> <./Slides/CM2.pdf
-
-pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<Slides/CM2.pdf, id=559, page=35, 845.1575pt x 597.23125pt>
-File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 35>
-Package pdftex.def Info: Slides/CM2.pdf , page35 used on input line 248.
-(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=560, page=38, 845.1575pt x 597.23125pt>
-File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 38>
-Package pdftex.def Info: Slides/CM2.pdf , page38 used on input line 264.
+Package pdftex.def Info: Slides/CM2.pdf , page24 used on input line 226.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
  [14 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
 pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 265--269
-
- []
-
-<Slides/CM2.pdf, id=630, page=41, 845.1575pt x 597.23125pt>
+<Slides/CM2.pdf, id=397, page=25, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 41>
-Package pdftex.def Info: Slides/CM2.pdf , page41 used on input line 269.
+<use Slides/CM2.pdf, page 25>
+Package pdftex.def Info: Slides/CM2.pdf , page25 used on input line 230.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=631, page=43, 845.1575pt x 597.23125pt>
+<Slides/CM2.pdf, id=398, page=27, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 43>
-Package pdftex.def Info: Slides/CM2.pdf , page43 used on input line 273.
+<use Slides/CM2.pdf, page 27>
+Package pdftex.def Info: Slides/CM2.pdf , page27 used on input line 246.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-[15 <./Slides/CM2.pdf> <./Slides/CM2.pdf
+<Slides/CM2.pdf, id=399, page=28, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 28>
+Package pdftex.def Info: Slides/CM2.pdf , page28 used on input line 247.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+ [15 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
 pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Slides/CM2.pdf, id=727, page=44, 845.1575pt x 597.23125pt>
+<Slides/CM2.pdf, id=568, page=35, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 44>
-Package pdftex.def Info: Slides/CM2.pdf , page44 used on input line 275.
-(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=728, page=45, 845.1575pt x 597.23125pt>
-File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 45>
-Package pdftex.def Info: Slides/CM2.pdf , page45 used on input line 276.
-(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=729, page=46, 845.1575pt x 597.23125pt>
-File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 46>
-Package pdftex.def Info: Slides/CM2.pdf , page46 used on input line 279.
+<use Slides/CM2.pdf, page 35>
+Package pdftex.def Info: Slides/CM2.pdf , page35 used on input line 251.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
  [16 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
 pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Slides/CM2.pdf
+>]
+<Slides/CM2.pdf, id=639, page=38, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 38>
+Package pdftex.def Info: Slides/CM2.pdf , page38 used on input line 267.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--272
+
+ []
+
+<Slides/CM2.pdf, id=640, page=41, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 41>
+Package pdftex.def Info: Slides/CM2.pdf , page41 used on input line 272.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+<Slides/CM2.pdf, id=641, page=43, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 43>
+Package pdftex.def Info: Slides/CM2.pdf , page43 used on input line 276.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+[17 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
 pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Slides/CM2.pdf, id=840, page=47, 845.1575pt x 597.23125pt>
+<Slides/CM2.pdf, id=737, page=44, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 47>
-Package pdftex.def Info: Slides/CM2.pdf , page47 used on input line 280.
+<use Slides/CM2.pdf, page 44>
+Package pdftex.def Info: Slides/CM2.pdf , page44 used on input line 278.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=841, page=48, 845.1575pt x 597.23125pt>
+<Slides/CM2.pdf, id=738, page=45, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 48>
-Package pdftex.def Info: Slides/CM2.pdf , page48 used on input line 281.
+<use Slides/CM2.pdf, page 45>
+Package pdftex.def Info: Slides/CM2.pdf , page45 used on input line 279.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
-<Slides/CM2.pdf, id=842, page=50, 845.1575pt x 597.23125pt>
+<Slides/CM2.pdf, id=739, page=46, 845.1575pt x 597.23125pt>
 File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 50>
-Package pdftex.def Info: Slides/CM2.pdf , page50 used on input line 284.
-(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
- [17 <./Slides/CM2.pdf> <./Slides/CM2.pdf
-
-pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Slides/CM2.pdf
-
-pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<Slides/CM2.pdf, id=924, page=51, 845.1575pt x 597.23125pt>
-File: Slides/CM2.pdf Graphic file (type pdf)
-<use Slides/CM2.pdf, page 51>
-Package pdftex.def Info: Slides/CM2.pdf , page51 used on input line 285.
+<use Slides/CM2.pdf, page 46>
+Package pdftex.def Info: Slides/CM2.pdf , page46 used on input line 282.
 (pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
  [18 <./Slides/CM2.pdf> <./Slides/CM2.pdf
 
 pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (./Synthese.aux)
+> <./Slides/CM2.pdf
+
+pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Slides/CM2.pdf, id=850, page=47, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 47>
+Package pdftex.def Info: Slides/CM2.pdf , page47 used on input line 283.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+<Slides/CM2.pdf, id=851, page=48, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 48>
+Package pdftex.def Info: Slides/CM2.pdf , page48 used on input line 284.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+<Slides/CM2.pdf, id=852, page=50, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 50>
+Package pdftex.def Info: Slides/CM2.pdf , page50 used on input line 287.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+ [19 <./Slides/CM2.pdf> <./Slides/CM2.pdf
+
+pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Slides/CM2.pdf
+
+pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Slides/CM2.pdf, id=935, page=51, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 51>
+Package pdftex.def Info: Slides/CM2.pdf , page51 used on input line 288.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+ [20 <./Slides/CM2.pdf> <./Slides/CM2.pdf
+
+pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Slides/CM2.pdf, id=983, page=54, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 54>
+Package pdftex.def Info: Slides/CM2.pdf , page54 used on input line 292.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+<Slides/CM2.pdf, id=984, page=56, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 56>
+Package pdftex.def Info: Slides/CM2.pdf , page56 used on input line 296.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+ [21 <./Slides/CM2.pdf> <./Slides/CM2.pdf
+
+pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Slides/CM2.pdf, id=1038, page=60, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 60>
+Package pdftex.def Info: Slides/CM2.pdf , page60 used on input line 303.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+<Slides/CM2.pdf, id=1039, page=65, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 65>
+Package pdftex.def Info: Slides/CM2.pdf , page65 used on input line 308.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--313
+
+ []
+
+[22 <./Slides/CM2.pdf> <./Slides/CM2.pdf
+
+pdfTeX warning: pdflatex (file ./Slides/CM2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Slides/CM2.pdf, id=1081, page=70, 845.1575pt x 597.23125pt>
+File: Slides/CM2.pdf Graphic file (type pdf)
+<use Slides/CM2.pdf, page 70>
+Package pdftex.def Info: Slides/CM2.pdf , page70 used on input line 313.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+ [23 <./Slides/CM2.pdf>]
+<Slides/CM3.pdf, id=1137, page=4, 845.1575pt x 597.23125pt>
+File: Slides/CM3.pdf Graphic file (type pdf)
+<use Slides/CM3.pdf, page 4>
+Package pdftex.def Info: Slides/CM3.pdf , page4 used on input line 319.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+
+Overfull \hbox (1.90077pt too wide) in paragraph at lines 320--321
+\OT1/cmss/m/n/10 On utilis-era couram-ment des \OT1/cmss/bx/n/10 di-a-grammes ^^Senerg^^Setiques \OT1/cmss/m/n/10 ou \OT1/cmss/bx/n/10 cin^^Setiques \OT1/cmss/m/n/10 lors d'^^Setudes
+ []
+
+<./Images/encombrement_sterique.png, id=1138, 598.48593pt x 118.19156pt>
+File: ./Images/encombrement_sterique.png Graphic file (type png)
+<use ./Images/encombrement_sterique.png>
+Package pdftex.def Info: ./Images/encombrement_sterique.png  used on input line 335.
+(pdftex.def)             Requested size: 299.24223pt x 59.09563pt.
+[24 <./Slides/CM3.pdf>]
+<Slides/CM3.pdf, id=1188, page=20, 845.1575pt x 597.23125pt>
+File: Slides/CM3.pdf Graphic file (type pdf)
+<use Slides/CM3.pdf, page 20>
+Package pdftex.def Info: Slides/CM3.pdf , page20 used on input line 347.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+ [25 <./Images/encombrement_sterique.png> <./Slides/CM3.pdf>] (./Synthese.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4193 strings out of 474222
- 70749 string characters out of 5748733
- 1934975 words of memory out of 5000000
- 26386 multiletter control sequences out of 15000+600000
+ 4231 strings out of 474222
+ 71922 string characters out of 5748733
+ 1935975 words of memory out of 5000000
+ 26424 multiletter control sequences out of 15000+600000
  564381 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,6n,79p,332b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb>
-Output written on Synthese.pdf (18 pages, 5903591 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb>
+Output written on Synthese.pdf (25 pages, 6488290 bytes).
 PDF statistics:
- 1012 PDF objects out of 1200 (max. 8388607)
- 647 compressed objects within 7 object streams
+ 1284 PDF objects out of 1440 (max. 8388607)
+ 823 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

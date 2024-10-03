@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1727339924.15965 "/home/qtbodart/Git/Work/UCLouvain/FYKI/LMAPR1230 - Chimie Organique/Synthèses/Notes/Synthese.tex" "Synthese.pdf" "Synthese" 1727339925.6206 0
+["pdflatex"] 1727944027.65766 "/home/qtbodart/Git/Work/UCLouvain/FYKI/LMAPR1230 - Chimie Organique/Synthèses/Notes/Synthese.tex" "Synthese.pdf" "Synthese" 1727944029.32918 0
   "/etc/texmf/web2c/texmf.cnf" 1725561544.73911 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/qtbodart/Git/Work/UCLouvain/FYKI/LMAPR1230 - Chimie Organique/Synthèses/Notes/Synthese.tex" 1727339923.39409 13961 3b3150cf07c05fa0559cc9883597a290 ""
+  "/home/qtbodart/Git/Work/UCLouvain/FYKI/LMAPR1230 - Chimie Organique/Synthèses/Notes/Synthese.tex" 1727944027.14916 18807 f9d91e32db270a6a181c44429a3a8fb1 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcss1000.tfm" 1136768653 1536 293044035fd171bb1d18cf655049b101 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -21,6 +21,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1248133631 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb" 1248133631 24393 3b7eb51a67a0a62aec5849271bdb9c2e ""
@@ -77,6 +78,7 @@
   "Images/aldehyde.png" 1726734382.78022 2677 19aec09f7049c2a4786ee43eed485f66 ""
   "Images/cetone.png" 1726734238.26255 2942 e3ad8a038e24718dcfb8cbad98c67a2f ""
   "Images/charge_formelle.png" 1726732767.89153 36318 ae69fb5c42ce7eee31342df68114c3b8 ""
+  "Images/encombrement_sterique.png" 1727943295.51864 11250 63c100ba856873dac70b95092eddc494 ""
   "Images/ester.png" 1726734547.47454 3656 b680670afa19642764bf2a8a563d7b2a ""
   "Images/formule_topologique.png" 1726732375.52054 3817 1871ad65bda6c8c0de8960bbb8f954bb ""
   "Images/groupes_alkyles.png" 1726733630.75523 20317 68cacabee22894e1a00aa6d653bca93c ""
@@ -87,9 +89,10 @@
   "Images/nomenclature_alcanes.png" 1726733000.97784 70490 fca31bc49533c80d3283e982ecd53015 ""
   "Images/structures_planes.png" 1726732215.14289 6074 9ebcc5678ccfa01b0baa27144786a756 ""
   "Slides/CM2.pdf" 1726726920.55063 14543299 30e16f1536c88b2dd8ac8532db3b089c ""
-  "Synthese.aux" 1727339925.46813 3431 fba42ef6ec997c6b3bc318bd571f6110 "pdflatex"
-  "Synthese.tex" 1727339923.39409 13961 3b3150cf07c05fa0559cc9883597a290 ""
-  "Synthese.toc" 1727339925.46913 2168 53312b755d336409ba21a2afa966657b "pdflatex"
+  "Slides/CM3.pdf" 1726726951.34904 3828141 7fa37e77138b97f23eaaa8c3fad7fa5a ""
+  "Synthese.aux" 1727944029.21417 4865 f52f19b8fc83584e75cfb8df7cf7cad8 "pdflatex"
+  "Synthese.tex" 1727944027.14916 18807 f9d91e32db270a6a181c44429a3a8fb1 ""
+  "Synthese.toc" 1727944029.21617 3110 83932976d0588b57ad722848893d76d2 "pdflatex"
   (generated)
   "Synthese.aux"
   "Synthese.log"
