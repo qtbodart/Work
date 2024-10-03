@@ -207,23 +207,25 @@
             Pour afficher un String formatté en C, on peut utiliser la fonction printf:
             \insertslide{Slides/CM2.pdf}{16}
             Modificateurs (format specifiers):\\
-            \begin{tabular}{|c|c|}
-                \hline
-                \%c & char \\
-                \hline
-                \%d / \%i & signed int \\
-                \hline
-                \%e / \%E & scientific notation \\
-                \hline
-                \%f & float \\
-                \hline
-                \%ld / \%li & long \\
-                \hline
-                \%lf & double \\
-                \hline
-                \%Lf & long double \\
-                \hline
-            \end{tabular}
+            \begin{center}
+                \begin{tabular}{|c|c|}
+                    \hline
+                    \%c & char \\
+                    \hline
+                    \%d / \%i & signed int \\
+                    \hline
+                    \%e / \%E & scientific notation \\
+                    \hline
+                    \%f & float \\
+                    \hline
+                    \%ld / \%li & long \\
+                    \hline
+                    \%lf & double \\
+                    \hline
+                    \%Lf & long double \\
+                    \hline
+                \end{tabular}
+            \end{center}
     \subsection{Types de données}
         \begin{itemize}
             \item int, long : variable entière
@@ -235,7 +237,7 @@
             \item Structures de contrôle : while, for, if, ...
         \end{itemize}
         La taille occupée par un type de donnée peut être récupérée via \textbf{sizeof()}.
-        \subsubsection{nombre signés et flottants}
+        \subsubsection{Nombres signés et flottants}
             Les entiers, en C, sont signés par défaut :
             \insertslide{Slides/CM2.pdf}{22}
             Via le mot-clé "unsigned", on peu "dé-signer" un type de donnée :
@@ -256,7 +258,7 @@
         \subsubsection{Chaînes de caractères}
             En C, une chaîne de charactères est stockée sous la forme d'un tableau.\\
             Le dernier élément du tableau contient le charactère "$\backslash$0".
-        
+\pagebreak
         \subsubsection{Pointeurs}
             Un \textbf{pointeur} est une variable qui contient l’adresse à
             laquelle est stockée un autre élément (variable, fonction, etc.)\\
@@ -286,7 +288,51 @@
                 \item $|$ : OU $\rightarrow$ 11111010 $|$ 01011111 = 11111111
                 \item \^ : OU exclusif $\rightarrow$ 11111010 \^ 01011111 = 10100101
             \end{itemize}
-
-    \subsection{Compléments de C}
-        Rien de nouveau ?
+\pagebreak
+\section{CM3 : Gestion de la mémoire}
+    \subsection{Organisation d'un programme Linux en mémoire}
+            Les différentes parties de la mémoire de Linux sont appelés \textbf{Segments}.\\
+            Ceux qui nous intéressent:
+            \begin{itemize}
+                \item Segment 1 : \textbf{code}\\
+                Il contient les instructions à exécuter par le processeur, directement extraites des codes.
+                \item Segment 2 : \textbf{données initialisées}\\
+                Contient les données initialisées par les codes du segment 1
+                \item Segment 3 : \textbf{données non-initialisées}\\
+                Contient les données non-initialisées par le codes du segment 1.\\
+                Elles sont souvent initialisées à 0 par défaut, en attente d'être transférées dans le segment 2.
+                \item Segment 4 : \textbf{Heap et Stack}
+                \begin{itemize}
+                    \item Heap : Permet aux programmes d'y réserver des zones mémoire\\(c.f. malloc, free, valgrind)
+                    \item Stack : Permet de stocker les variables locales et les appels de fonctions, ainsi que de récupérer les valeurs de retour.
+                \end{itemize}
+                \item Segment 5 : \textbf{Arguments et variables d'environnement}
+            \end{itemize}
+        \insertslide{Slides/CM3}{6}
+\pagebreak
+    \subsection{Gestion de la mémoire dynamique}
+        malloc() et free() ne sont pas mises en oeuvre dans le noyau du système d'exploitation, ce sont simplement des \textbf{fonctions da la librairie standard utilisant des appels système : brk() et sbrk()}.\\\\
+        malloc() est aligné sur un \textbf{facteur d'alignement} : elle retourne un nombre entier d'octets directement supérieur au nombre d'octets demandés. (padding)\\
+        Exemple : Sous Linux, ce facteur est de \textbf{16 octets}. Si l'on demande 37 octets, le malloc va en retourner 64.
+        \subsubsection{Objectif d'un algorithme de gestion de mémoire dynamique}
+            Les objectifs de cet algorithme sont les suivants :
+            \begin{itemize}
+                \item \textbf{Minimiser le temps d'exécution} et maximiser sa stabilité
+                \item \textbf{Utiliser efficacement la mémoire} (minimiser la fragmentation):\\
+                Deux types de fragmentation:
+                \begin{itemize}
+                    \item Fragmentation interne : espace perdu par le padding
+                    \item Fragmentation externe : espace perdu par l'allocation et désallocation de la mémoire
+                \end{itemize}
+                \item \textbf{Bonnes propriétés de localité spatiale} :\\
+                Alloue les variables proches les unes des autres afin d'accélérer l'accès du cache du processeur
+            \end{itemize}
+        
+        \subsubsection{Implémentation de l'algorithme}
+            Une des implémentations pourrait utiliser des métadonnées :
+            \insertslide{Slides/CM3}{48}
+\pagebreak
+            Cependant, aucune des implémentations ne peut satisfaire les 3 conditions parfaitement.
+            Par exemple :
+            \insertslide{Slides/CM3}{55}
 \end{document}
