@@ -128,7 +128,7 @@ class SegmentedListImpl<T> implements SegmentedList<T> {
 
         @Override
         public boolean hasNext() {
-            return
+            return true;
         }
 
         @Override
