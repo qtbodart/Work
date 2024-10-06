@@ -1,0 +1,42 @@
+\contentsline {section}{\numberline {1}CM 1 : Introduction et rappels}{3}{}%
+\contentsline {subsection}{\numberline {1.1}La chimie organique}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Le carbone}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Pourquoi le carbone?}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Hybridation}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Théorie VSEPR}{5}{}%
+\contentsline {subsection}{\numberline {1.4}Représenter une molécule}{6}{}%
+\contentsline {subsubsection}{\numberline {1.4.1}Formules}{6}{}%
+\contentsline {subsubsection}{\numberline {1.4.2}Structure de Lewis}{6}{}%
+\contentsline {subsection}{\numberline {1.5}Les hydrocarbures}{7}{}%
+\contentsline {subsubsection}{\numberline {1.5.1}Les alcanes}{7}{}%
+\contentsline {subsubsection}{\numberline {1.5.2}Nomenclature}{7}{}%
+\contentsline {subsubsection}{\numberline {1.5.3}Groupes alkyles}{8}{}%
+\contentsline {subsubsection}{\numberline {1.5.4}Alcanes Cycliques}{8}{}%
+\contentsline {subsection}{\numberline {1.6}Les groupes fonctionnels}{9}{}%
+\contentsline {section}{\numberline {2}CM 2 : Isomérie}{10}{}%
+\contentsline {subsection}{\numberline {2.1}Isomères de constitution}{10}{}%
+\contentsline {subsection}{\numberline {2.2}Stéréoisomérie}{11}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Chiralité}{12}{}%
+\contentsline {subsection}{\numberline {2.3}Centre stéréogénique}{12}{}%
+\contentsline {subsection}{\numberline {2.4}Enantiomères}{13}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Convention R-S}{14}{}%
+\contentsline {subsubsection}{\numberline {2.4.2}Plus d'un centre asymétrique?}{15}{}%
+\contentsline {subsubsection}{\numberline {2.4.3}Projection de Fischer}{16}{}%
+\contentsline {subsection}{\numberline {2.5}Proriétés des énantiomères}{17}{}%
+\contentsline {subsubsection}{\numberline {2.5.1}Notation D-L}{18}{}%
+\contentsline {subsection}{\numberline {2.6}Isomérie géométrique}{19}{}%
+\contentsline {subsection}{\numberline {2.7}En résumé}{20}{}%
+\contentsline {subsection}{\numberline {2.8}Isomérie conformationnelle}{21}{}%
+\contentsline {subsubsection}{\numberline {2.8.1}Projection de Newman}{21}{}%
+\contentsline {subsubsection}{\numberline {2.8.2}Energie d'angle}{22}{}%
+\contentsline {subsection}{\numberline {2.9}Les cycloalcanes}{22}{}%
+\contentsline {section}{\numberline {3}CM3 : Réactivité}{24}{}%
+\contentsline {subsection}{\numberline {3.1}Les réactions en chimie organique}{24}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}La catalyse}{24}{}%
+\contentsline {subsection}{\numberline {3.2}Nucléophiles et électrophiles}{24}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Nucléophiles}{24}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Electropiles}{25}{}%
+\contentsline {subsection}{\numberline {3.3}Modifications de la densité électronique}{25}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Effet inductif}{25}{}%
+\contentsline {subsection}{\numberline {3.4}Acidité et basicité}{25}{}%
+\contentsline {subsection}{\numberline {3.5}Facteurs influençant l'acidité ou la basicité}{25}{}%
