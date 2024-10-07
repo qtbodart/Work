@@ -13,10 +13,15 @@
 \contentsline {subsection}{\numberline {2.5}Etat microscopique d'un système}{7}{}%
 \contentsline {subsection}{\numberline {2.6}Equation de Boltzmann}{7}{}%
 \contentsline {subsection}{\numberline {2.7}Modèle d'Einstein du solide cristallin}{8}{}%
-\contentsline {section}{\numberline {3}CM 3}{9}{}%
+\contentsline {section}{\numberline {3}CM 3 : Ensemble Canonique et fonction de partition}{9}{}%
 \contentsline {subsection}{\numberline {3.1}Ensemble Canonique}{9}{}%
 \contentsline {subsection}{\numberline {3.2}Fonction de partition}{10}{}%
 \contentsline {subsubsection}{\numberline {3.2.1}Propriétés de la fonction de partition}{12}{}%
 \contentsline {subsection}{\numberline {3.3}Densité d'états}{12}{}%
 \contentsline {subsection}{\numberline {3.4}Modèle de Debye}{12}{}%
 \contentsline {subsection}{\numberline {3.5}Théorie du corps noir}{13}{}%
+\contentsline {section}{\numberline {4}CM4 : Potentiel Grand-Canonique}{14}{}%
+\contentsline {subsection}{\numberline {4.1}Formalisme Grand-canonique}{14}{}%
+\contentsline {subsection}{\numberline {4.2}Fluides quantiques}{14}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Modèle du pré-gaz}{14}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Fluide idéal de Fermi}{15}{}%

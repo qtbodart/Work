@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
 \graphicspath{ {./Images/} }
+\usepackage{amssymb}
 \usepackage{pdfpages}
 \newcommand{\insertslide}[3]{
 \begin{center}
@@ -237,7 +238,7 @@
             \includegraphics[scale = .5]{c_v_einstein.png}
         %TODO Système à deux états
 \pagebreak
-\section{CM 3}
+\section{CM 3 : Ensemble Canonique et fonction de partition}
     \subsection{Ensemble Canonique}
         \insertslide{Slides/CM3}{2}{.6}
     \subsection{Fonction de partition}
@@ -276,12 +277,72 @@
         Le modèle de Debye reprend le modèle d'Einstein et assigne à chaque oscillateur une fréquence dépendante de la longueur d'onde ($w(\lambda)$).
     
     \subsection{Théorie du corps noir}
-        Le problème du corps noir consiste à comprendre et
-        décrire mathématiquement ce qui se passe quand un
-        morceau de fer chauffé passe de la couleur rouge à
-        la couleur blanche, en émettant une quantité de
-        lumière de plus en plus importante.\\\\
+        Le problème du corps noir consiste à comprendre et décrire mathématiquement ce qui se passe quand un morceau de fer chauffé passe de la couleur rouge à la couleur blanche, en émettant une quantité de lumière de plus en plus importante.\\\\
         L'intensité lumineuse dégagée par un corps noir est donnée par $I = \sigma T^4$, avec $\sigma$ la constante de Stefan-Boltzmann.\\
         En utilisant le formalisme canonique, on trouve aussi que l'énergie interne d'un corps noir varie en $T^4$.
+\pagebreak
+\section{CM4 : Potentiel Grand-Canonique}
+    \subsection{Formalisme Grand-canonique}
+        Le formalisme grand-canonique considère un système relié à un réservoir thermique \textbf{et} à un réservoir de particules.\\
+        Après calculs (c.f. Slides/CM4.pdf), on obtient sa fonction de partition :
+        $$
+        \mathcal{Z} = \sum_{j} e^{-\beta (\epsilon_j - \mu N_j)} = e^{-\beta \Psi}
+        $$
+        avec\\
+        $\Psi = U - TS - \mu \tilde N$ le potentiel grand-canonique,\\
+        $\beta = \frac{1}{k_B T}$\\
+        $S = - \frac{\partial \Psi}{\partial T}$\\
+        (le $\mathcal{Z}$ dans le formalisme grand-canonique est généralement noté avec une double barre)
+    
+    \subsection{Fluides quantiques}
+        Il existe naturellement 2 particules "classiques":
+        \begin{itemize}
+            \item les \textbf{Fermions} (électrons, protons, neutrons, ...)\\
+            Fonction d'onde asymétrique, principe d'exlusion de Pauli,\\ analogie aux \textbf{particules matérielles}
+            \item les \textbf{Bosons} (photons, phonons, ...)\\
+            Fonction d'onde symétrique, masse nulle, analogie aux \textbf{ondes}
+        \end{itemize}
 
+        \subsubsection{Modèle du pré-gaz}
+            Gaz de Fermions de spin 1/2 avec 3 états d'énergie ($\epsilon_1$, $\epsilon_2$, $\epsilon_3$) permis, en contact avec un réservoir de Fermions de spin +-1/2.\\
+            Les Fermions vont alors respecter la \textbf{distribution de Fermi-Dirac} :
+            $$
+            f_{n,m_s} = \frac{1}{e^{\beta (\epsilon - \mu)} + 1}
+            $$
+\pagebreak
+        \subsubsection{Fluide idéal de Fermi}
+            Extrapolation du modèle du pré-gaz de Fermions :\\ comme le nombre d'états orbitaux d'un fluide de Fermi est très grand, les sommations des fonctions de partition sont remplacées par des intégrations.\\
+            On obtient donc :
+            $$
+            \tilde N = \int_{0}^{\infty} \epsilon^{1/2} f(\epsilon) d\epsilon
+            $$
+            $$
+            U = \int_{0}^{\infty} \epsilon^{3/2} f(\epsilon) d\epsilon
+            $$\\\\
+            A très haute température, on peut approximer $f(\epsilon) = e^{\beta \mu} e^{- \beta \epsilon}$, et on retrouve donc
+            $$
+            U = 3/2 k_B T
+            $$
+            $$
+            c_V = 3/2 R
+            $$
+            ce qui correspond exactement au compertement d'un gaz idéal classique ! \\\\
+            A T=0, en définissant une énergie de Fermi (potentiel chimique à température nulle) $\mu_0$, on peut trouver
+            $$
+            U = 3/5 \tilde N \mu_0
+            $$\\\\
+            Basé sur les raisonnements précédents, on peut déterminer, après une intégration par partie et un dévellopement de Taylor : 
+            $$
+            \frac{\tilde N}{\tilde N (T = 0)} = (1 + \frac{\pi^2}{8}(\frac{k_B T}{\mu})^2 + ...)^{2/3}
+            $$
+            ce qui permet d'écrire :
+            $$
+            \mu \approx \mu_0 (1 - \frac{\pi^2}{12}(\frac{k_B T}{\mu})^2)
+            $$\\
+            3 conclusions :
+            \begin{itemize}
+                \item La température de Fermi ne varie pas
+                \item $\mu$ décroit lorsque la température augmente
+                \item La chaleur spécifique d'un fluide de Fermi nécéssite un facteur de correction d'environ 10\%
+            \end{itemize}
 \end{document}
