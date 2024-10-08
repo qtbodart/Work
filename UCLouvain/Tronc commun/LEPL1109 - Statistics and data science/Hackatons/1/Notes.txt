@@ -1,0 +1,2 @@
+- Bien commenter chacun des résultats
+3.2) Utiliser OLS
