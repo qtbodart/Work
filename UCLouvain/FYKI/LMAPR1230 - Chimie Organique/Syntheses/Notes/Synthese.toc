@@ -38,5 +38,8 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Electropiles}{25}{}%
 \contentsline {subsection}{\numberline {3.3}Modifications de la densité électronique}{25}{}%
 \contentsline {subsubsection}{\numberline {3.3.1}Effet inductif}{25}{}%
-\contentsline {subsection}{\numberline {3.4}Acidité et basicité}{25}{}%
-\contentsline {subsection}{\numberline {3.5}Facteurs influençant l'acidité ou la basicité}{25}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Géométrie des carbocations, carboanions et radicaux}{26}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Effet mésomère}{26}{}%
+\contentsline {subsection}{\numberline {3.4}Acidité et basicité}{28}{}%
+\contentsline {subsubsection}{\numberline {3.4.1}Force}{28}{}%
+\contentsline {subsection}{\numberline {3.5}Facteurs influençant l'acidité ou la basicité}{29}{}%

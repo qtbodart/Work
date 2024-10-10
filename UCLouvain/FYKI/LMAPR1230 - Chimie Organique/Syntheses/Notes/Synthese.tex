@@ -10,6 +10,7 @@
 }
 % \insertslide{Slides/CM1.pdf}{1} to insert first page of CM1.pdf, for example.
 \usepackage{amsmath}
+\usepackage{mhchem}
 \renewcommand{\familydefault}{\sfdefault}
 
 \title{LMAPR1230 : Chimie Organique\\Notes de cours}
@@ -346,7 +347,86 @@
             Il se propage le long des liaisons $\sigma$ et dimminue de proche en proche.
             Il en existe 2 catégories :
             \insertslide{Slides/CM3}{20}
+            \begin{itemize}
+                \item Les groupements contenant des atomes plus électronégatifs que le carbone auront tendance à générer un effet inductif \textbf{attracteur}\\
+                Exemple : $NH_2 < OH < COOR < COR < CHO < Br < Cl < F$
+                \item Les groupements contenant des atomes moins électronégatifs que le carbone auront tendance à générer un effet inductif \textbf{donneur}\\
+                Exemple : $H < CH_3 < CH_2-CH_3 < CH(CH_3) 2 < C(CH_3)_3 < Mg < Li$
+            \end{itemize}
+            L'effet inductif peut influencer des intermédiaires réactionnels, influençant ainsi notablement les réactions chimiques. Par exemple, un groupement tert-butyle sera beaucoup plus stable qu'un groupement méthyle.\\
+            Les groupements où le carbone possède un excès de charge ou un manque de charges sont appelés \textbf{carboanions} et \textbf{carbocations}.
+        
+        \subsubsection{Géométrie des carbocations, carboanions et radicaux}
+            La géométrie des anions carbones est déterminée de la même manière que d'habitude : On ne prend pas en compte \textbf{les électron non-appariés ou le manque d'électrons}.\\
+            Exemple : Un groupement méthyle ($CH_3^-$) aura une géométrie trigonale plane, et non pas trigonale pyramidale.
+        
+        \subsubsection{Effet mésomère}
+            L'effet mésomère représente le fait qu'une chaine carbonée contenant des liaisons simples et doubles a tendance à présenter de liaisons "hybrides", dans lesquelles les carbones des orbitales $p$ peuvent se déplacer d'une orbitale à l'autre.\\
+            Exemple :
+            \insertslide{Slides/CM3}{32}
+            Pour trouver les formes de résonance (modèle moléculaire avec liaisons hybrides), il faut respecter 4 règles :
+            \begin{itemize}
+                \item Respecter la règle de l'octet
+                \item Pas de déplacement d'atomes (uniquement les $e^-$)
+                \item La charge globale ne change pas
+                \item Délocalisation toujours vers un atome $sp^2$ ou $sp$ \\(jamais $sp^3$, sinon la première règle n'est pas respectée !)
+            \end{itemize}
+\pagebreak
+            Bien sûr, certaines formes de résonance sont plus stables que d'autres. Ainsi, les formes sont plus stable lorsque (par ordre d'importance):
+            \begin{itemize}
+                \item La règle de l'octet est respectée pour un maximum d'atomes \\($C$, $N$, $O$, $F$, ...)
+                \item Les préférences électroniques (électronégativité) des atomes sont respectées \\(($O^-$, $C^+$) préféré à ($O^+$, $C^-$))
+                \item La forme minimise l'apparition de charge
+            \end{itemize}
+            L'effet mésomère représente donc l'\textbf{effet produit sur une molécule par
+            un groupement possédant des formes de résonances}. \\
+            Il est toujours \textbf{plus fort que l'effet inductif} :
+            \insertslide{Slides/CM3}{38}
+            Remarque importante :\\
+            \begin{itemize}
+                \item $\Longleftrightarrow$ traduit un mouvement d'électrons au sein d'une molécule
+                \item \ce{<=>} traduit un mouvement d'électrons et d'atome(s) ou un équilibre conformationnel
+            \end{itemize}
+\pagebreak
     \subsection{Acidité et basicité}
+        Il existe deux définitions de l'acidité et la basicité :
+        \begin{itemize}
+            \item \textbf{Brönsted-Lowry} : un acide est composé de type \ce{H_n A} qui peut transférer un \ce{H^+} à une base \ce{B}
+            \item \textbf{Lewis} : un acide/une base est un accepteur/donneur d'électrons
+        \end{itemize}
+        \subsubsection{Force}
+            La force d'un acide est mesurée via son Ka :
+            \insertslide{Slides/CM3}{42}
+            Un acide est d'autant plus fort que sa base conjuguée est stable.\\
+            Lorsque l'on parle du pKa d'une substance basique, on se réfère généralement à son \textbf{acide conjugué} !\\\\
+            Afin de déterminer le sens d'une réaction, il faut examiner le pKa des acides présents: la réaction aura toujours lieu dans le sens où l'acide le plus fort se dissocie.\\
+            Exemple :\\
+            \ce{CH_3-C#CH + OH^- <- CH_3-C#C^- + H_2O}\\
+            pKa(\ce{CH_3-C#CH}) = 25\\
+            pKa(\ce{H_2O}) = 15.7\\\\
+            \ce{CH_3-C#CH + NH_2^- -> CH_3-C#C^- + NH_3}\\
+            pKa(\ce{CH_3-C#CH}) = 25\\
+            pKa(\ce{NH_3}) = 36\\
+
+\pagebreak
     \subsection{Facteurs influençant l'acidité ou la basicité}
+        Cinq critères augmentent la force d'un acide:
+        \begin{itemize}
+            \item Son électronégativité\\
+            Exemple : \ce{CH_4} $<$ \ce{NH_3} $<$ \ce{H_2O} $<$ \ce{HF}
+            \item Sa taille\\
+            Exemple : \ce{HF} $<$ \ce{HCl} $<$ \ce{HBr} $<$ \ce{HI}
+            \item Sa résonance (mésomérie)\\
+            Exemple : Cyclohexanol $<$ Phénol
+            \item Son effet inductif\\
+            Exemple : \ce{CH_3-COOH} $<$ \ce{CH_2Cl-COOH} $<$ \ce{CHCl_2-COOH} $<$ \ce{CCl_3-COOH}
+            \item Ses orbitales\\
+            Exemple : \ce{CH_3-CH_3} ($sp^3$) $<$ \ce{CH_2=CH_2} ($sp^2$) $<$ \ce{CH#CH} ($sp$)
+        \end{itemize}
+        Pour retenir l'ordre de ségrégation:\\
+        \textbf{A}tome\\
+        \textbf{R}ésonance\\
+        \textbf{I}nductif\\
+        \textbf{O}rbitale\\
 
 \end{document}
