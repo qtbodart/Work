@@ -1,5 +1,6 @@
 #include<stdint.h>
 #include<stdio.h>
+#include<stdlib.h>
 #include<stddef.h>
 #include<stdbool.h>
 
@@ -42,7 +43,7 @@ void init(){
     new_data.previous = separation-1;
     new_data.next = separation-1;
     new_data.address = MY_HEAP;
-    new_data.length = -1;
+    new_data.length = 0;
     new_data.utilized = true;
     *separation = new_data;
 
@@ -57,37 +58,52 @@ void* my_malloc(size_t size){
         return NULL;
     }
     
-    struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-1;
-    data = data->next;
+    // Starting at second dummy node
+    struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-2;
 
     // Iterate until enough space found or reached the end of the data
-    while (!(data->next->address - data->address - data->length >= size) && data->next->address != NULL){
+    while (!(data->next->address - data->address - data->length >= size) && data->next->length != 0){
         data = data->next;
     }
 
-    // If reached the end of data
-    if (data->next->address == NULL){
-        // If there's enough space at the end of the data
-        if ((void *) separation - (void *) data->address - data->length - sizeof(struct Metadata) > size){
-            struct Metadata new_data;
-            new_data.previous = data;
-            new_data.next = data->next;
-            new_data.address = 0;
-            new_data.length = 0;
-        }
+    // If reached the end of data and not enough space
+    if (data->next->length == 0 && (void *) separation - (void *) data->address - data->length - sizeof(struct Metadata) < size){
+        return (void *) NULL;
     }
 
+    // In any other case, adjusting pointers and creating new meta-data for the new block
+    struct Metadata* new_data = findDataPlace();
 
+    // adjusting pointers
+    new_data->previous = data;
+    new_data->next = data->next;
+    new_data->next->previous = new_data;
+    data->next = new_data;
+
+    // Setting up new meta-data
+    new_data->address = data->address+data->length;
+    new_data->length = size;
+    new_data->utilized = true;
+    return new_data->address;
 }
 
 void my_free(void* pointer){
     return;
 }
 
+void print_metadata(){
+    struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-2;
+    while (data->next->length != 0){
+        data = data->next;
+        printf("previous : %p   current : %p   next : %p   address : %p    length : %u    utilized : %i\n", data->previous, data, data->next, data->address, data->length, data->utilized);
+    }
+}
+
 void main(){
     init();
+    printf("HEAP starting at %p and ending at %p\n\n", MY_HEAP, MY_HEAP+sizeof(MY_HEAP));
 
-    // Tests the dummy nodes
+    // DUMMY NODES TEST
     // struct Metadata* ptr = separation;
     // printf("%p %p %p %i\n", ptr->previous, ptr->next, ptr->address, ptr->length);
     // ptr = ptr->next;
@@ -95,5 +111,20 @@ void main(){
     // ptr = ptr->next;
     // printf("%p %p %p %i\n", ptr->previous, ptr->next, ptr->address, ptr->length);
 
-    printf("%i\n", 0b1111111111111111);
+    // INT ARRAY TEST
+    int* new_array = my_malloc(sizeof(int)*6);
+
+    for (int i = 0; i < 6; i++){
+        *new_array = i;
+        new_array++;
+    }
+    print_metadata();
+
+    int* ptr = (int*) MY_HEAP;
+    for (int i = 0; i < 6; i++){
+        printf("%u", *ptr);
+        ptr++;
+    }
+    printf("\n");
+
 }
