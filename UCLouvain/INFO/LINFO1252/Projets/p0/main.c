@@ -88,19 +88,16 @@ void* my_malloc(size_t size){
 }
 
 void my_free(void* pointer){
-    printf("Trying to free element at address %p\n", pointer);
     struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-2;
     while (data->next->length != 0){
         data = data->next;
         if (data->address == pointer){
-            printf("Found address to free\n");
             data->utilized = false;
             data->previous->next = data->next;
             data->next->previous = data->previous;
             return;
         }
     }
-    printf("Address not found\n");
 }
 
 void print_metadata(){
