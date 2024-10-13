@@ -68,6 +68,7 @@ void* my_malloc(size_t size){
 
     // If reached the end of data and not enough space
     if (data->next->length == 0 && (void *) separation - (void *) data->address - data->length - sizeof(struct Metadata) < size){
+        printf("Not enough space !\n");
         return (void *) NULL;
     }
 
@@ -142,10 +143,9 @@ void main(){
 
 
     // MALLOC AND FREE TEST
-    int* new_array_1 = my_malloc(sizeof(int)*12);
-    int* new_array_2 = my_malloc(sizeof(int)*12);
-    my_free(new_array_1);
-    new_array_1 = my_malloc(sizeof(int)*12);
-
+    int* array;
+    do{
+        array = my_malloc(2048);
+    } while (array != NULL);
     print_metadata();
 }
