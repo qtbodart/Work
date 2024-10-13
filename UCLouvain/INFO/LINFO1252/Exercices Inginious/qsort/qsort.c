@@ -1,70 +1,73 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h> 
 
 void sort(void *base, size_t nel, size_t width, int (*compar)(const void *, const void *)) {
-    // Selection sort
-    size_t i, j, min_idx;
-    char *arr = (char *)base;
-
-    for (i = 0; i < nel - 1; i++) {
-        min_idx = i;
-
-        // Find the index of the minimum element in the unsorted portion
-        for (j = i + 1; j < nel; j++) {
-            if (compar(arr + j * width, arr + min_idx * width) < 0) {
-                min_idx = j;
-            }
-        }
-
-        // Swap the minimum element with the new minimum, if found
-        if (min_idx != i) {
-            size_t k;
-            for (k = 0; k < width; k++) {
-                char temp = arr[i * width + k];
-                arr[i * width + k] = arr[min_idx * width + k];
-                arr[min_idx * width + k] = temp;
-            }
-        }
+    // Handle special cases
+    if (nel <= 1 || base == NULL || compar == NULL || width == 0) {
+        // Nothing to sort
+        return;
     }
+
+    char *arr = (char *)base;
+    // Allocate a temporary buffer to hold one element of size width
+    char *temp = (char *)malloc(width);
+    if (temp == NULL) {
+        exit(EXIT_FAILURE);
+    }
+
+    for (size_t i = 1; i < nel; i++) {
+        memcpy(temp, arr + i * width, width);
+
+        size_t j = i;
+        while (j > 0 && compar(temp, arr + (j - 1) * width) < 0) {
+            memcpy(arr + j * width, arr + (j - 1) * width, width);
+            j--;
+        }
+        memcpy(arr + j * width, temp, width);
+    }
+    free(temp);
 }
 
 
-int compare(const void* a, const void* b){
-    char* p_a = (char*) a;
-    char* p_b = (char*) b;
-    char char_a;
-    char char_b;
-
-    while(1){
-        char_a = *p_a;
-        char_b = *p_b;
-        // To lowercase
-        if (char_a >= 65 && char_a <= 90){
-            char_a += 32;
+void lower(void* s){
+    char* s_p = (char*) s;
+    while (*s_p != '\0'){
+        if (*s_p >= 65 && *s_p <= 90){
+            *s_p += 32;
         }
-        if (char_b >= 65 && char_b <= 90){
-            char_b += 32;
+        s_p++;
+    }
+    return;
+}
+
+int compare(const void* a, const void* b) {
+    const char* str1 = *(const char**)a;
+    const char* str2 = *(const char**)b;
+
+    while (*str1 && *str2) {
+        // Convert both characters to lowercase for case-insensitive comparison
+        char c1 = tolower((unsigned char)*str1);
+        char c2 = tolower((unsigned char)*str2);
+
+        if (c1 != c2) {
+            return c1 - c2;
         }
-
-        // Return 0 if no difference found
-        if (!char_a && !char_b){
-            return 0;
-        }
-
-        // Return if difference found
-        if (char_a != char_b){
-            return (unsigned char) char_a- (unsigned char) char_b;
-        }
-
-
-        p_a++;
-        p_b++;
+        str1++;
+        str2++;
     }
 
-    return 0;
+    // If both strings have reached the end, they are equal
+    if (*str1 == '\0' && *str2 == '\0') {
+        return 0;
+    }
+
+    // If one string has ended, the shorter string is considered smaller
+    return (*str1 == '\0') ? -1 : 1;
 }
 
 void main(){
-    char* A = "aBc";
-    char* a = "Ab";
+    char* A = "Ab[]A";
+    char* a = "ab[]b";
     printf("Compare \"A\" and \"a\" : %i\n", compare(A,a));
 }
