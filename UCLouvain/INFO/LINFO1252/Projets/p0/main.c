@@ -88,15 +88,31 @@ void* my_malloc(size_t size){
 }
 
 void my_free(void* pointer){
-    return;
+    printf("Trying to free element at address %p\n", pointer);
+    struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-2;
+    while (data->next->length != 0){
+        data = data->next;
+        if (data->address == pointer){
+            printf("Found address to free\n");
+            data->utilized = false;
+            data->previous->next = data->next;
+            data->next->previous = data->previous;
+            return;
+        }
+    }
+    printf("Address not found\n");
 }
 
 void print_metadata(){
+    printf("PRINTING METADATA : \n");
+    int nel = 0;
     struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-2;
     while (data->next->length != 0){
         data = data->next;
         printf("previous : %p   current : %p   next : %p   address : %p    length : %u    utilized : %i\n", data->previous, data, data->next, data->address, data->length, data->utilized);
+        nel++;
     }
+    printf("Total blocks : %i\n\n", nel);
 }
 
 void main(){
@@ -112,19 +128,27 @@ void main(){
     // printf("%p %p %p %i\n", ptr->previous, ptr->next, ptr->address, ptr->length);
 
     // INT ARRAY TEST
-    int* new_array = my_malloc(sizeof(int)*6);
+    // int* new_array = my_malloc(sizeof(int)*6);
 
-    for (int i = 0; i < 6; i++){
-        *new_array = i;
-        new_array++;
-    }
+    // for (int i = 0; i < 6; i++){
+    //     *new_array = i;
+    //     new_array++;
+    // }
+    // print_metadata();
+
+    // int* ptr = (int*) MY_HEAP;
+    // for (int i = 0; i < 6; i++){
+    //     printf("%u", *ptr);
+    //     ptr++;
+    // }
+    // printf("\n");
+
+
+    // MALLOC AND FREE TEST
+    int* new_array_1 = my_malloc(sizeof(int)*12);
+    int* new_array_2 = my_malloc(sizeof(int)*12);
+    my_free(new_array_1);
+    new_array_1 = my_malloc(sizeof(int)*12);
+
     print_metadata();
-
-    int* ptr = (int*) MY_HEAP;
-    for (int i = 0; i < 6; i++){
-        printf("%u", *ptr);
-        ptr++;
-    }
-    printf("\n");
-
 }
