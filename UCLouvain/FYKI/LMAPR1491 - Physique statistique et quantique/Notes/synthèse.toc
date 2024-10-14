@@ -1,27 +1,31 @@
-\contentsline {section}{\numberline {1}CM1 : Théorie Cinétique des Gaz (TCG)}{2}{}%
-\contentsline {subsection}{\numberline {1.1}Pression sur un réservoir}{2}{}%
-\contentsline {subsection}{\numberline {1.2}Chaleur spécifique molaire de gaz idéaux}{3}{}%
-\contentsline {subsubsection}{\numberline {1.2.1}Valeur de $c_V$}{3}{}%
-\contentsline {subsubsection}{\numberline {1.2.2}Valeur de $c_P$}{4}{}%
-\contentsline {subsection}{\numberline {1.3}Comparaison avec des gaz réels}{4}{}%
-\contentsline {subsection}{\numberline {1.4}Distibution de Maxwell-Boltzmann}{5}{}%
-\contentsline {section}{\numberline {2}CM2 : Eléments de physique statistique}{6}{}%
-\contentsline {subsection}{\numberline {2.1}Espace de phase et points représentatifs}{6}{}%
-\contentsline {subsection}{\numberline {2.2}Notion d'ensemble}{6}{}%
-\contentsline {subsection}{\numberline {2.3}Postulat d'équiprobabilité}{6}{}%
-\contentsline {subsection}{\numberline {2.4}Rappel sur l'entropie}{6}{}%
-\contentsline {subsection}{\numberline {2.5}Etat microscopique d'un système}{7}{}%
-\contentsline {subsection}{\numberline {2.6}Equation de Boltzmann}{7}{}%
-\contentsline {subsection}{\numberline {2.7}Modèle d'Einstein du solide cristallin}{8}{}%
-\contentsline {section}{\numberline {3}CM 3 : Ensemble Canonique et fonction de partition}{9}{}%
-\contentsline {subsection}{\numberline {3.1}Ensemble Canonique}{9}{}%
-\contentsline {subsection}{\numberline {3.2}Fonction de partition}{10}{}%
-\contentsline {subsubsection}{\numberline {3.2.1}Propriétés de la fonction de partition}{12}{}%
-\contentsline {subsection}{\numberline {3.3}Densité d'états}{12}{}%
-\contentsline {subsection}{\numberline {3.4}Modèle de Debye}{12}{}%
-\contentsline {subsection}{\numberline {3.5}Théorie du corps noir}{13}{}%
-\contentsline {section}{\numberline {4}CM4 : Potentiel Grand-Canonique}{14}{}%
-\contentsline {subsection}{\numberline {4.1}Formalisme Grand-canonique}{14}{}%
-\contentsline {subsection}{\numberline {4.2}Fluides quantiques}{14}{}%
-\contentsline {subsubsection}{\numberline {4.2.1}Modèle du pré-gaz}{14}{}%
-\contentsline {subsubsection}{\numberline {4.2.2}Fluide idéal de Fermi}{15}{}%
+\contentsline {section}{\numberline {1}CM1 : Théorie Cinétique des Gaz (TCG)}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Pression sur un réservoir}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Chaleur spécifique molaire de gaz idéaux}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Valeur de $c_V$}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Valeur de $c_P$}{5}{}%
+\contentsline {subsection}{\numberline {1.3}Comparaison avec des gaz réels}{5}{}%
+\contentsline {subsection}{\numberline {1.4}Distibution de Maxwell-Boltzmann}{6}{}%
+\contentsline {section}{\numberline {2}CM2 : Eléments de physique statistique}{7}{}%
+\contentsline {subsection}{\numberline {2.1}Espace de phase et points représentatifs}{7}{}%
+\contentsline {subsection}{\numberline {2.2}Notion d'ensemble}{7}{}%
+\contentsline {subsection}{\numberline {2.3}Postulat d'équiprobabilité}{7}{}%
+\contentsline {subsection}{\numberline {2.4}Rappel sur l'entropie}{7}{}%
+\contentsline {subsection}{\numberline {2.5}Etat microscopique d'un système}{8}{}%
+\contentsline {subsection}{\numberline {2.6}Equation de Boltzmann}{8}{}%
+\contentsline {subsection}{\numberline {2.7}Modèle d'Einstein du solide cristallin}{9}{}%
+\contentsline {section}{\numberline {3}CM 3 : Ensemble Canonique et fonction de partition}{10}{}%
+\contentsline {subsection}{\numberline {3.1}Ensemble Canonique}{10}{}%
+\contentsline {subsection}{\numberline {3.2}Fonction de partition}{11}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Propriétés de la fonction de partition}{13}{}%
+\contentsline {subsection}{\numberline {3.3}Densité d'états}{13}{}%
+\contentsline {subsection}{\numberline {3.4}Modèle de Debye}{13}{}%
+\contentsline {subsection}{\numberline {3.5}Théorie du corps noir}{14}{}%
+\contentsline {section}{\numberline {4}CM4 : Potentiel Grand-Canonique}{15}{}%
+\contentsline {subsection}{\numberline {4.1}Formalisme Grand-canonique}{15}{}%
+\contentsline {subsection}{\numberline {4.2}Fluides quantiques}{15}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Modèle du pré-gaz}{15}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Fluide idéal de Fermi}{16}{}%
+\contentsline {section}{\numberline {5}CM4 : Suite du formalisme Grand-canonique}{17}{}%
+\contentsline {subsection}{\numberline {5.1}Fermions}{17}{}%
+\contentsline {subsection}{\numberline {5.2}Bosons}{17}{}%
+\contentsline {subsection}{\numberline {5.3}Condensation de Bose-Einstein}{19}{}%

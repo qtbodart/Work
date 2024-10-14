@@ -345,4 +345,69 @@
                 \item $\mu$ décroit lorsque la température augmente
                 \item La chaleur spécifique d'un fluide de Fermi nécéssite un facteur de correction d'environ 10\%
             \end{itemize}
+\pagebreak
+
+\section{CM4 : Suite du formalisme Grand-canonique}
+    \subsection{Fermions}
+        Les fermions vont venir peupler des états d'énergie jusqu'à un état "maximal" ($E_f$).
+        Lors du calcul de la fonction de partition d'un gaz de fermions, il faut prendre en compte leur état de spin, et les multiplier par la suite :
+        $$
+        \mathcal{Z}_{k,m_s} = 1 + e^{-\beta (\epsilon_k - \mu)}
+        $$
+        $$
+        \mathcal{Z}_{glob} = \prod \mathcal{Z}_{k, m_s}
+        $$
+        $$
+        \Psi = \frac{-1}{\beta} ln(\mathcal{Z})
+        $$
+        $$
+        \tilde N = - \frac{\partial \beta \Phi}{\partial \beta \mu}
+        $$
+        $$
+        U = \frac{\partial \beta \Phi}{\partial \beta}
+        $$
+        Pour un régime quantique faible ($\mu << 0 \rightarrow$ faible densité ou haute température), les gaz deviennent "classiques".\\
+        Pour un régime quantique fort ($\mu >> 0 \rightarrow$ haute densité ou faible température), on observe un "niveau de Fermi" $\mu_0$, au delà duquel la probabilité d'occupation d'une énergie $\epsilon > \mu_0$ est très proche de 0.\\
+        La probabilité d'occupation d'un état orbital ($k, m_s$) d'un gaz de fermions est déterminée par la \textbf{distribution de Fermi-Dirac} :
+        $$
+        f_{n,m_s} = \frac{1}{e^{\beta (\epsilon - \mu)} + 1}
+        $$
+
+    \subsection{Bosons}
+        Lors du calcul de la fonction de partition d'un gaz de Bosons, il faut prendre en compte leur état de spin, et les multiplier par la suite:
+        $$
+        \mathcal{Z}_{k,m_s} = 1 + e^{-\beta (\epsilon_k - \mu)} + e^{-2\beta (\epsilon_k - \mu)} + e^{-3\beta (\epsilon_k - \mu)} + ... = \frac{1}{1-e^{-\beta (\epsilon_k - \mu)}}
+        $$
+        Le nombre moyen d'occupation d'un gaz de bosons est déterminée par la \textbf{distribution de Bose-Einstein} :
+        $$
+        \overline{n}_{n,m_s} = \frac{1}{e^{\beta (\epsilon - \mu)} - 1}
+        $$
+        Après calculs, on obtient le potentiel grand-canonique:
+        $$
+        \Psi = \frac{g_0}{\beta} \int_{0}^{\infty} ln[1 - e^{-\beta(\epsilon-\mu)}] D(\epsilon) d\epsilon
+        $$
+        avec $g_0 = 2s +1$ où $s = |m_s|$
+\pagebreak
+        Après des calculs encore plus compliqués (c.f. CM5), on obtient
+        $$
+        \tilde N_e = \frac{g_0 V}{\lambda_T^3} F_{3/2}(\xi)
+        $$
+        avec $F_{3/2}(\xi) = \xi + \frac{\xi^2}{2\sqrt{2}} + \frac{\xi^3}{3\sqrt{3}} + ...$\\\\
+        et
+        $$
+        U = \frac{3}{2} k_B T \frac{g_0 V}{\lambda_T^3} F_{5/2}(\xi)
+        $$
+        avec $F_{5/2}(\xi) = \xi + \frac{\xi^2}{4\sqrt{2}} + \frac{\xi^3}{9\sqrt{3}} + ...$
+\pagebreak
+    \subsection{Condensation de Bose-Einstein}
+        Pour certaines valeurs de $\tilde N_e$, $V$ et $T$, l'état fondamental ($\epsilon = 0$) est occupé par un nombre virtuellement infini de particules.\\
+        Afin de prendre ça en compte dans le formalisme Grand-canonique, il faut considérer que $\tilde N = n_0 + \tilde N_e$ où $n_0$ représente le nombre de particules dans l'état fondamental, et $\tilde N_e$ représente le nombre de particules dans des états excités.\\
+        On obtient donc :
+        $$
+        \tilde N = \frac{\xi}{1-\xi} + \frac{g_0 V}{\lambda_T^3} F_{3/2}(\xi)
+        $$
+        $$
+        \frac{\tilde N_e}{\tilde N} = \left(\frac{T}{T_c}\right)^{3/2}
+        $$
+        \insertslide{Slides/CM5}{12}{.4}
 \end{document}

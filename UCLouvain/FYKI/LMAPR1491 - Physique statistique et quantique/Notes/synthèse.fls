@@ -134,9 +134,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-OUTPUT synthèse.toc
 OUTPUT synthèse.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+OUTPUT synthèse.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /usr/share/texmf-dist/tex/latex/base/ts1cmss.fd
 INPUT /usr/share/texmf-dist/tex/latex/base/ts1cmss.fd
@@ -176,6 +176,10 @@ INPUT ./Slides/CM3.pdf
 INPUT ./Slides/CM3.pdf
 INPUT ./Slides/CM3.pdf
 INPUT ./Slides/CM3.pdf
+INPUT ./Slides/CM5.pdf
+INPUT ./Slides/CM5.pdf
+INPUT ./Slides/CM5.pdf
+INPUT ./Slides/CM5.pdf
 INPUT synthèse.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
