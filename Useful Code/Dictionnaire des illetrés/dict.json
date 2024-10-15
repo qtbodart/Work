@@ -1,0 +1,146 @@
+{
+    "anse": {
+        "date": "04/01/2024",
+        "person": "Louis",
+        "cword": "anse",
+        "word": "ance, ence"
+    },
+    "automne": {
+        "date": "28/12/2023",
+        "person": "Maxime",
+        "cword": "automne",
+        "word": "autone"
+    },
+    "autruche": {
+        "date": "18/01/2024",
+        "person": "Maxime",
+        "cword": "autruche",
+        "word": "autrushe"
+    },
+    "cimeti\u00e8re": {
+        "date": "28/12/2023",
+        "person": "Lo\u00efc",
+        "cword": "cimeti\u00e8re",
+        "word": "cimere"
+    },
+    "cruche": {
+        "date": "28/12/2023",
+        "person": "Louis",
+        "cword": "cruche",
+        "word": "crushe, sruche"
+    },
+    "cymbale": {
+        "date": "27/12/2023",
+        "person": "Lo\u00efc",
+        "cword": "cymbale",
+        "word": "symbale, simbla, cymblese, symblase"
+    },
+    "faisan": {
+        "date": "20/08/2024",
+        "person": "Lo\u00efc",
+        "cword": "faisan",
+        "word": "fesantr"
+    },
+    "feu de camp": {
+        "date": "20/08/2024",
+        "person": "Lo\u00efc",
+        "cword": "feu de camp",
+        "word": "fdeui de cam"
+    },
+    "frelon": {
+        "date": "NA",
+        "person": "Maxime",
+        "cword": "frelon",
+        "word": "frolon"
+    },
+    "h\u00e9ron": {
+        "date": "NA",
+        "person": "Maxime",
+        "cword": "h\u00e9ron",
+        "word": "airon"
+    },
+    "idiot": {
+        "date": "28/12/2023",
+        "person": "Lo\u00efc",
+        "cword": "idiot",
+        "word": "idio, idios, idot"
+    },
+    "mammouth": {
+        "date": "28/12/2023",
+        "person": "Lo\u00efc",
+        "cword": "mammouth",
+        "word": "mamouht, mammout, mamouth, mamochon"
+    },
+    "milan": {
+        "date": "10/09/2024",
+        "person": "Lo\u00efc",
+        "cword": "milan",
+        "word": "merlazn"
+    },
+    "montgolfi\u00e8re": {
+        "date": "20/08/2024",
+        "person": "Maxime",
+        "cword": "montgolfi\u00e8re",
+        "word": "mongolfi\u00e8re, mongolfierre, mongolefiere, montmongolfiere"
+    },
+    "nicki minaj": {
+        "date": "20/03/2024",
+        "person": "Lo\u00efc",
+        "cword": "nicki minaj",
+        "word": "nicky menage"
+    },
+    "onglet": {
+        "date": "NA",
+        "person": "Maxime",
+        "cword": "onglet",
+        "word": "honglait"
+    },
+    "permis de conduire": {
+        "date": "27/12/2023",
+        "person": "Lo\u00efc",
+        "cword": "permis de conduire",
+        "word": "cermis de cuire"
+    },
+    "pic vert": {
+        "date": "20/08/2024",
+        "person": "Lo\u00efc",
+        "cword": "pic vert",
+        "word": "pivers"
+    },
+    "porsche": {
+        "date": "29/12/2023",
+        "person": "Lo\u00efc",
+        "cword": "porsche",
+        "word": "poche"
+    },
+    "soucoupe": {
+        "date": "20/03/2024",
+        "person": "Lo\u00efc",
+        "cword": "soucoupe",
+        "word": "souloule"
+    },
+    "terre": {
+        "date": "NA",
+        "person": "Maxime",
+        "cword": "terre",
+        "word": "th\u00e8re"
+    },
+    "th\u00e9i\u00e8re": {
+        "date": "28/08/2024",
+        "person": "NA",
+        "cword": "th\u00e9i\u00e8re",
+        "word": "t\u00e9llaire, tesaillaire, th\u00e9yaire, th\u00e9illaire, th\u00e9iaire"
+    },
+    "turquie": {
+        "date": "NA",
+        "person": "Maxime",
+        "cword": "turquie",
+        "word": "turkie"
+    },
+    "vietnam": {
+        "date": "29/08/2024",
+        "person": "Augustin",
+        "cword": "vietnam",
+        "word": "vietnman"
+    }
+}
