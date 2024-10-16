@@ -1,5 +1,4 @@
 package sorting;
-
 /**
  * Author Pierre Schaus
  *
@@ -105,8 +104,28 @@ public class Median {
      * @param hi the highest index from which the median is computed
      */
     public static int median(Vector vec, int lo, int hi) {
-        // TODO
+        return quickSelect(vec, lo, hi, (lo+hi)/2);
+    }
+
+    public static int quickSelect(Vector vec, int lo, int hi, int k) {
          return -1;
     }
 
+    public static void compsort(Vector vec, int lo, int hi, int pivot) {
+        while (lo < hi) {
+            int lo_value = vec.get(lo);
+            int hi_value = vec.get(hi);
+            if (lo_value < pivot) {
+                lo++;
+                continue;
+            }
+
+            if (hi_value > pivot) {
+                hi--;
+                continue;
+            }
+
+
+        }
+    }
 }
