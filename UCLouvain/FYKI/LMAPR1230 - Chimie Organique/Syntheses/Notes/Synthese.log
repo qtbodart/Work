@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.6)  10 OCT 2024 10:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.6)  17 OCT 2024 10:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -666,30 +666,134 @@ Underfull \hbox (badness 10000) in paragraph at lines 400--410
 
  []
 
-[28 <./Slides/CM3.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 426--431
+[28 <./Slides/CM3.pdf>] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
 
  []
 
-[29] (./Synthese.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
+
+ []
+
+<Slides/CM4.pdf, id=1410, page=16, 845.1575pt x 597.23125pt>
+File: Slides/CM4.pdf Graphic file (type pdf)
+<use Slides/CM4.pdf, page 16>
+Package pdftex.def Info: Slides/CM4.pdf , page16 used on input line 458.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+[30]
+<Slides/CM4.pdf, id=1414, page=17, 845.1575pt x 597.23125pt>
+File: Slides/CM4.pdf Graphic file (type pdf)
+<use Slides/CM4.pdf, page 17>
+Package pdftex.def Info: Slides/CM4.pdf , page17 used on input line 459.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+ [31 <./Slides/CM4.pdf> <./Slides/CM4.pdf>]
+<Slides/CM4.pdf, id=1469, page=24, 845.1575pt x 597.23125pt>
+File: Slides/CM4.pdf Graphic file (type pdf)
+<use Slides/CM4.pdf, page 24>
+Package pdftex.def Info: Slides/CM4.pdf , page24 used on input line 477.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+<Slides/CM4.pdf, id=1470, page=26, 845.1575pt x 597.23125pt>
+File: Slides/CM4.pdf Graphic file (type pdf)
+<use Slides/CM4.pdf, page 26>
+Package pdftex.def Info: Slides/CM4.pdf , page26 used on input line 478.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+<Slides/CM4.pdf, id=1471, page=27, 845.1575pt x 597.23125pt>
+File: Slides/CM4.pdf Graphic file (type pdf)
+<use Slides/CM4.pdf, page 27>
+Package pdftex.def Info: Slides/CM4.pdf , page27 used on input line 479.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+ [32 <./Slides/CM4.pdf> <./Slides/CM4.pdf> <./Slides/CM4.pdf>]
+<Slides/CM4.pdf, id=1530, page=30, 845.1575pt x 597.23125pt>
+File: Slides/CM4.pdf Graphic file (type pdf)
+<use Slides/CM4.pdf, page 30>
+Package pdftex.def Info: Slides/CM4.pdf , page30 used on input line 483.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+<Slides/CM4.pdf, id=1531, page=34, 845.1575pt x 597.23125pt>
+File: Slides/CM4.pdf Graphic file (type pdf)
+<use Slides/CM4.pdf, page 34>
+Package pdftex.def Info: Slides/CM4.pdf , page34 used on input line 489.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+<Slides/CM4.pdf, id=1532, page=35, 845.1575pt x 597.23125pt>
+File: Slides/CM4.pdf Graphic file (type pdf)
+<use Slides/CM4.pdf, page 35>
+Package pdftex.def Info: Slides/CM4.pdf , page35 used on input line 490.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+ [33 <./Slides/CM4.pdf> <./Slides/CM4.pdf>]
+<Slides/CM4.pdf, id=1598, page=37, 845.1575pt x 597.23125pt>
+File: Slides/CM4.pdf Graphic file (type pdf)
+<use Slides/CM4.pdf, page 37>
+Package pdftex.def Info: Slides/CM4.pdf , page37 used on input line 493.
+(pdftex.def)             Requested size: 211.28885pt x 149.30743pt.
+ [34 <./Slides/CM4.pdf> <./Slides/CM4.pdf>] (./Synthese.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4741 strings out of 476076
- 85186 string characters out of 5793775
+ 4774 strings out of 476076
+ 86176 string characters out of 5793775
  1938187 words of memory out of 5000000
- 26794 multiletter control sequences out of 15000+600000
+ 26827 multiletter control sequences out of 15000+600000
  566039 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 68i,16n,79p,464b,417s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 68i,16n,79p,464b,485s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb>
-Output written on Synthese.pdf (29 pages, 6710026 bytes).
+Output written on Synthese.pdf (34 pages, 6963368 bytes).
 PDF statistics:
- 1463 PDF objects out of 1728 (max. 8388607)
- 939 compressed objects within 10 object streams
+ 1694 PDF objects out of 1728 (max. 8388607)
+ 1098 compressed objects within 11 object streams
  0 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

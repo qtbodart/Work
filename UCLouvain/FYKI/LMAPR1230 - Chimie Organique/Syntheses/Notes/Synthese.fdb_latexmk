@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1728549180.76902 "/home/qbodart/Git/Work/UCLouvain/FYKI/LMAPR1230 - Chimie Organique/Syntheses/Notes/Synthese.tex" "Synthese.pdf" "Synthese" 1728549183.91173 0
-  "/home/qbodart/Git/Work/UCLouvain/FYKI/LMAPR1230 - Chimie Organique/Syntheses/Notes/Synthese.tex" 1728549180.41049 24303 38f423b9f799a6ddb6bdc0e02d423bd7 ""
+["pdflatex"] 1729152174.86047 "/home/qbodart/Git/Work/UCLouvain/FYKI/LMAPR1230 - Chimie Organique/Syntheses/Notes/Synthese.tex" "Synthese.pdf" "Synthese" 1729152178.92459 0
+  "/home/qbodart/Git/Work/UCLouvain/FYKI/LMAPR1230 - Chimie Organique/Syntheses/Notes/Synthese.tex" 1729152170.3521 28071 96bd238c3c947bd93c8b3ed1a7316fcd ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1727349926 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1727349926 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcss1000.tfm" 1727349926 1536 293044035fd171bb1d18cf655049b101 ""
@@ -91,9 +91,10 @@
   "Images/structures_planes.png" 1728243016.93854 6074 9ebcc5678ccfa01b0baa27144786a756 ""
   "Slides/CM2.pdf" 1728243017.02521 14543299 30e16f1536c88b2dd8ac8532db3b089c ""
   "Slides/CM3.pdf" 1728243017.03521 3828141 7fa37e77138b97f23eaaa8c3fad7fa5a ""
-  "Synthese.aux" 1728549183.77048 5236 135b5bdce2dece43589812a683c73ce8 "pdflatex"
-  "Synthese.tex" 1728549180.41049 24303 38f423b9f799a6ddb6bdc0e02d423bd7 ""
-  "Synthese.toc" 1728549183.77381 3358 250567c71150b2909127005f8ab0f4c0 "pdflatex"
+  "Slides/CM4.pdf" 1729146786.53257 1525170 1931a7c38db115074fb3fed9df61c88d ""
+  "Synthese.aux" 1729152178.7721 6641 991a387d69c37aade701237ab22781b6 "pdflatex"
+  "Synthese.tex" 1729152170.3521 28071 96bd238c3c947bd93c8b3ed1a7316fcd ""
+  "Synthese.toc" 1729152178.77544 4312 cadc7b366eea70625670afb50638cc0d "pdflatex"
   (generated)
   "Synthese.aux"
   "Synthese.log"

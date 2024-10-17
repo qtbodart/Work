@@ -108,24 +108,22 @@ public class Median {
     }
 
     public static int quickSelect(Vector vec, int lo, int hi, int k) {
-         return -1;
-    }
-
-    public static void compsort(Vector vec, int lo, int hi, int pivot) {
-        while (lo < hi) {
-            int lo_value = vec.get(lo);
-            int hi_value = vec.get(hi);
-            if (lo_value < pivot) {
-                lo++;
-                continue;
+        int pivot = vec.get(hi);
+        int i = lo;
+        for (int j = lo; j < hi; j++) {
+            if (vec.get(j) < pivot) {
+                vec.swap(i, j);
+                i++;
             }
-
-            if (hi_value > pivot) {
-                hi--;
-                continue;
-            }
-
-
         }
+        vec.swap(hi, i);
+
+        if (i == k){
+            return vec.get(i);
+        }
+        if (k < i){
+            return quickSelect(vec, lo, i-1, k);
+        }
+        return quickSelect(vec, i+1, hi , k);
     }
 }

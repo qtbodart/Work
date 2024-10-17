@@ -43,3 +43,14 @@
 \contentsline {subsection}{\numberline {3.4}Acidité et basicité}{28}{}%
 \contentsline {subsubsection}{\numberline {3.4.1}Force}{28}{}%
 \contentsline {subsection}{\numberline {3.5}Facteurs influençant l'acidité ou la basicité}{29}{}%
+\contentsline {section}{\numberline {4}CM4 : Réactivité des alcanes, alcènes et alcynes}{30}{}%
+\contentsline {subsection}{\numberline {4.1}Structures et propriétés physiques des alcanes}{30}{}%
+\contentsline {subsection}{\numberline {4.2}Réactions des alcanes}{30}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Oxydation et combustion}{30}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Halogénation radicalaire des alcanes}{30}{}%
+\contentsline {subsection}{\numberline {4.3}Structures et propriétés physiques des alcènes}{31}{}%
+\contentsline {subsection}{\numberline {4.4}Réactions des alcènes}{32}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Réactions d'addition électrophile}{32}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Hydratation}{33}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}Halogénation}{33}{}%
+\contentsline {subsubsection}{\numberline {4.4.4}Addition radicalaire et polymères}{34}{}%

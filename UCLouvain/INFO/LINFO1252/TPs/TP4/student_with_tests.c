@@ -7,7 +7,20 @@ static inline void my_inline_func(int *a, int b, int c){
      *   *a = c - 4;
      */
     __asm__(
-        // TODO
+        // ASM Template
+        "cmpl $10,%0\n"
+        "jg if\n"
+        "subl $4,%2\n"
+        "movl %2,%0\n"
+        "jmp end\n"
+        "if:\n"
+        "addl $3,%1\n"
+        "mov %1,%0\n"
+        "end:"
+        //outputs : + means read and write, m means location in memory
+        :"+m"(*a)
+        //inputs : r means register
+        :"r"(b), "r"(c)
     );
 }
 
