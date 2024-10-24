@@ -38,18 +38,13 @@ struct Metadata* findDataPlace(){
 void init(){
     separation = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-1;
 
-    // Initializing two dummy nodes
+    // Initializing one dummy nodes
     struct Metadata new_data;
-    new_data.previous = separation-1;
-    new_data.next = separation-1;
+    new_data.previous = separation;
+    new_data.next = separation;
     new_data.address = MY_HEAP;
     new_data.length = 0;
     new_data.utilized = true;
-    *separation = new_data;
-
-    separation--;
-    new_data.previous = separation+1;
-    new_data.next = separation+1;
     *separation = new_data;
 }
 
@@ -58,8 +53,8 @@ void* my_malloc(size_t size){
         return NULL;
     }
     
-    // Starting at second dummy node
-    struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-2;
+    // Starting at first dummy node
+    struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-1;
 
     // Iterate until enough space found or reached the end of the data
     while (!(data->next->address - data->address - data->length >= size) && data->next->length != 0){
@@ -89,7 +84,7 @@ void* my_malloc(size_t size){
 }
 
 void my_free(void* pointer){
-    struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-2;
+    struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-1;
     while (data->next->length != 0){
         data = data->next;
         if (data->address == pointer){
@@ -104,7 +99,7 @@ void my_free(void* pointer){
 void print_metadata(){
     printf("PRINTING METADATA : \n");
     int nel = 0;
-    struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-2;
+    struct Metadata* data = ((struct Metadata*) (MY_HEAP+sizeof(MY_HEAP)))-1;
     while (data->next->length != 0){
         data = data->next;
         printf("previous : %p   current : %p   next : %p   address : %p    length : %u    utilized : %i\n", data->previous, data, data->next, data->address, data->length, data->utilized);
@@ -115,6 +110,8 @@ void print_metadata(){
 
 void main(){
     init();
+    struct Metadata example;
+    printf("Meta-data bit-size : %i\n",sizeof(example));
     printf("HEAP starting at %p and ending at %p\n\n", MY_HEAP, MY_HEAP+sizeof(MY_HEAP));
 
     // DUMMY NODES TEST
