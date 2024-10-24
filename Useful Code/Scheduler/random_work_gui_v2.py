@@ -2,13 +2,13 @@ import numpy.random as rd
 import datetime as dt
 import tkinter as tk
 from tkinter import ttk
-import winsound
+# import winsound
 import time as t
 import scipy.stats as stats
 import json
 
 # getting scheduler settings from .json file
-with open("settings.json","r") as file:
+with open(__file__[:-21] + "settings.json","r") as file:
     settings = json.load(file)
 settings_keys = (list)(settings.keys())
 print(settings_keys)
@@ -371,7 +371,7 @@ class GUI:
                         if end_time-(cur_time+duration) <= 1800: # if there's less than 30 minutes between the chosen work time and the schedule's end time,
                             self.CS_end_time_s_intvar.set(end_time)   # set the session's end time to the schedule's end time
                         else:
-                            self.CS_end_time_s_intvar.set(cur_time+duration)
+                            self.CS_end_time_s_intvarz.set(cur_time+duration)
                     
                     else:
                         # if current session is "rest", we set it so and choose the time to be rested
@@ -383,7 +383,7 @@ class GUI:
                             self.CS_end_time_s_intvar.set(cur_time+duration)
                     
                     self.session_boolvar.set(True)
-                    winsound.PlaySound("pingsound",winsound.SND_FILENAME)
+                    # winsound.PlaySound("pingsound",winsound.SND_FILENAME)
                 
                 else:
                     if session_end_time-cur_time <= 0:
